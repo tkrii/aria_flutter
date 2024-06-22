@@ -1,0 +1,61 @@
+name: aria
+description: "A new Flutter package project."
+version: 0.0.1
+#homepage:
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  material_color_utilities: ^0.8.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+   fonts:
+     - family: Inter
+       fonts:
+         - asset: assets/fonts/inter/Inter-Thin.ttf
+           weight: 100
+         - asset: assets/fonts/inter/Inter-ExtraLight.ttf
+           weight: 200
+         - asset: assets/fonts/inter/Inter-Light.ttf
+           weight: 300
+         - asset: assets/fonts/inter/Inter-Regular.ttf
+           weight: 400
+         - asset: assets/fonts/inter/Inter-Medium.ttf
+           weight: 500
+         - asset: assets/fonts/inter/Inter-SemiBold.ttf
+           weight: 600
+         - asset: assets/fonts/inter/Inter-Bold.ttf
+           weight: 700
+         - asset: assets/fonts/inter/Inter-ExtraBold.ttf
+           weight: 800
+         - asset: assets/fonts/inter/Inter-Black.ttf
+           weight: 900
+     - family: Fira Sans
+       fonts:
+         - asset: assets/fonts/fira_sans/FiraSans-Thin.ttf
+           weight: 100
+         - asset: assets/fonts/fira_sans/FiraSans-ExtraLight.ttf
+           weight: 200
+         - asset: assets/fonts/fira_sans/FiraSans-Light.ttf
+           weight: 300
+         - asset: assets/fonts/fira_sans/FiraSans-Regular.ttf
+           weight: 400
+         - asset: assets/fonts/fira_sans/FiraSans-Medium.ttf
+           weight: 500
+         - asset: assets/fonts/fira_sans/FiraSans-SemiBold.ttf
+           weight: 600
+         - asset: assets/fonts/fira_sans/FiraSans-Bold.ttf
+           weight: 700
+         - asset: assets/fonts/fira_sans/FiraSans-ExtraBold.ttf
+           weight: 800
+         - asset: assets/fonts/fira_sans/FiraSans-Black.ttf
+           weight: 900
