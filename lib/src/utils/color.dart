@@ -1,10 +1,12 @@
 import 'package:aria/aria.dart';
 import 'package:flutter/material.dart' show Brightness, Color, Colors, HSLColor;
+import 'package:material_color_utilities/material_color_utilities.dart';
 
 extension AriaColorExtension on Color {
   int get _brightnessValue =>
       (((red * 299) + (green * 587) + (blue * 114)) / 1000).round();
 
+/// Convert color to [AriaTheme]
   AriaTheme get toAriaTheme => AriaTheme(primary: this);
 
   /// [Brightness] of this color.
@@ -14,22 +16,32 @@ extension AriaColorExtension on Color {
           : Brightness.dark;
 
   /// [Color] of text on this color.
-  Color get foreground =>
-      brightness == Brightness.dark ? Colors.white : Colors.black;
+  Color get foreground {
+    TonalPalette tonal = TonalPalette.fromHct(
+      Hct.fromInt(value),
+    );
+    return Color(
+      brightness == Brightness.light ? tonal.get(20) : tonal.get(100),
+    );
+  }
+
+  Color applyHighContrast(bool highContrast) => highContrast
+      ? (brightness == Brightness.dark ? Colors.black : Colors.white)
+      : this;
 
   /// Combine this [Color] with received [Color]
   Color mix(Color other, [int weight = 50]) {
     assert(weight >= 0 && weight <= 100);
     int weightDifference = 100 - weight;
     int newRed =
-        ((red * weight / 100) + (other.red * weightDifference / 100)).round();
+        ((red * weightDifference / 100) + (other.red * weight / 100)).round();
     int newGreen =
-        ((green * weight / 100) + (other.green * weightDifference / 100))
+        ((green * weightDifference / 100) + (other.green * weight / 100))
             .round();
     int newBlue =
-        ((blue * weight / 100) + (other.blue * weightDifference / 100)).round();
+        ((blue * weightDifference / 100) + (other.blue * weight / 100)).round();
     int newAlpha =
-        ((alpha * weight / 100) + (other.alpha * weightDifference / 100))
+        ((alpha * weightDifference / 100) + (other.alpha * weight / 100))
             .round();
     return Color.fromARGB(newAlpha, newRed, newGreen, newBlue);
   }

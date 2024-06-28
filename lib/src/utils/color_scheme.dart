@@ -15,12 +15,14 @@ extension AriaColorSchemeExtension on ColorScheme {
   ColorFamily get destructive => ExtendedColor(value: const Color(0xffe01b24)).from(brightness);
 
   /// Warning based on *Libadwaita*
-  ColorFamily get warning => ExtendedColor(value: const Color(0xff2ec27e)).from(brightness);
+  ColorFamily get success =>
+      ExtendedColor(value: const Color(0xff2ec27e)).from(brightness);
 
   /// Success based on *Libadwaita*
-  ColorFamily get success => ExtendedColor(value: const Color(0xffe5a50a)).from(brightness);
+  ColorFamily get warning =>
+      ExtendedColor(value: const Color(0xffe5a50a)).from(brightness);
 
-  Color get onSurfaceSecondary => onSurface.scale(alpha: -0.4);
+  Color get onSurfaceSecondary => onSurface.scale(alpha: -0.3);
 
-  Color get disabled => onSurface.scale(alpha: -0.6);
+  Color get disabled => outline.scale(alpha: -0.3);
 }
