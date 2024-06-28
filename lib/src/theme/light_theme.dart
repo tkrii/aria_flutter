@@ -71,40 +71,47 @@ ThemeData lightTheme({
       dynamicScheme.neutralPalette.get(98),
     ),
     surfaceBright: Color(
-      dynamicScheme.neutralPalette.get(98),
+      dynamicScheme.neutralPalette.get(100),
+    ),
+    surfaceTint: Color(
+      dynamicScheme.neutralPalette.get(100),
     ),
     inverseSurface: Color(
-      dynamicScheme.neutralPalette.get(20),
+      dynamicScheme.neutralPalette.get(14),
     ),
     onSurface: Color(
-      dynamicScheme.neutralPalette.get(30),
+      dynamicScheme.neutralPalette.get(10),
     ),
     onInverseSurface: Color(
       dynamicScheme.neutralPalette.get(95),
     ),
+    // View color
     surfaceContainerLowest: Color(
       dynamicScheme.neutralPalette.get(100),
     ),
+    // Header bar
     surfaceContainerLow: Color(
-      dynamicScheme.neutralPalette.get(96),
+      dynamicScheme.neutralPalette.get(100),
     ),
     surfaceContainer: Color(
-      dynamicScheme.neutralPalette.get(94),
+      dynamicScheme.neutralPalette.get(100),
     ),
+    // Secondary sidebar
     surfaceContainerHigh: Color(
-      dynamicScheme.neutralPalette.get(92),
+      dynamicScheme.neutralPalette.get(95),
     ),
+    // Sidebar
     surfaceContainerHighest: Color(
-      dynamicScheme.neutralPalette.get(90),
+      dynamicScheme.neutralPalette.get(92),
     ),
     onSurfaceVariant: Color(
       dynamicScheme.neutralVariantPalette.get(30),
     ),
     outline: Color(
-      dynamicScheme.neutralVariantPalette.get(50),
+      dynamicScheme.neutralPalette.get(70),
     ),
     outlineVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(80),
+      dynamicScheme.neutralVariantPalette.get(60),
     ),
   );
   return createAriaTheme(colorScheme);

@@ -68,10 +68,13 @@ ThemeData darkTheme({
       dynamicScheme.neutralPalette.get(6),
     ),
     surface: Color(
-      dynamicScheme.neutralPalette.get(6),
+      dynamicScheme.neutralPalette.get(14),
     ),
     surfaceBright: Color(
-      dynamicScheme.neutralPalette.get(24),
+      dynamicScheme.neutralPalette.get(0),
+    ),
+    surfaceTint: Color(
+      dynamicScheme.neutralPalette.get(0),
     ),
     inverseSurface: Color(
       dynamicScheme.neutralPalette.get(90),
@@ -82,29 +85,33 @@ ThemeData darkTheme({
     onInverseSurface: Color(
       dynamicScheme.neutralPalette.get(20),
     ),
+    // View color
     surfaceContainerLowest: Color(
-      dynamicScheme.neutralPalette.get(4),
-    ),
-    surfaceContainerLow: Color(
-      dynamicScheme.neutralPalette.get(10),
-    ),
-    surfaceContainer: Color(
       dynamicScheme.neutralPalette.get(12),
     ),
-    surfaceContainerHigh: Color(
-      dynamicScheme.neutralPalette.get(17),
+    // Header color
+    surfaceContainerLow: Color(
+      dynamicScheme.neutralPalette.get(18),
     ),
+    surfaceContainer: Color(
+      dynamicScheme.neutralPalette.get(20),
+    ),
+    // Secondary sidebar
+    surfaceContainerHigh: Color(
+      dynamicScheme.neutralPalette.get(16),
+    ),
+    // Sidebar
     surfaceContainerHighest: Color(
-      dynamicScheme.neutralPalette.get(24),
+      dynamicScheme.neutralPalette.get(21),
     ),
     onSurfaceVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(90),
+      dynamicScheme.neutralVariantPalette.get(98),
     ),
     outline: Color(
-      dynamicScheme.neutralVariantPalette.get(60),
+      dynamicScheme.neutralPalette.get(40),
     ),
     outlineVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(30),
+      dynamicScheme.neutralVariantPalette.get(50),
     ),
   );
   return createAriaTheme(colorScheme);
