@@ -16,7 +16,6 @@ class TextBox extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: TextFormField(
             decoration: InputDecoration(
-              border: const UnderlineInputBorder(),
               labelText: 'hello'.tr,
               hintText: 'hello'.tr,
             ),
@@ -28,11 +27,24 @@ class TextBox extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: TextFormField(
             decoration: InputDecoration(
-              border: const OutlineInputBorder(),
               labelText: 'hello'.tr,
               hintText: 'hello'.tr,
             ),
+            enabled: false,
             maxLength: 100,
+            maxLines: null,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: TextFormField(
+            autovalidateMode: AutovalidateMode.always,
+            validator: (value) =>
+                value == null || value.isEmpty ? 'empty'.tr : null,
+            decoration: InputDecoration(
+              labelText: 'hello'.tr,
+              hintText: 'hello'.tr,
+            ),
             maxLines: null,
           ),
         ),

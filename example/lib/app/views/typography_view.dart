@@ -1,66 +1,89 @@
-import 'package:example/core/i18n/i18n.dart';
-import 'package:flutter/widgets.dart';
+import 'package:example/app/views/search_view.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/context_extensions.dart';
-import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:get/get_utils/src/extensions/widget_extensions.dart';
 
 class TypographyView extends StatelessWidget {
   const TypographyView({super.key});
 
   @override
   Widget build(BuildContext context) => SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: SizedBox(
-              child: Column(
+        child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Text(
-                      LocaleKeys.lorem.tr,
+            SearchAnchor.bar(
+              isFullScreen: false,
+              suggestionsBuilder: searchView,
+            ).paddingAll(8),
+            Expanded(
+              child: SelectableText.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Display large\n',
+                      style: context.textTheme.displayLarge,
+                    ),
+                    TextSpan(
+                      text: 'Display medium\n',
                       style: context.textTheme.displayMedium,
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Text(
-                      LocaleKeys.lorem.tr,
-                      style: context.textTheme.headlineMedium,
+                    TextSpan(
+                      text: 'Display small\n',
+                      style: context.textTheme.displaySmall,
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Text(
-                      LocaleKeys.lorem.tr,
+                    TextSpan(
+                      text: 'Title large\n',
+                      style: context.textTheme.titleLarge,
+                    ),
+                    TextSpan(
+                      text: 'Title medium\n',
                       style: context.textTheme.titleMedium,
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Text(
-                      LocaleKeys.lorem.tr,
+                    TextSpan(
+                      text: 'Title small\n',
+                      style: context.textTheme.titleSmall,
+                    ),
+                    TextSpan(
+                      text: 'Headline large\n',
+                      style: context.textTheme.headlineLarge,
+                    ),
+                    TextSpan(
+                      text: 'Headline medium\n',
+                      style: context.textTheme.headlineMedium,
+                    ),
+                    TextSpan(
+                      text: 'Headline small\n',
+                      style: context.textTheme.headlineSmall,
+                    ),
+                    TextSpan(
+                      text: 'Body large\n',
+                      style: context.textTheme.bodyLarge,
+                    ),
+                    TextSpan(
+                      text: 'Body medium\n',
                       style: context.textTheme.bodyMedium,
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Text(
-                      LocaleKeys.lorem.tr,
-                      style: context.textTheme.labelLarge,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Text(
-                      LocaleKeys.lorem.tr,
+                    TextSpan(
+                      text: 'Body small\n',
                       style: context.textTheme.bodySmall,
                     ),
-                  ),
-                ],
+                    TextSpan(
+                      text: 'Label large\n',
+                      style: context.textTheme.labelLarge,
+                    ),
+                    TextSpan(
+                      text: 'Label medium\n',
+                      style: context.textTheme.labelMedium,
+                    ),
+                    TextSpan(
+                      text: 'Label small\n',
+                      style: context.textTheme.labelSmall,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
+          ],
         ),
       );
 }

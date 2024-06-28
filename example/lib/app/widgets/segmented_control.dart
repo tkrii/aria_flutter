@@ -23,24 +23,52 @@ class SegmentedControl extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Obx(
             () => SegmentedButton<int>(
-              segments: const <ButtonSegment<int>>[
+              segments: <ButtonSegment<int>>[
                 ButtonSegment<int>(
                   value: 0,
-                  label: PhosphorIcon(PhosphorIconsDuotone.numberSquareOne),
+                  label: Text('one'.tr),
                 ),
                 ButtonSegment<int>(
                   value: 1,
-                  label: PhosphorIcon(PhosphorIconsDuotone.numberSquareTwo),
+                  label: Text('two'.tr),
                 ),
                 ButtonSegment<int>(
                   value: 2,
-                  label: PhosphorIcon(PhosphorIconsDuotone.numberSquareThree),
+                  label: Text('three'.tr),
+                  enabled: false,
                 ),
               ],
               selected: <int>{segmentedControlGroupValue.value},
               onSelectionChanged: (Set<int> value) =>
                   segmentedControlGroupValue.value = value.first,
             ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: ToggleButtons(
+            isSelected: const [
+              true,
+              false,
+            ],
+            children: const [
+              PhosphorIcon(PhosphorIconsDuotone.numberCircleOne),
+              PhosphorIcon(PhosphorIconsDuotone.numberCircleTwo),
+            ],
+            onPressed: (index) {},
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: ToggleButtons(
+            isSelected: const [
+              true,
+              false,
+            ],
+            children: const [
+              PhosphorIcon(PhosphorIconsDuotone.numberCircleOne),
+              PhosphorIcon(PhosphorIconsDuotone.numberCircleTwo),
+            ],
           ),
         ),
       ],

@@ -44,4 +44,8 @@ Map<String, String> enUS = <String, String>{
   'pickers': 'Pickers',
   'datePicker': 'Date Picker',
   'timePicker': 'Time Picker',
+  'one': 'One',
+  'two': 'Two',
+  'three': 'Three',
+  'empty': 'Empty text',
 };

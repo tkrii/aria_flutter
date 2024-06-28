@@ -20,29 +20,7 @@ class HelloView extends StatelessWidget {
             children: [
               Card(
                 child: Obx(
-                  () => SelectableText(
-                    LocaleKeys.buttonPushed.trArgs(
-                      [
-                        helloPushedButton.value.toString(),
-                      ],
-                    ),
-                  ).paddingAll(16),
-                ),
-              ),
-              Card.filled(
-                child: Obx(
-                  () => SelectableText(
-                    LocaleKeys.buttonPushed.trArgs(
-                      [
-                        helloPushedButton.value.toString(),
-                      ],
-                    ),
-                  ).paddingAll(16),
-                ),
-              ),
-              Card.outlined(
-                child: Obx(
-                  () => SelectableText(
+                  () => Text(
                     LocaleKeys.buttonPushed.trArgs(
                       [
                         helloPushedButton.value.toString(),

@@ -44,4 +44,8 @@ Map<String, String> esMX = <String, String>{
   'pickers': 'Selectores',
   'datePicker': 'Selector de fecha',
   'timePicker': 'Selector de hora',
+  'one': 'Uno',
+  'two': 'Dos',
+  'three': 'Tres',
+  'empty': 'Vacío',
 };
