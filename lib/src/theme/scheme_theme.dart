@@ -1,12 +1,36 @@
 import 'package:aria/aria.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+part '../widgets/components/app_bar.dart';
+part '../widgets/components/banner.dart';
+part '../widgets/components/collapsible.dart';
+part '../widgets/components/list_tile.dart';
+part '../widgets/components/progress.dart';
+part '../widgets/components/toast.dart';
+part '../widgets/containers/card.dart';
+part '../widgets/forms/badge.dart';
+part '../widgets/forms/button_groups.dart';
+part '../widgets/forms/buttons.dart';
+part '../widgets/forms/checkbox.dart';
+part '../widgets/forms/input.dart';
+part '../widgets/forms/search.dart';
+part '../widgets/forms/select.dart';
+part '../widgets/forms/slider.dart';
+part '../widgets/forms/switch.dart';
+part '../widgets/layout/bottom_navigation.dart';
+part '../widgets/layout/drawer_navigation.dart';
+part '../widgets/layout/menu.dart';
+part '../widgets/layout/tab_navigation.dart';
 
 ThemeData createAriaTheme(ColorScheme colorScheme) => ThemeData(
       colorScheme: colorScheme,
       useMaterial3: true,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       scaffoldBackgroundColor: colorScheme.surface,
+      applyElevationOverlayColor: colorScheme.isDark,
+      textTheme: createTextTheme(colorScheme.onSurface),
       disabledColor: colorScheme.disabled,
       cupertinoOverrideTheme: CupertinoThemeData(
         primaryColor: colorScheme.primary,
@@ -15,5 +39,53 @@ ThemeData createAriaTheme(ColorScheme colorScheme) => ThemeData(
         scaffoldBackgroundColor: colorScheme.surface,
         applyThemeToAll: true,
       ),
-      textTheme: createTextTheme(colorScheme.onSurface),
+      appBarTheme: _appBarTheme(colorScheme),
+      bannerTheme: _materialBannerThemeData(colorScheme),
+      cardColor: colorScheme.surfaceContainer,
+      cardTheme: _cardTheme(colorScheme),
+      listTileTheme: _listTileThemeData(colorScheme),
+      badgeTheme: _badgeTheme(colorScheme),
+      expansionTileTheme: _expansionTileThemeData(colorScheme),
+      progressIndicatorTheme: _progressIndicatorThemeData(colorScheme),
+      snackBarTheme: _snackBarThemeData(colorScheme),
+      bottomAppBarTheme: _bottomAppBarTheme(colorScheme),
+      bottomNavigationBarTheme: _bottomNavigationTheme(colorScheme),
+      navigationBarTheme: _navigationBarTheme(colorScheme),
+      drawerTheme: _drawerTheme(colorScheme),
+      navigationDrawerTheme: _navigationDrawerTheme(colorScheme),
+      tabBarTheme: _tabBarTheme(colorScheme),
+      navigationRailTheme: _navigationRailThemeData(colorScheme),
+      menuTheme: _menuThemeData(colorScheme),
+      menuBarTheme: _menuBarThemeData(colorScheme),
+      menuButtonTheme: _menuButtonThemeData,
+      sliderTheme: _sliderThemeData(colorScheme),
+      switchTheme: _switchThemeData(colorScheme),
+      checkboxTheme: _checkboxThemeData(colorScheme),
+      segmentedButtonTheme: _segmentedButtonThemeData(colorScheme),
+      toggleButtonsTheme: _toggleButtonsThemeData(colorScheme),
+      outlinedButtonTheme: _outlinedButtonThemeData(colorScheme),
+      elevatedButtonTheme: _elevatedButtonThemeData(colorScheme),
+      filledButtonTheme: _filledButtonThemeData,
+      textButtonTheme: _textButtonThemeData,
+      floatingActionButtonTheme: _floatingActionButtonThemeData(colorScheme),
+      popupMenuTheme: _popupMenuThemeData(colorScheme),
+      dropdownMenuTheme: _dropdownMenuThemeData(colorScheme),
+      inputDecorationTheme: _inputDecorationTheme(colorScheme),
+      actionIconTheme: ActionIconThemeData(
+        backButtonIconBuilder: (_) =>
+            const Icon(Icons.arrow_back_ios_new_rounded),
+        closeButtonIconBuilder: (_) => const Icon(Icons.close_rounded),
+        drawerButtonIconBuilder: (_) => const Icon(Icons.menu_rounded),
+        endDrawerButtonIconBuilder: (_) => const Icon(Icons.menu_rounded),
+      ),
+      searchBarTheme: _searchBarThemeData(colorScheme),
+      searchViewTheme: _searchViewThemeData(colorScheme),
+      brightness: colorScheme.brightness,
+      dialogBackgroundColor: colorScheme.surfaceContainer,
+      dividerColor: colorScheme.outlineVariant,
+      bottomSheetTheme: _bottomSheetThemeData(colorScheme),
+      package: 'aria',
+      
+      
+      
     );
