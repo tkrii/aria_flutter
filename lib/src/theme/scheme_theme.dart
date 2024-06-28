@@ -10,6 +10,9 @@ part '../widgets/components/list_tile.dart';
 part '../widgets/components/progress.dart';
 part '../widgets/components/toast.dart';
 part '../widgets/containers/card.dart';
+part '../widgets/containers/date_picker.dart';
+part '../widgets/containers/dialog.dart';
+part '../widgets/containers/time_picker.dart';
 part '../widgets/forms/badge.dart';
 part '../widgets/forms/button_groups.dart';
 part '../widgets/forms/buttons.dart';
@@ -25,10 +28,14 @@ part '../widgets/layout/menu.dart';
 part '../widgets/layout/tab_navigation.dart';
 
 ThemeData createAriaTheme(ColorScheme colorScheme) => ThemeData(
+      package: 'aria',
       colorScheme: colorScheme,
       useMaterial3: true,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
+      brightness: colorScheme.brightness,
       scaffoldBackgroundColor: colorScheme.surface,
+      dividerColor: colorScheme.outlineVariant,
+      visualDensity: VisualDensity.adaptivePlatformDensity,
+      dialogBackgroundColor: colorScheme.surfaceContainer,
       applyElevationOverlayColor: colorScheme.isDark,
       textTheme: createTextTheme(colorScheme.onSurface),
       disabledColor: colorScheme.disabled,
@@ -80,12 +87,9 @@ ThemeData createAriaTheme(ColorScheme colorScheme) => ThemeData(
       ),
       searchBarTheme: _searchBarThemeData(colorScheme),
       searchViewTheme: _searchViewThemeData(colorScheme),
-      brightness: colorScheme.brightness,
-      dialogBackgroundColor: colorScheme.surfaceContainer,
-      dividerColor: colorScheme.outlineVariant,
       bottomSheetTheme: _bottomSheetThemeData(colorScheme),
-      package: 'aria',
-      
-      
+      dialogTheme: _dialogTheme(colorScheme),
+      datePickerTheme: _datePickerThemeData(colorScheme),
+      timePickerTheme: _timePickerThemeData(colorScheme),
       
     );

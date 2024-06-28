@@ -1,5 +1,4 @@
 import 'package:aria/aria.dart';
-import 'package:aria/src/colors/neutral.dart';
 import 'package:aria/src/theme/dark_theme.dart';
 import 'package:aria/src/theme/light_theme.dart';
 import 'package:flutter/material.dart';
@@ -14,14 +13,21 @@ class AriaTheme {
   final Color primary;
   final Color? secondary;
   final Color? tertiary;
+  final int? neutral;
 
   const AriaTheme({
     this.primary = const Color(0xff3584e4),
     this.secondary,
     this.tertiary,
+    this.neutral = 0xff2e3033,
   });
 
-  DynamicScheme _dynamicScheme(bool isDark, double contrastValue) => DynamicScheme(
+  DynamicScheme _dynamicScheme(bool isDark, double contrastValue) {
+    TonalPalette neutralPalette = TonalPalette.of(
+      Hct.fromInt(neutral!).hue,
+      Hct.fromInt(neutral!).chroma,
+    );
+    return DynamicScheme(
         contrastLevel: contrastValue,
         isDark: isDark,
         sourceColorArgb: primary.value,
@@ -37,7 +43,7 @@ class AriaTheme {
               )
             : TonalPalette.of(
                 Hct.fromInt(primary.value).hue,
-                (Hct.fromInt(primary.value).chroma / 3.0) + 4.0,
+              (Hct.fromInt(primary.value).chroma / 2.0) 
               ),
         tertiaryPalette: tertiary != null
             ? TonalPalette.of(
@@ -51,13 +57,13 @@ class AriaTheme {
                   ).complement,
                 ),
               ),
-        neutralPalette: neutral,
+      neutralPalette: neutralPalette,
         neutralVariantPalette: TonalPalette.of(
           Hct.fromInt(primary.value).hue,
           (Hct.fromInt(primary.value).chroma / 3.0),
         ),
       );
-
+}
   ThemeData light([double contrastValue = 0.0]) => lightTheme(
         dynamicScheme: _dynamicScheme(false, contrastValue),
       );
