@@ -43,9 +43,17 @@ TextButtonThemeData _textButtonThemeData = TextButtonThemeData(
 FloatingActionButtonThemeData _floatingActionButtonThemeData(
         ColorScheme colorScheme) =>
     FloatingActionButtonThemeData(
-      backgroundColor: colorScheme.tertiary,
-      foregroundColor: colorScheme.onTertiary,
+      backgroundColor: colorScheme.secondaryContainer,
+      foregroundColor: colorScheme.onSecondaryContainer,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
       ),
     );
+
+ButtonStyle _cancelButtonStyle(ColorScheme colorScheme) => TextButton.styleFrom(
+      foregroundColor: colorScheme.warning.color,
+    ).merge(_commonButton);
+ButtonStyle _confirmButtonStyle(ColorScheme colorScheme) =>
+    TextButton.styleFrom(
+      foregroundColor: colorScheme.success.color,
+    ).merge(_commonButton);

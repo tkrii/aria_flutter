@@ -9,7 +9,8 @@ SliderThemeData _sliderThemeData(
       colorScheme.secondary,
       25,
     ),
-    trackHeight: 2,
+    trackHeight: 3,
+    
     thumbColor: Colors.white,
     disabledThumbColor: colorScheme.inverseSurface.mix(
       colorScheme.surface,

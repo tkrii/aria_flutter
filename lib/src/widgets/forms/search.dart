@@ -8,19 +8,22 @@ SearchBarThemeData _searchBarThemeData(ColorScheme colorScheme) =>
       backgroundColor: WidgetStateProperty.resolveWith(
         (state) => state.contains(WidgetState.disabled)
             ? colorScheme.disabled
-            : colorScheme.surfaceContainerLowest,
+            : colorScheme.surfaceContainerLow,
       ),
       shape: WidgetStatePropertyAll(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(26),
+            
         ),
+        
       ),
     );
 
 SearchViewThemeData _searchViewThemeData(ColorScheme colorScheme) =>
     SearchViewThemeData(
+      elevation: 6,
       dividerColor: colorScheme.outlineVariant,
-      backgroundColor: colorScheme.surface,
+      backgroundColor: colorScheme.surfaceContainerHigh,
       shape: RoundedRectangleBorder(
         side: BorderSide(
           color: colorScheme.outline,
