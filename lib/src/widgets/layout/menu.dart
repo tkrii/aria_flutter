@@ -13,7 +13,7 @@ MenuThemeData _menuThemeData(ColorScheme colorScheme) => MenuThemeData(
         elevation: const WidgetStatePropertyAll(4),
         shape: WidgetStatePropertyAll(
           RoundedRectangleBorder(
-            side: BorderSide(color: colorScheme.outline),
+            side: BorderSide(color: colorScheme.outlineVariant),
             borderRadius: BorderRadius.circular(16),
           ),
         ),

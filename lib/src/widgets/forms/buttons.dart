@@ -43,8 +43,17 @@ TextButtonThemeData _textButtonThemeData = TextButtonThemeData(
 FloatingActionButtonThemeData _floatingActionButtonThemeData(
         ColorScheme colorScheme) =>
     FloatingActionButtonThemeData(
-      backgroundColor: colorScheme.secondaryContainer,
-      foregroundColor: colorScheme.onSecondaryContainer,
+      disabledElevation: 0,
+      backgroundColor: WidgetStateColor.resolveWith(
+        (state) => state.contains(WidgetState.disabled)
+            ? colorScheme.secondaryContainer.mix(colorScheme.disabled)
+            : colorScheme.secondaryContainer,
+      ),
+      foregroundColor: WidgetStateColor.resolveWith(
+        (state) => state.contains(WidgetState.disabled)
+            ? colorScheme.onSecondaryContainer.mix(colorScheme.disabled)
+            : colorScheme.onSecondaryContainer,
+      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
       ),

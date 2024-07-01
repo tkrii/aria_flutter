@@ -14,4 +14,5 @@ PopupMenuThemeData _popupMenuThemeData(ColorScheme colorScheme) =>
 DropdownMenuThemeData _dropdownMenuThemeData(ColorScheme colorScheme) =>
     DropdownMenuThemeData(
       menuStyle: _menuStyle(colorScheme),
+      inputDecorationTheme: _inputDecorationTheme(colorScheme),
     );

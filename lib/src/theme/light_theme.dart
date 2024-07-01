@@ -1,4 +1,4 @@
-import 'package:aria/src/theme/scheme_theme.dart';
+import 'package:aria/aria.dart';
 import 'package:flutter/material.dart';
 import 'package:material_color_utilities/scheme/dynamic_scheme.dart';
 
@@ -114,5 +114,8 @@ ThemeData lightTheme({
       dynamicScheme.neutralVariantPalette.get(60),
     ),
   );
-  return createAriaTheme(colorScheme);
+  return createAriaTheme(
+    colorScheme,
+    createTextTheme(colorScheme.onSurface),
+  );
 }

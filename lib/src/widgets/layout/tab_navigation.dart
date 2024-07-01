@@ -17,7 +17,7 @@ NavigationRailThemeData _navigationRailThemeData(ColorScheme colorScheme) {
     indicatorColor: colorScheme.surfaceContainerHighest,
     indicatorShape: RoundedRectangleBorder(
       side: BorderSide(
-        color: colorScheme.outline,
+        color: colorScheme.outlineVariant,
       ),
       borderRadius: BorderRadius.circular(12),
     ),

@@ -1,6 +1,6 @@
+import 'dart:math' as math;
+
 import 'package:aria/aria.dart';
-import 'package:aria/src/theme/dark_theme.dart';
-import 'package:aria/src/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:material_color_utilities/dislike/dislike_analyzer.dart';
 import 'package:material_color_utilities/hct/hct.dart';
@@ -13,20 +13,22 @@ class AriaTheme {
   final Color primary;
   final Color? secondary;
   final Color? tertiary;
-  final int? neutral;
+  // final int? neutral;
 
   const AriaTheme({
     this.primary = const Color(0xff3584e4),
     this.secondary,
     this.tertiary,
-    this.neutral = 0xff2e3033,
+    // this.neutral = 0xff2e3033,
   });
 
   DynamicScheme _dynamicScheme(bool isDark, double contrastValue) {
+    /*
     TonalPalette neutralPalette = TonalPalette.of(
-      Hct.fromInt(neutral!).hue,
-      Hct.fromInt(neutral!).chroma,
+      Hct.fromInt(primary.value).hue,
+      Hct.fromInt(primary.value).chroma,
     );
+    */
     return DynamicScheme(
         contrastLevel: contrastValue,
         isDark: isDark,
@@ -38,8 +40,9 @@ class AriaTheme {
         ),
         secondaryPalette: secondary != null
             ? TonalPalette.of(
-                Hct.fromInt(secondary!.value).hue,
-                Hct.fromInt(secondary!.value).chroma,
+              Hct.fromInt(primary.value).hue,
+              math.max(Hct.fromInt(primary.value).chroma - 32.0,
+                  Hct.fromInt(primary.value).chroma * 0.5),
               )
             : TonalPalette.of(
                 Hct.fromInt(primary.value).hue,
@@ -57,11 +60,14 @@ class AriaTheme {
                   ).complement,
                 ),
               ),
-      neutralPalette: neutralPalette,
+      neutralPalette: TonalPalette.of(
+        Hct.fromInt(primary.value).hue,
+        0,
+      ),
         neutralVariantPalette: TonalPalette.of(
-          Hct.fromInt(primary.value).hue,
-          (Hct.fromInt(primary.value).chroma / 3.0),
-        ),
+        Hct.fromInt(primary.value).hue,
+        (Hct.fromInt(primary.value).chroma / 8.0) + 4.0,
+      ),
       );
 }
   ThemeData light([double contrastValue = 0.0]) => lightTheme(

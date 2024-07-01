@@ -27,7 +27,11 @@ part '../widgets/layout/drawer_navigation.dart';
 part '../widgets/layout/menu.dart';
 part '../widgets/layout/tab_navigation.dart';
 
-ThemeData createAriaTheme(ColorScheme colorScheme) => ThemeData(
+ThemeData createAriaTheme(
+  ColorScheme colorScheme,
+  TextTheme textTheme,
+) =>
+    ThemeData(
       package: 'aria',
       colorScheme: colorScheme,
       useMaterial3: true,
@@ -37,7 +41,8 @@ ThemeData createAriaTheme(ColorScheme colorScheme) => ThemeData(
       visualDensity: VisualDensity.adaptivePlatformDensity,
       dialogBackgroundColor: colorScheme.surfaceContainer,
       applyElevationOverlayColor: colorScheme.isDark,
-      textTheme: createTextTheme(colorScheme.onSurface),
+      textTheme: textTheme,
+      canvasColor: colorScheme.surfaceContainerHighest,
       disabledColor: colorScheme.disabled,
       cupertinoOverrideTheme: CupertinoThemeData(
         primaryColor: colorScheme.primary,
