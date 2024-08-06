@@ -8,21 +8,23 @@ extension AriaColorSchemeExtension on ColorScheme {
   /// Whether the brightness is light.
   bool get isLight => brightness.isLight;
 
-  /// AccentColor based on *Libadwaita*
-  ColorFamily get accent => ExtendedColor(value: const Color(0xff3584e4)).from(brightness);
+  /// AccentColor based on *Arna*
+  ColorFamily get accent =>
+      ExtendedColor(value: const Color(0xFF0791E7)).from(brightness);
 
-  /// Destructive based on *Libadwaita*
-  ColorFamily get destructive => ExtendedColor(value: const Color(0xffe01b24)).from(brightness);
+  /// Destructive based on *Arna*
+  ColorFamily get destructive =>
+      ExtendedColor(value: const Color(0xFFF7072F)).from(brightness);
 
-  /// Warning based on *Libadwaita*
+  /// Warning based on *Arna*
   ColorFamily get success =>
-      ExtendedColor(value: const Color(0xff2ec27e)).from(brightness);
+      ExtendedColor(value: const Color(0xFF26A598)).from(brightness);
 
-  /// Success based on *Libadwaita*
+  /// Success based on *Arna*
   ColorFamily get warning =>
-      ExtendedColor(value: const Color(0xffe5a50a)).from(brightness);
+      ExtendedColor(value: const Color(0xFFF9A72D)).from(brightness);
 
   Color get onSurfaceSecondary => onSurface.scale(alpha: -0.3);
 
-  Color get disabled => outline.scale(alpha: -0.3);
+  Color get disabled => outlineVariant.scale(alpha: -0.3);
 }

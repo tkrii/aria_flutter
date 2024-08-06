@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/src/root/internacionalization.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 
 import 'en_us.dart';
 import 'es_mx.dart';
@@ -9,6 +10,25 @@ class I18n implements Translations {
         'es_mx': esMX,
         'en_us': enUS,
       };
+
+  static String add = 'add'.tr;
+  static String about = 'about'.tr;
+  static String theme = 'theme'.tr;
+  static String helloWorld = 'hello_world'.tr;
+  static String buttonPushed = 'button_pushed'.tr;
+  static String colorsView = 'colors_view'.tr;
+  static String widgets = 'widgets'.tr;
+  static String typography = 'typography'.tr;
+  static String buttons = 'buttons'.tr;
+  static String button = 'button'.tr;
+  static String checkBox = 'checkbox'.tr;
+  static String first = 'first'.tr;
+  static String second = 'second'.tr;
+  static String third = 'third'.tr;
+  static String radio = 'radio'.tr;
+  static String forms = 'forms'.tr;
+  static String expansible = 'expansible'.tr;
+  static String select = 'select'.tr;
 }
 
 class LocaleKeys {
@@ -16,18 +36,14 @@ class LocaleKeys {
   static const String appName = 'appName';
   static const String version = 'version';
   static const String argo = 'argo';
-  static const String about = 'about';
   static const String settings = 'settings';
   static const String hello = 'hello';
   static const String add = 'add';
   static const String search = 'search';
-  static const String widgets = 'widgets';
-  static const String typography = 'typography';
   static const String tabs = 'tabs';
   static const String tab = 'tab';
   static const String closedTab = 'closedTab';
   static const String buttonPushed = 'buttonPushed';
-  static const String theme = 'theme';
   static const String system = 'system';
   static const String dark = 'dark';
   static const String light = 'light';
@@ -36,16 +52,10 @@ class LocaleKeys {
   static const String accent = 'accent';
   static const String lorem = 'lorem';
   static const String bannerTitle = 'bannerTitle';
-  static const String buttons = 'buttons';
-  static const String first = 'first';
-  static const String second = 'second';
-  static const String third = 'third';
   static const String selected = 'selected';
   static const String linkedButtons = 'linkedButtons';
   static const String segmentedControl = 'segmentedControl';
-  static const String checkBox = 'checkBox';
   static const String subtitle = 'subtitle';
-  static const String radio = 'radio';
   static const String switchText = 'switchText';
   static const String listTile = 'listTile';
   static const String title = 'title';

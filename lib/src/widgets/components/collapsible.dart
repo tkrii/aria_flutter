@@ -17,7 +17,7 @@ ExpansionTileThemeData _expansionTileThemeData(
           colorScheme.surfaceContainer.mix(colorScheme.surfaceContainerHigh),
       collapsedBackgroundColor: Colors.transparent,
       collapsedIconColor: colorScheme.onSurfaceSecondary,
-      iconColor: colorScheme.primary,
+      iconColor: colorScheme.secondary,
       collapsedTextColor: colorScheme.onSurface,
       textColor: colorScheme.secondary,
     );

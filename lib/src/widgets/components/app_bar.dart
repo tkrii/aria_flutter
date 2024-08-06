@@ -15,14 +15,12 @@ AppBarTheme _appBarTheme(ColorScheme colorScheme) => AppBarTheme(
               statusBarIconBrightness: Brightness.dark,
               statusBarColor: Colors.transparent,
               systemNavigationBarColor: colorScheme.surfaceContainerHigh,
-              systemNavigationBarDividerColor: colorScheme.outline,
               systemNavigationBarIconBrightness: colorScheme.brightness.inverse,
             )
           : SystemUiOverlayStyle.dark.copyWith(
               statusBarIconBrightness: Brightness.light,
               statusBarColor: Colors.transparent,
               systemNavigationBarColor: colorScheme.surfaceContainerHigh,
-              systemNavigationBarDividerColor: colorScheme.outline,
               systemNavigationBarIconBrightness: colorScheme.brightness.inverse,
             ),
       titleTextStyle: createTextTheme(colorScheme.onSurface).titleLarge,

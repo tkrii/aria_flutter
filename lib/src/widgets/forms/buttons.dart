@@ -15,7 +15,7 @@ OutlinedButtonThemeData _outlinedButtonThemeData(ColorScheme colorScheme) =>
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
             side: BorderSide(
-              color: colorScheme.outlineVariant,
+              color: colorScheme.primary,
             ),
           ),
         ),

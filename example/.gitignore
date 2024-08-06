@@ -5,9 +5,13 @@
 *.swp
 .DS_Store
 .atom/
+.idea/
+.vscode/
+.dart_tool/
 .buildlog/
 .history
 .svn/
+build/
 migrate_working_dir/
 
 # IntelliJ related

@@ -67,8 +67,9 @@ ThemeData darkTheme({
     surfaceDim: Color(
       dynamicScheme.neutralPalette.get(6),
     ),
+    // Arna background color
     surface: Color(
-      dynamicScheme.neutralPalette.get(14),
+      dynamicScheme.neutralPalette.get(12),
     ),
     surfaceBright: Color(
       dynamicScheme.neutralPalette.get(0),
@@ -76,42 +77,49 @@ ThemeData darkTheme({
     surfaceTint: Color(
       dynamicScheme.neutralPalette.get(0),
     ),
+    // Arna reverse background color
     inverseSurface: Color(
-      dynamicScheme.neutralPalette.get(90),
+      dynamicScheme.neutralPalette.get(95),
     ),
+    // Arna primary color
     onSurface: Color(
-      dynamicScheme.neutralPalette.get(90),
+      dynamicScheme.neutralPalette.get(95),
     ),
+    // Arna reverse primary color
     onInverseSurface: Color(
-      dynamicScheme.neutralPalette.get(20),
-    ),
-    // View color
-    surfaceContainerLowest: Color(
       dynamicScheme.neutralPalette.get(12),
     ),
-    // Header color
+    // Arna button/field color
+    surfaceContainerLowest: Color(
+      dynamicScheme.neutralPalette.get(22),
+    ),
+    // Arna header color
     surfaceContainerLow: Color(
+      dynamicScheme.neutralPalette.get(14),
+    ),
+    // Arna card color
+    surfaceContainer: Color(
       dynamicScheme.neutralPalette.get(18),
     ),
-    surfaceContainer: Color(
-      dynamicScheme.neutralPalette.get(20),
-    ),
-    // Secondary sidebar
+    // (Container + Highest) / 2
     surfaceContainerHigh: Color(
-      dynamicScheme.neutralPalette.get(16),
+      dynamicScheme.neutralPalette.get(15),
     ),
-    // Sidebar
+    // Arna sidebar color
     surfaceContainerHighest: Color(
-      dynamicScheme.neutralPalette.get(21),
+      dynamicScheme.neutralPalette.get(17),
     ),
+    // Arna primary color
     onSurfaceVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(98),
+      dynamicScheme.neutralVariantPalette.get(95),
     ),
+    // Arna border color
     outline: Color(
-      dynamicScheme.neutralPalette.get(40),
+      dynamicScheme.neutralPalette.get(2),
     ),
+    // Arna secondary text color
     outlineVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(50),
+      dynamicScheme.neutralVariantPalette.get(57),
     ),
   );
   return createAriaTheme(

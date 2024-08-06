@@ -7,7 +7,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         init: BaseController(),
         tag: 'main',
         builder: (controller) => GetMaterialApp(
-          title: 'Argo Theme Example',
+          title: 'Aria gallery example',
 
           /// translations
           translations: I18n(),
@@ -39,13 +41,9 @@ class MyApp extends StatelessWidget {
           getPages: AppPages.pages,
 
           /// customization
-          themeMode: controller.theme.value,
-          theme: AriaTheme(
-            primary: controller.color.value.color,
-          ).light(),
-          darkTheme:AriaTheme(
-            primary: controller.color.value.color,
-          ).dark(),
+          themeMode: ThemeMode.system,
+          theme: controller.color.value.color.toAriaTheme.light(),
+          darkTheme: controller.color.value.color.toAriaTheme.dark(),
         ),
       );
 }

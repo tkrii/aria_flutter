@@ -6,27 +6,55 @@ extension AriaColorExtension on Color {
   int get _brightnessValue =>
       (((red * 299) + (green * 587) + (blue * 114)) / 1000).round();
 
-/// Convert color to [AriaTheme]
+  /// Convert [Color] to [AriaTheme]
   AriaTheme get toAriaTheme => AriaTheme(primary: this);
 
-  /// [Brightness] of this color.
-  Brightness get brightness =>
+  /// [Brightness] of this [Color].
+  Brightness get estimateBrightness =>
       (_brightnessValue) >= (Colors.white._brightnessValue / 2)
           ? Brightness.light
           : Brightness.dark;
 
   /// [Color] of text on this color.
-  Color get foreground {
+  Color get foregroundColor {
     TonalPalette tonal = TonalPalette.fromHct(
       Hct.fromInt(value),
     );
     return Color(
-      brightness == Brightness.light ? tonal.get(20) : tonal.get(100),
+      estimateBrightness == Brightness.light ? tonal.get(12) : tonal.get(95),
     );
   }
 
+  /// Applies an overlay color to a [backgroundColor].
+  Color get applyOverlay {
+    return Color.alphaBlend(foregroundColor.withOpacity(0.1), this);
+  }
+
+  /// The color to use when drawn outside of [color].
+  Color get outerColor {
+    final double colorLuminance = computeLuminance();
+    final Color fgColor = colorLuminance < 0.2 || colorLuminance > 0.8
+        ? Color.alphaBlend(foregroundColor.withOpacity(0.49), this)
+        : this;
+    return Color.alphaBlend(fgColor, this);
+  }
+
+  /// Computes the color that matches with [color] and [brightness].
+  Color matchingColor(final Brightness brightness) {
+    final double colorLuminance = computeLuminance();
+    final Color fgColor = colorLuminance < 0.2 && brightness == Brightness.dark
+        ? Color.alphaBlend(foregroundColor.withOpacity(0.49), this)
+        : colorLuminance > 0.8 && brightness == Brightness.light
+            ? Color.alphaBlend(
+                foregroundColor.withOpacity(0.28),
+                this,
+              )
+            : this;
+    return Color.alphaBlend(fgColor, this);
+  }
+
   Color applyHighContrast(bool highContrast) => highContrast
-      ? (brightness == Brightness.dark ? Colors.black : Colors.white)
+      ? (estimateBrightness == Brightness.dark ? Colors.black : Colors.white)
       : this;
 
   /// Combine this [Color] with received [Color]

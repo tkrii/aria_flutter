@@ -1,5 +1,7 @@
 import 'dart:ui';
-
+///
+/// Colors from [Elementary brand](https://elementary.io/en/brand)
+///
 enum ElementaryColors {
   strawberry(Color(0xffc6262e)),
   orange(Color(0xfff37329)),
@@ -11,8 +13,7 @@ enum ElementaryColors {
   bubblegum(Color(0xffde3e80)),
   cocoa(Color(0xff715344)),
   silver(Color(0xffabacae)),
-  slate(Color(0xff485a6c)),
-  black(Color(0xff323232));
+  slate(Color(0xff485a6c));
 
   final Color color;
   const ElementaryColors(this.color);

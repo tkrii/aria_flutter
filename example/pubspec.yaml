@@ -1,10 +1,11 @@
 name: example
-description: "Example app for ArgoTheme"
+description: "App gallery for aria_flutter theme"
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.4.3 <4.0.0'
 
 dependencies:
   aria:
@@ -14,12 +15,12 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   get: ^4.6.6
-  phosphor_flutter: ^2.0.1
+  phosphor_flutter: ^2.1.0
 
 dev_dependencies:
+  flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
 
 flutter:
   uses-material-design: true

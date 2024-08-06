@@ -1,4 +1,4 @@
-package com.tokari.argo.example
+package com.tokari.aria
 
 import io.flutter.embedding.android.FlutterActivity
 

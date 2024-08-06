@@ -1,6 +1,6 @@
-# example
+# aria
 
-Example app for ArgoTheme
+App gallery for aria_flutter theme
 
 ## Getting Started
 

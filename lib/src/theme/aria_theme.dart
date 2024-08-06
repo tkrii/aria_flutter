@@ -13,63 +13,54 @@ class AriaTheme {
   final Color primary;
   final Color? secondary;
   final Color? tertiary;
-  // final int? neutral;
 
   const AriaTheme({
-    this.primary = const Color(0xff3584e4),
+    this.primary = const Color(0xFF0791E7),
     this.secondary,
     this.tertiary,
-    // this.neutral = 0xff2e3033,
   });
 
-  DynamicScheme _dynamicScheme(bool isDark, double contrastValue) {
-    /*
-    TonalPalette neutralPalette = TonalPalette.of(
-      Hct.fromInt(primary.value).hue,
-      Hct.fromInt(primary.value).chroma,
-    );
-    */
+  DynamicScheme _dynamicScheme(
+    bool isDark,
+    double contrastValue,
+  ) {
+    TonalPalette fromColor(Color color) => TonalPalette.fromHct(
+          Hct.fromInt(color.value),
+        );
+
     return DynamicScheme(
-        contrastLevel: contrastValue,
-        isDark: isDark,
-        sourceColorArgb: primary.value,
-        variant: Variant.content,
-        primaryPalette: TonalPalette.of(
-          Hct.fromInt(primary.value).hue,
-          Hct.fromInt(primary.value).chroma,
-        ),
-        secondaryPalette: secondary != null
-            ? TonalPalette.of(
+      contrastLevel: contrastValue,
+      isDark: isDark,
+      sourceColorArgb: primary.value,
+      variant: Variant.expressive,
+      primaryPalette: fromColor(primary),
+      secondaryPalette: secondary != null
+          ? fromColor(secondary!)
+          : TonalPalette.of(
               Hct.fromInt(primary.value).hue,
               math.max(Hct.fromInt(primary.value).chroma - 32.0,
                   Hct.fromInt(primary.value).chroma * 0.5),
-              )
-            : TonalPalette.of(
-                Hct.fromInt(primary.value).hue,
-              (Hct.fromInt(primary.value).chroma / 2.0) 
+            ),
+      tertiaryPalette: tertiary != null
+          ? fromColor(tertiary!)
+          : TonalPalette.fromHct(
+              DislikeAnalyzer.fixIfDisliked(
+                TemperatureCache(
+                  Hct.fromInt(primary.value),
+                ).complement,
               ),
-        tertiaryPalette: tertiary != null
-            ? TonalPalette.of(
-                Hct.fromInt(tertiary!.value).hue,
-                Hct.fromInt(tertiary!.value).chroma,
-              )
-            : TonalPalette.fromHct(
-                DislikeAnalyzer.fixIfDisliked(
-                  TemperatureCache(
-                    Hct.fromInt(primary.value),
-                  ).complement,
-                ),
-              ),
+            ),
       neutralPalette: TonalPalette.of(
         Hct.fromInt(primary.value).hue,
-        0,
+        2,
       ),
-        neutralVariantPalette: TonalPalette.of(
+      neutralVariantPalette: TonalPalette.of(
         Hct.fromInt(primary.value).hue,
-        (Hct.fromInt(primary.value).chroma / 8.0) + 4.0,
+        (Hct.fromInt(primary.value).chroma / 8.0),
       ),
-      );
-}
+    );
+  }
+
   ThemeData light([double contrastValue = 0.0]) => lightTheme(
         dynamicScheme: _dynamicScheme(false, contrastValue),
       );
