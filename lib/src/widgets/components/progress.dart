@@ -2,9 +2,9 @@ part of '../../theme/scheme_theme.dart';
 
 ProgressIndicatorThemeData _progressIndicatorThemeData(
     ColorScheme colorScheme) {
-  Color background = colorScheme.surface.mix(
+  Color background = colorScheme.surfaceContainer.mix(
     colorScheme.secondary,
-    25,
+    20,
   );
   return ProgressIndicatorThemeData(
     color: colorScheme.primary,

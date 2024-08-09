@@ -1,14 +1,10 @@
 part of '../../theme/scheme_theme.dart';
 
 AppBarTheme _appBarTheme(ColorScheme colorScheme) => AppBarTheme(
-      shape: Border(
-        bottom: BorderSide(
-          color: colorScheme.outline,
-        ),
-      ),
       elevation: 0,
       foregroundColor: colorScheme.onSurface,
-      backgroundColor: colorScheme.surfaceContainerLow,
+      scrolledUnderElevation: 0,
+      backgroundColor: colorScheme.surface,
       centerTitle: true,
       systemOverlayStyle: colorScheme.isLight
           ? SystemUiOverlayStyle.light.copyWith(

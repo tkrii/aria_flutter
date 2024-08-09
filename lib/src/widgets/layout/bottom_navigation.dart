@@ -8,7 +8,7 @@ BottomAppBarTheme _bottomAppBarTheme(ColorScheme colorScheme) =>
 BottomNavigationBarThemeData _bottomNavigationTheme(ColorScheme colorScheme) {
   return BottomNavigationBarThemeData(
     elevation: 6,
-    backgroundColor: colorScheme.surfaceContainerHigh,
+    backgroundColor: colorScheme.surface,
     selectedItemColor: colorScheme.primary,
     unselectedItemColor: colorScheme.onSurfaceVariant,
   );
@@ -17,11 +17,11 @@ BottomNavigationBarThemeData _bottomNavigationTheme(ColorScheme colorScheme) {
 NavigationBarThemeData _navigationBarTheme(ColorScheme colorScheme) {
   return NavigationBarThemeData(
     elevation: 6,
-    backgroundColor: colorScheme.surfaceContainerHigh,
-    indicatorColor: colorScheme.surfaceContainerHighest,
+    backgroundColor: colorScheme.surface,
+    indicatorColor: colorScheme.surfaceContainerLowest,
     indicatorShape: RoundedRectangleBorder(
       side: BorderSide(
-        color: colorScheme.outlineVariant,
+        color: colorScheme.outline,
       ),
       borderRadius: BorderRadius.circular(12),
     ),
@@ -32,7 +32,7 @@ NavigationBarThemeData _navigationBarTheme(ColorScheme colorScheme) {
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
       (state) => state.contains(WidgetState.selected)
-          ? createTextTheme(colorScheme.primary).labelMedium!
+          ? createTextTheme(colorScheme.onSurface).labelMedium!
           : createTextTheme(colorScheme.onSurfaceVariant).labelMedium!,
     ),
   );

@@ -3,8 +3,8 @@ part of '../../theme/scheme_theme.dart';
 MenuStyle _menuStyle(ColorScheme colorScheme) => MenuStyle(
       backgroundColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.selected)
-            ? colorScheme.surfaceContainerHighest
-            : colorScheme.surfaceContainerHigh,
+            ? colorScheme.surfaceContainerHigh
+            : colorScheme.surfaceContainerHighest,
       ),
     );
 
@@ -13,7 +13,7 @@ MenuThemeData _menuThemeData(ColorScheme colorScheme) => MenuThemeData(
         elevation: const WidgetStatePropertyAll(4),
         shape: WidgetStatePropertyAll(
           RoundedRectangleBorder(
-            side: BorderSide(color: colorScheme.outlineVariant),
+            side: BorderSide(color: colorScheme.outline),
             borderRadius: BorderRadius.circular(16),
           ),
         ),

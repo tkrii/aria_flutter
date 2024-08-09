@@ -2,7 +2,7 @@ part of '../../theme/scheme_theme.dart';
 
 ListTileThemeData _listTileThemeData(ColorScheme colorScheme) {
   return ListTileThemeData(
-    selectedTileColor: colorScheme.surfaceContainerHighest,
+    selectedTileColor: colorScheme.surfaceContainer,
     selectedColor: colorScheme.primary,
     iconColor: colorScheme.onSurfaceSecondary,
     titleTextStyle: createTextTheme(colorScheme.onSurface).bodyLarge,

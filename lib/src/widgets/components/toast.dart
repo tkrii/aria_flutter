@@ -7,5 +7,11 @@ SnackBarThemeData _snackBarThemeData(ColorScheme colorScheme) {
     elevation: 6,
     behavior: SnackBarBehavior.floating,
     dismissDirection: DismissDirection.down,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12),
+      side: BorderSide(
+        color: colorScheme.disabled,
+      ),
+    ),
   );
 }

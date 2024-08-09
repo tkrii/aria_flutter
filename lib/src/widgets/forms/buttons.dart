@@ -11,13 +11,19 @@ ButtonStyle _commonButton = ButtonStyle(
 OutlinedButtonThemeData _outlinedButtonThemeData(ColorScheme colorScheme) =>
     OutlinedButtonThemeData(
       style: ButtonStyle(
-        shape: WidgetStatePropertyAll(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-            side: BorderSide(
-              color: colorScheme.primary,
-            ),
-          ),
+        side: WidgetStateProperty.resolveWith(
+          (state) {
+            if (state.contains(WidgetState.disabled)) {
+              return BorderSide(
+                color: colorScheme.disabled.scale(
+                  alpha: -0.5,
+                ),
+              );
+            }
+            return BorderSide(
+              color: colorScheme.primary.outerColor,
+            );
+          },
         ),
       ),
     );
@@ -30,12 +36,38 @@ ElevatedButtonThemeData _elevatedButtonThemeData(ColorScheme colorScheme) =>
               ? colorScheme.disabled.scale(alpha: -0.5)
               : colorScheme.surfaceContainerLowest,
         ),
+        side: WidgetStateProperty.resolveWith(
+          (state) {
+            if (state.contains(WidgetState.disabled)) {
+              return const BorderSide(
+                color: Colors.transparent,
+              );
+            }
+            return BorderSide(
+              color: colorScheme.outline,
+            );
+          },
+        ),
       ).merge(_commonButton),
     );
 
-FilledButtonThemeData _filledButtonThemeData = FilledButtonThemeData(
-  style: const ButtonStyle().merge(_commonButton),
-);
+FilledButtonThemeData _filledButtonThemeData(ColorScheme colorScheme) =>
+    FilledButtonThemeData(
+      style: ButtonStyle(
+        side: WidgetStateProperty.resolveWith(
+          (state) {
+            if (state.contains(WidgetState.disabled)) {
+              return const BorderSide(
+                color: Colors.transparent,
+              );
+            }
+            return BorderSide(
+              color: colorScheme.outline,
+            );
+          },
+        ),
+      ).merge(_commonButton),
+    );
 TextButtonThemeData _textButtonThemeData = TextButtonThemeData(
   style: const ButtonStyle().merge(_commonButton),
 );

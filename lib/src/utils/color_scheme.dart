@@ -24,7 +24,7 @@ extension AriaColorSchemeExtension on ColorScheme {
   ColorFamily get warning =>
       ExtendedColor(value: const Color(0xFFF9A72D)).from(brightness);
 
-  Color get onSurfaceSecondary => onSurface.scale(alpha: -0.3);
+  Color get onSurfaceSecondary => onSurfaceVariant;
 
-  Color get disabled => outlineVariant.scale(alpha: -0.3);
+  Color get disabled => outlineVariant;
 }
