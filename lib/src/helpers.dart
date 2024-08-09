@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 
 import 'package:aria/aria.dart';
-import 'package:aria/src/utils/string_extensions.dart';
 import 'package:flutter/services.dart'
     show Clipboard, ClipboardData, DeviceOrientation, SystemChrome;
 import 'package:flutter/widgets.dart';

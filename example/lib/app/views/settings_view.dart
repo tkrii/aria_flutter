@@ -54,7 +54,7 @@ class SettingsView extends GetView<BaseController> {
                           padding: const EdgeInsets.all(4.0),
                           child: Obx(
                             () => IconButton(
-                              icon: controller.color.value == ec.color
+                              icon: controller.color.value == ec
                                   ? const PhosphorIcon(
                                       PhosphorIconsDuotone.checkCircle)
                                   : const PhosphorIcon(
