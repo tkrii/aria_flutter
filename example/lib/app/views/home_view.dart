@@ -108,10 +108,6 @@ class HomeView extends GetView<BaseController> {
                 labelType: NavigationRailLabelType.selected,
               ),
             ),
-            Visibility(
-              visible: controller.railNavigation.value,
-              child: const VerticalDivider(),
-            ),
             Expanded(
               child:
                   controller.screens[controller.homeIndexNavigation.value].$4,

@@ -14,9 +14,9 @@ ExpansionTileThemeData _expansionTileThemeData(
         borderRadius: BorderRadius.circular(16),
       ),
       backgroundColor:
-          colorScheme.surfaceContainer.mix(colorScheme.surfaceContainerHigh),
+          colorScheme.surfaceContainer.mix(colorScheme.surfaceContainerHighest),
       collapsedBackgroundColor: Colors.transparent,
-      collapsedIconColor: colorScheme.onSurfaceSecondary,
+      collapsedIconColor: colorScheme.onSurface,
       iconColor: colorScheme.secondary,
       collapsedTextColor: colorScheme.onSurface,
       textColor: colorScheme.secondary,

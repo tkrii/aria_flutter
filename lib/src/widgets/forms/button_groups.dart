@@ -5,7 +5,7 @@ SegmentedButtonThemeData _segmentedButtonThemeData(ColorScheme colorScheme) =>
       style: ButtonStyle(
         backgroundColor: WidgetStateColor.resolveWith(
           (state) => state.contains(WidgetState.disabled)
-              ? Colors.transparent
+              ? colorScheme.surfaceContainerLowest
               : state.contains(WidgetState.selected)
                   ? colorScheme.primaryContainer
                   : colorScheme.surfaceContainerLowest,
@@ -15,7 +15,7 @@ SegmentedButtonThemeData _segmentedButtonThemeData(ColorScheme colorScheme) =>
               ? colorScheme.disabled
               : state.contains(WidgetState.selected)
                   ? colorScheme.onPrimaryContainer
-                  : colorScheme.onSurfaceSecondary,
+                  : colorScheme.onSurface,
         ),
       ).merge(_commonButton),
       selectedIcon: const Icon(Icons.check_rounded),

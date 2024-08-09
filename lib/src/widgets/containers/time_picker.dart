@@ -12,10 +12,10 @@ TimePickerThemeData _timePickerThemeData(ColorScheme colorScheme) =>
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
         side: BorderSide(
-          color: colorScheme.isLight ? Colors.transparent : colorScheme.outline,
+          color: colorScheme.outline,
         ),
       ),
-      dialBackgroundColor: colorScheme.surfaceContainerHigh,
+      dialBackgroundColor: colorScheme.surfaceContainerLow,
       hourMinuteColor: WidgetStateColor.resolveWith(
         (state) => !state.contains(WidgetState.selected)
             ? colorScheme.surfaceContainerHigh

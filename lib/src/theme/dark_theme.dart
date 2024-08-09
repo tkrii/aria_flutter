@@ -109,17 +109,17 @@ ThemeData darkTheme({
     surfaceContainerHighest: Color(
       dynamicScheme.neutralPalette.get(17),
     ),
-    // Arna primary color
+    // Arna secondary color
     onSurfaceVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(95),
+      dynamicScheme.neutralPalette.get(57),
     ),
     // Arna border color
     outline: Color(
-      dynamicScheme.neutralPalette.get(2),
+      dynamicScheme.neutralVariantPalette.get(2),
     ),
-    // Arna secondary text color
+    // Arna disabled text color
     outlineVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(57),
+      dynamicScheme.neutralPalette.get(42),
     ),
   );
   return createAriaTheme(

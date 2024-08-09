@@ -109,17 +109,17 @@ ThemeData lightTheme({
     surfaceContainerHighest: Color(
       dynamicScheme.neutralPalette.get(97),
     ),
-    // Arna primary color
+    // Arna secondary color
     onSurfaceVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(12),
+      dynamicScheme.neutralPalette.get(43),
     ),
     // Arna border color
     outline: Color(
-      dynamicScheme.neutralPalette.get(82),
+      dynamicScheme.neutralVariantPalette.get(82),
     ),
-    // Arna secondary text color
+    // Arna disabled text color
     outlineVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(43),
+      dynamicScheme.neutralPalette.get(60),
     ),
   );
   return createAriaTheme(

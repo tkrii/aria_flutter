@@ -5,16 +5,15 @@ SliderThemeData _sliderThemeData(
 ) {
   return SliderThemeData(
     activeTrackColor: colorScheme.primary,
-    inactiveTrackColor: colorScheme.surface.mix(
+    inactiveTrackColor: colorScheme.surfaceContainer.mix(
       colorScheme.secondary,
-      25,
+      20,
     ),
     trackHeight: 3,
-    
-    thumbColor: Colors.white,
+    thumbColor: Colors.white.mix(colorScheme.primary),
     disabledThumbColor: colorScheme.inverseSurface.mix(
       colorScheme.surface,
-      10,
+      70,
     ),
   );
 }

@@ -6,10 +6,10 @@ DialogTheme _dialogTheme(ColorScheme colorScheme) => DialogTheme(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
         side: BorderSide(
-          color: colorScheme.isLight ? Colors.transparent : colorScheme.outline,
+          color: colorScheme.outline,
         ),
       ),
-      iconColor: colorScheme.onSurfaceVariant,
+      iconColor: colorScheme.primaryContainer,
       insetPadding: const EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 8,

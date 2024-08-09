@@ -8,6 +8,7 @@ part '../widgets/components/banner.dart';
 part '../widgets/components/collapsible.dart';
 part '../widgets/components/list_tile.dart';
 part '../widgets/components/progress.dart';
+part '../widgets/components/scroll_bar.dart';
 part '../widgets/components/toast.dart';
 part '../widgets/containers/card.dart';
 part '../widgets/containers/date_picker.dart';
@@ -37,7 +38,7 @@ ThemeData createAriaTheme(
       useMaterial3: true,
       brightness: colorScheme.brightness,
       scaffoldBackgroundColor: colorScheme.surface,
-      dividerColor: colorScheme.outlineVariant,
+      dividerColor: colorScheme.outline,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       dialogBackgroundColor: colorScheme.surfaceContainer,
       applyElevationOverlayColor: colorScheme.isDark,
@@ -47,7 +48,7 @@ ThemeData createAriaTheme(
       cupertinoOverrideTheme: CupertinoThemeData(
         primaryColor: colorScheme.primary,
         primaryContrastingColor: colorScheme.tertiary,
-        barBackgroundColor: colorScheme.surfaceContainerHigh,
+        barBackgroundColor: colorScheme.surfaceContainerHighest,
         scaffoldBackgroundColor: colorScheme.surface,
         applyThemeToAll: true,
       ),
@@ -77,7 +78,7 @@ ThemeData createAriaTheme(
       toggleButtonsTheme: _toggleButtonsThemeData(colorScheme),
       outlinedButtonTheme: _outlinedButtonThemeData(colorScheme),
       elevatedButtonTheme: _elevatedButtonThemeData(colorScheme),
-      filledButtonTheme: _filledButtonThemeData,
+      filledButtonTheme: _filledButtonThemeData(colorScheme),
       textButtonTheme: _textButtonThemeData,
       floatingActionButtonTheme: _floatingActionButtonThemeData(colorScheme),
       popupMenuTheme: _popupMenuThemeData(colorScheme),
@@ -90,11 +91,11 @@ ThemeData createAriaTheme(
         drawerButtonIconBuilder: (_) => const Icon(Icons.menu_rounded),
         endDrawerButtonIconBuilder: (_) => const Icon(Icons.menu_rounded),
       ),
+      scrollbarTheme: _scrollbarThemeData(colorScheme),
       searchBarTheme: _searchBarThemeData(colorScheme),
       searchViewTheme: _searchViewThemeData(colorScheme),
       bottomSheetTheme: _bottomSheetThemeData(colorScheme),
       dialogTheme: _dialogTheme(colorScheme),
       datePickerTheme: _datePickerThemeData(colorScheme),
       timePickerTheme: _timePickerThemeData(colorScheme),
-      
     );

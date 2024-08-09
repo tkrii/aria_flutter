@@ -26,7 +26,8 @@ class SettingsView extends GetView<BaseController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(LocaleKeys.theme.tr).paddingSymmetric(vertical: 8, horizontal: 16),
+                Text(LocaleKeys.theme.tr)
+                    .paddingSymmetric(vertical: 8, horizontal: 16),
                 ...ThemeMode.values.map<Widget>(
                   (ThemeMode tm) => Obx(
                     () => RadioListTile<ThemeMode>(
@@ -44,7 +45,8 @@ class SettingsView extends GetView<BaseController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(LocaleKeys.accent.tr).paddingSymmetric(vertical: 8, horizontal: 16),
+                Text(LocaleKeys.accent.tr)
+                    .paddingSymmetric(vertical: 8, horizontal: 16),
                 Wrap(
                   children: ElementaryColors.values
                       .map<Widget>(
@@ -53,12 +55,16 @@ class SettingsView extends GetView<BaseController> {
                           child: Obx(
                             () => IconButton(
                               icon: controller.color.value == ec.color
-                                  ? const PhosphorIcon(PhosphorIconsDuotone.checkCircle)
-                                  : const PhosphorIcon(PhosphorIconsDuotone.circle),
+                                  ? const PhosphorIcon(
+                                      PhosphorIconsDuotone.checkCircle)
+                                  : const PhosphorIcon(
+                                      PhosphorIconsDuotone.circle),
                               onPressed: () => controller.color.value = ec,
                               style: IconButton.styleFrom(
                                 backgroundColor: ec.color,
-                                foregroundColor: controller.color.value == ec ? ec.color.foreground : ec.color,
+                                foregroundColor: controller.color.value == ec
+                                    ? ec.color.foregroundColor
+                                    : ec.color,
                               ),
                             ),
                           ),
@@ -73,7 +79,8 @@ class SettingsView extends GetView<BaseController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(LocaleKeys.options.tr).paddingSymmetric(vertical: 8, horizontal: 16),
+                Text(LocaleKeys.options.tr)
+                    .paddingSymmetric(vertical: 8, horizontal: 16),
                 Obx(
                   () => SwitchListTile(
                     title: const Text('Rail navigation mode'),

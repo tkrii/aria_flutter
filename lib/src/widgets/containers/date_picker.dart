@@ -7,11 +7,11 @@ DatePickerThemeData _datePickerThemeData(ColorScheme colorScheme) =>
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
         side: BorderSide(
-          color: colorScheme.isLight ? Colors.transparent : colorScheme.outline,
+          color: colorScheme.outline,
         ),
       ),
       headerBackgroundColor: colorScheme.surfaceContainerLow,
-      headerForegroundColor: colorScheme.onSurfaceVariant,
+      headerForegroundColor: colorScheme.onSurface,
       cancelButtonStyle: _cancelButtonStyle(colorScheme),
       confirmButtonStyle: _confirmButtonStyle(colorScheme),
     );
