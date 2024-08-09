@@ -5,19 +5,19 @@ TextTheme createTextTheme(Color textColor) {
     displayLarge: _TextStyle(
       fontFamily: 'Inter',
       fontSize: 57,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w300,
       textColor: textColor,
     ),
     displayMedium: _TextStyle(
       fontFamily: 'Inter',
       fontSize: 45,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w300,
       textColor: textColor,
     ),
     displaySmall: _TextStyle(
       fontFamily: 'Inter',
       fontSize: 36,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w300,
       textColor: textColor,
     ),
     headlineLarge: _TextStyle(
@@ -28,7 +28,7 @@ TextTheme createTextTheme(Color textColor) {
     ),
     headlineMedium: _TextStyle(
       fontFamily: 'Inter',
-      fontSize:28,
+      fontSize: 28,
       fontWeight: FontWeight.normal,
       textColor: textColor,
     ),
@@ -103,7 +103,7 @@ class _TextStyle extends TextStyle {
     super.fontWeight,
     required this.textColor,
   }) : super(
-    package: 'aria',
-    color: textColor,
-  );
+          package: 'aria',
+          color: textColor,
+        );
 }
