@@ -81,7 +81,7 @@ ThemeData lightTheme({
     ),
     // Arna reverse background color
     inverseSurface: Color(
-      dynamicScheme.neutralVariantPalette.get(12),
+      dynamicScheme.neutralVariantPalette.get(24),
     ),
     // Arna primary color
     onSurface: Color(
@@ -89,7 +89,7 @@ ThemeData lightTheme({
     ),
     // Arna reverse primary color
     onInverseSurface: Color(
-      dynamicScheme.neutralVariantPalette.get(95),
+      dynamicScheme.neutralVariantPalette.get(85),
     ),
     // Adwaita view
     surfaceContainerLowest: Color(
@@ -118,15 +118,15 @@ ThemeData lightTheme({
     ),
     // Arna secondary color
     onSurfaceVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(43),
+      dynamicScheme.neutralVariantPalette.get(17),
     ),
     // Arna border color
     outline: Color(
       dynamicScheme.neutralVariantPalette.get(12),
-    ).withOpacity(0.45),
+    ).withOpacity(1 / 3),
     outlineVariant: Color(
       dynamicScheme.neutralPalette.get(12),
-    ).withOpacity(0.7),
+    ).withOpacity(2 / 3),
   );
   return createAriaTheme(
     colorScheme,

@@ -4,10 +4,18 @@ SliderThemeData _sliderThemeData(
   ColorScheme colorScheme,
 ) {
   return SliderThemeData(
-    activeTrackColor: colorScheme.inverseSurface,
-    inactiveTrackColor: colorScheme.outline,
+    activeTrackColor: colorScheme.secondary,
+    inactiveTrackColor: Color.lerp(
+      colorScheme.disabled,
+      colorScheme.primaryContainer,
+      3 / 4,
+    ),
     trackHeight: 3,
-    thumbColor: colorScheme.inversePrimary,
-    disabledThumbColor: colorScheme.surfaceContainer,
+    thumbColor: colorScheme.primary.scale(
+      lightness: colorScheme.isLight ? 0.2 : -0.2,
+    ),
+    disabledThumbColor: colorScheme.surfaceBright.scale(
+      lightness: colorScheme.isLight ? -0.2 : 0.2,
+    ),
   );
 }

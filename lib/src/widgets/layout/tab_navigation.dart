@@ -2,9 +2,9 @@ part of '../../theme/scheme_theme.dart';
 
 TabBarTheme _tabBarTheme(ColorScheme colorScheme) {
   return TabBarTheme(
-    indicatorColor: colorScheme.primary,
+    indicatorColor: colorScheme.secondaryContainer,
     dividerColor: colorScheme.outlineVariant,
-    labelColor: colorScheme.onSurface,
+    labelColor: colorScheme.primary,
     unselectedLabelColor: colorScheme.onSurfaceVariant,
     indicatorSize: TabBarIndicatorSize.label,
   );
@@ -14,19 +14,14 @@ NavigationRailThemeData _navigationRailThemeData(ColorScheme colorScheme) {
   return NavigationRailThemeData(
     elevation: 6,
     backgroundColor: colorScheme.surface,
-    indicatorColor: colorScheme.brightness.isLight
-        ? const Color(0xfff6f6f6)
-        : const Color(0xff272727),
+    indicatorColor: colorScheme.secondaryContainer,
     indicatorShape: RoundedRectangleBorder(
-      side: BorderSide(
-        color: colorScheme.outline,
-      ),
       borderRadius: BorderRadius.circular(12),
     ),
-    selectedIconTheme: IconThemeData(color: colorScheme.primary),
+    selectedIconTheme: IconThemeData(color: colorScheme.onSecondaryContainer),
     unselectedIconTheme: IconThemeData(color: colorScheme.onSurfaceVariant),
-    selectedLabelTextStyle: createTextTheme(colorScheme.onSurface).labelMedium,
+    selectedLabelTextStyle: createTextTheme(colorScheme.primary).labelMedium,
     unselectedLabelTextStyle:
-        createTextTheme(colorScheme.onSurfaceVariant).labelMedium,
+        createTextTheme(colorScheme.onSurfaceVariant).labelSmall,
   );
 }

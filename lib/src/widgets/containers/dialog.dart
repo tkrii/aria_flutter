@@ -5,9 +5,11 @@ DialogTheme _dialogTheme(ColorScheme colorScheme) => DialogTheme(
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
-        side: BorderSide(
-          color: colorScheme.outline,
-        ),
+        side: colorScheme.isDark
+            ? BorderSide(
+                color: colorScheme.outline,
+              )
+            : BorderSide.none,
       ),
       iconColor: colorScheme.primaryContainer,
       insetPadding: const EdgeInsets.symmetric(

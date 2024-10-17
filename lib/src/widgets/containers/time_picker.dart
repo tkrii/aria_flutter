@@ -11,9 +11,11 @@ TimePickerThemeData _timePickerThemeData(ColorScheme colorScheme) =>
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
-        side: BorderSide(
-          color: colorScheme.outline,
-        ),
+        side: colorScheme.isDark
+            ? BorderSide(
+                color: colorScheme.outline,
+              )
+            : BorderSide.none,
       ),
       dialBackgroundColor: colorScheme.surfaceContainerHighest,
       hourMinuteColor: WidgetStateColor.resolveWith(

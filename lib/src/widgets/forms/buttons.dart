@@ -44,7 +44,7 @@ ElevatedButtonThemeData _elevatedButtonThemeData(ColorScheme colorScheme) =>
               );
             }
             return BorderSide(
-              color: colorScheme.surfaceContainerLow,
+              color: colorScheme.outline,
             );
           },
         ),
@@ -79,17 +79,17 @@ FloatingActionButtonThemeData _floatingActionButtonThemeData(
       disabledElevation: 0,
       backgroundColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.disabled)
-            ? colorScheme.secondaryContainer.scale(alpha: -0.5)
-            : colorScheme.secondaryContainer,
+            ? colorScheme.secondary.scale(alpha: -0.5)
+            : colorScheme.secondary,
       ),
       foregroundColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.disabled)
             ? Color.lerp(
-                colorScheme.onSecondaryContainer,
+                colorScheme.onSecondary,
                 colorScheme.disabled,
                 0.5,
               )!
-            : colorScheme.onSecondaryContainer,
+            : colorScheme.onSecondary,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),

@@ -6,12 +6,14 @@ DatePickerThemeData _datePickerThemeData(ColorScheme colorScheme) =>
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
-        side: BorderSide(
-          color: colorScheme.outline,
-        ),
+        side: colorScheme.isDark
+            ? BorderSide(
+                color: colorScheme.outline,
+              )
+            : BorderSide.none,
       ),
       headerBackgroundColor: colorScheme.surfaceContainer,
-      headerForegroundColor: colorScheme.onSurface,
+      headerForegroundColor: colorScheme.onSurfaceVariant,
       cancelButtonStyle: _cancelButtonStyle(colorScheme),
       confirmButtonStyle: _confirmButtonStyle(colorScheme),
     );

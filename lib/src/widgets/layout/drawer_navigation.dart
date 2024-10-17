@@ -3,7 +3,7 @@ part of '../../theme/scheme_theme.dart';
 DrawerThemeData _drawerTheme(ColorScheme colorScheme) {
   return DrawerThemeData(
     elevation: 8,
-    backgroundColor: colorScheme.surfaceBright,
+    backgroundColor: colorScheme.surfaceDim,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadiusDirectional.only(
         topEnd: Radius.circular(26),
@@ -22,14 +22,9 @@ DrawerThemeData _drawerTheme(ColorScheme colorScheme) {
 NavigationDrawerThemeData _navigationDrawerTheme(ColorScheme colorScheme) {
   return NavigationDrawerThemeData(
     elevation: 8,
-    backgroundColor: colorScheme.surfaceBright,
-    indicatorColor: colorScheme.brightness.isLight
-        ? const Color(0xfff6f6f6)
-        : const Color(0xff272727),
+    backgroundColor: colorScheme.surfaceDim,
+    indicatorColor: colorScheme.secondaryContainer,
     indicatorShape: RoundedRectangleBorder(
-      side: BorderSide(
-        color: colorScheme.outline,
-      ),
       borderRadius: BorderRadius.circular(12),
     ),
     iconTheme: WidgetStateProperty.resolveWith(
@@ -39,7 +34,7 @@ NavigationDrawerThemeData _navigationDrawerTheme(ColorScheme colorScheme) {
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
       (state) => state.contains(WidgetState.selected)
-          ? createTextTheme(colorScheme.onSurface).labelMedium!
+          ? createTextTheme(colorScheme.onSecondaryContainer).labelMedium!
           : createTextTheme(colorScheme.onSurfaceVariant).labelMedium!,
     ),
   );

@@ -70,11 +70,11 @@ class AriaTheme {
             ),
       neutralPalette: TonalPalette.of(
         Hct.fromInt(primary.value).hue,
-        0,
+        Hct.fromInt(primary.value).chroma / 64,
       ),
       neutralVariantPalette: TonalPalette.of(
         Hct.fromInt(primary.value).hue,
-        Hct.fromInt(primary.value).chroma / 8.0,
+        Hct.fromInt(primary.value).chroma / 4,
       ),
     );
   }

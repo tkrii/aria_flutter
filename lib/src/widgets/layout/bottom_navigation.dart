@@ -9,7 +9,7 @@ BottomNavigationBarThemeData _bottomNavigationTheme(ColorScheme colorScheme) {
   return BottomNavigationBarThemeData(
     elevation: 6,
     backgroundColor: colorScheme.surfaceContainer,
-    selectedItemColor: colorScheme.surfaceContainerLowest,
+    selectedItemColor: colorScheme.primary,
     unselectedItemColor: colorScheme.onSurfaceVariant,
   );
 }
@@ -18,24 +18,19 @@ NavigationBarThemeData _navigationBarTheme(ColorScheme colorScheme) {
   return NavigationBarThemeData(
     elevation: 6,
     backgroundColor: colorScheme.surfaceContainer,
-    indicatorColor: colorScheme.brightness.isLight
-        ? const Color(0xfff6f6f6)
-        : const Color(0xff272727),
+    indicatorColor: colorScheme.secondaryContainer,
     indicatorShape: RoundedRectangleBorder(
-      side: BorderSide(
-        color: colorScheme.outline,
-      ),
       borderRadius: BorderRadius.circular(12),
     ),
     iconTheme: WidgetStateProperty.resolveWith(
       (states) => states.contains(WidgetState.selected)
-          ? IconThemeData(color: colorScheme.primary)
+          ? IconThemeData(color: colorScheme.onSecondaryContainer)
           : IconThemeData(color: colorScheme.onSurfaceVariant),
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
       (state) => state.contains(WidgetState.selected)
-          ? createTextTheme(colorScheme.onSurface).labelMedium!
-          : createTextTheme(colorScheme.onSurfaceVariant).labelMedium!,
+          ? createTextTheme(colorScheme.primary).labelMedium!
+          : createTextTheme(colorScheme.onSurfaceVariant).labelSmall!,
     ),
   );
 }
@@ -44,7 +39,7 @@ BottomSheetThemeData _bottomSheetThemeData(ColorScheme colorScheme) =>
     BottomSheetThemeData(
       showDragHandle: true,
       dragHandleColor: colorScheme.secondary,
-      backgroundColor: colorScheme.surfaceContainerHigh,
+      backgroundColor: colorScheme.surfaceContainer,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadiusDirectional.only(
           topStart: Radius.circular(26),

@@ -4,9 +4,17 @@ ProgressIndicatorThemeData _progressIndicatorThemeData(
   ColorScheme colorScheme,
 ) {
   return ProgressIndicatorThemeData(
-    color: colorScheme.primaryFixedDim,
-    linearTrackColor: colorScheme.outline,
-    circularTrackColor: colorScheme.outline,
+    color: colorScheme.primary,
+    linearTrackColor: Color.lerp(
+      colorScheme.disabled,
+      colorScheme.primaryContainer,
+      3 / 4,
+    ),
+    circularTrackColor: Color.lerp(
+      colorScheme.disabled,
+      colorScheme.primaryContainer,
+      3 / 4,
+    ),
     refreshBackgroundColor: colorScheme.surfaceContainerHigh,
   );
 }

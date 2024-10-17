@@ -22,7 +22,15 @@ class ListTiles extends StatelessWidget {
         ListTile(
           title: Text('${LocaleKeys.title.tr} 2'),
           subtitle: Text(LocaleKeys.subtitle.tr),
-          trailing: const Badge(label: Text('2')),
+          selected: true,
+          trailing: const Badge(
+            label: Text('2'),
+          ),
+        ),
+        ListTile(
+          title: Text('${LocaleKeys.title.tr} 3'),
+          subtitle: Text(LocaleKeys.subtitle.tr),
+          trailing: const Badge(label: Text('3')),
           enabled: false,
         ),
       ],

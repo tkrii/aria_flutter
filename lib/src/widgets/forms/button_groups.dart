@@ -7,14 +7,14 @@ SegmentedButtonThemeData _segmentedButtonThemeData(ColorScheme colorScheme) =>
           (state) => state.contains(WidgetState.disabled)
               ? colorScheme.disabled
               : state.contains(WidgetState.selected)
-                  ? colorScheme.primaryContainer
+                  ? colorScheme.primary
                   : colorScheme.surfaceContainerLowest,
         ),
         foregroundColor: WidgetStateColor.resolveWith(
           (state) => state.contains(WidgetState.disabled)
               ? colorScheme.disabled
               : state.contains(WidgetState.selected)
-                  ? colorScheme.onPrimaryContainer
+                  ? colorScheme.onPrimary
                   : colorScheme.onSurface,
         ),
       ).merge(_commonButton),
@@ -24,9 +24,9 @@ SegmentedButtonThemeData _segmentedButtonThemeData(ColorScheme colorScheme) =>
 ToggleButtonsThemeData _toggleButtonsThemeData(ColorScheme colorScheme) =>
     ToggleButtonsThemeData(
       color: colorScheme.surfaceContainerLowest,
-      selectedColor: colorScheme.onPrimaryContainer,
+      selectedColor: colorScheme.onPrimary,
       disabledColor: colorScheme.disabled,
-      fillColor: colorScheme.primaryContainer,
+      fillColor: colorScheme.primary,
       selectedBorderColor: colorScheme.outlineVariant,
       borderRadius: BorderRadius.circular(12),
     );

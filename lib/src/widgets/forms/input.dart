@@ -3,11 +3,11 @@ part of '../../theme/scheme_theme.dart';
 InputDecorationTheme _inputDecorationTheme(ColorScheme colorScheme) {
   return InputDecorationTheme(
     filled: true,
-    fillColor: colorScheme.surfaceContainerHighest,
+    fillColor: colorScheme.surfaceContainerLowest,
     iconColor: colorScheme.onSurfaceSecondary,
     enabledBorder: OutlineInputBorder(
       borderSide: BorderSide(
-        color: colorScheme.outlineVariant,
+        color: colorScheme.outline,
       ),
       borderRadius: BorderRadius.circular(12),
     ),
@@ -26,11 +26,7 @@ InputDecorationTheme _inputDecorationTheme(ColorScheme colorScheme) {
     ),
     disabledBorder: OutlineInputBorder(
       borderSide: BorderSide(
-        color: Color.lerp(
-          colorScheme.disabled,
-          colorScheme.surfaceContainerLowest,
-          0.5,
-        )!,
+        color: colorScheme.disabled,
       ),
       borderRadius: BorderRadius.circular(12),
     ),

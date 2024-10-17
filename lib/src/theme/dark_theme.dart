@@ -80,14 +80,14 @@ ThemeData darkTheme({
       dynamicScheme.neutralPalette.get(0),
     ),
     inverseSurface: Color(
-      dynamicScheme.neutralVariantPalette.get(95),
+      dynamicScheme.neutralVariantPalette.get(85),
     ),
     // Primary color
     onSurface: Color(
       dynamicScheme.neutralPalette.get(95),
     ),
     onInverseSurface: Color(
-      dynamicScheme.neutralVariantPalette.get(12),
+      dynamicScheme.neutralVariantPalette.get(24),
     ),
     // Adwaita View
     surfaceContainerLowest: Color(
@@ -114,7 +114,7 @@ ThemeData darkTheme({
       dynamicScheme.neutralPalette.get(17),
     ),
     onSurfaceVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(57),
+      dynamicScheme.neutralVariantPalette.get(85),
     ),
     outline: Color(
       dynamicScheme.neutralVariantPalette.get(95),

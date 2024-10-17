@@ -2,12 +2,14 @@ part of '../../theme/scheme_theme.dart';
 
 PopupMenuThemeData _popupMenuThemeData(ColorScheme colorScheme) =>
     PopupMenuThemeData(
-      color: colorScheme.surfaceContainerHigh,
+      color: colorScheme.isLight ? Colors.white : const Color(0xff383838),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-        side: BorderSide(
-          color: colorScheme.outline,
-        ),
+        borderRadius: BorderRadius.circular(12),
+        side: colorScheme.isDark
+            ? BorderSide(
+                color: colorScheme.outline,
+              )
+            : BorderSide.none,
       ),
     );
 

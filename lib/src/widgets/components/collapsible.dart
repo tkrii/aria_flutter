@@ -6,14 +6,11 @@ ExpansionTileThemeData _expansionTileThemeData(
     ExpansionTileThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(
-          color: colorScheme.outline,
-        ),
       ),
       collapsedShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
-      backgroundColor: colorScheme.surfaceContainerLowest,
+      backgroundColor: colorScheme.surfaceContainerHighest,
       collapsedBackgroundColor: Colors.transparent,
       collapsedIconColor: colorScheme.onSurface,
       iconColor: colorScheme.secondary,
