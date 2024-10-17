@@ -2,7 +2,7 @@ part of '../../theme/scheme_theme.dart';
 
 DatePickerThemeData _datePickerThemeData(ColorScheme colorScheme) =>
     DatePickerThemeData(
-      backgroundColor: colorScheme.surfaceContainer,
+      backgroundColor: colorScheme.surfaceContainerHigh,
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
@@ -10,7 +10,7 @@ DatePickerThemeData _datePickerThemeData(ColorScheme colorScheme) =>
           color: colorScheme.outline,
         ),
       ),
-      headerBackgroundColor: colorScheme.surfaceContainerLow,
+      headerBackgroundColor: colorScheme.surfaceContainer,
       headerForegroundColor: colorScheme.onSurface,
       cancelButtonStyle: _cancelButtonStyle(colorScheme),
       confirmButtonStyle: _confirmButtonStyle(colorScheme),

@@ -2,14 +2,14 @@ part of '../../theme/scheme_theme.dart';
 
 BottomAppBarTheme _bottomAppBarTheme(ColorScheme colorScheme) =>
     BottomAppBarTheme(
-      color: colorScheme.surfaceContainerHigh,
+      color: colorScheme.surfaceContainer,
     );
 
 BottomNavigationBarThemeData _bottomNavigationTheme(ColorScheme colorScheme) {
   return BottomNavigationBarThemeData(
     elevation: 6,
-    backgroundColor: colorScheme.surface,
-    selectedItemColor: colorScheme.primary,
+    backgroundColor: colorScheme.surfaceContainer,
+    selectedItemColor: colorScheme.surfaceContainerLowest,
     unselectedItemColor: colorScheme.onSurfaceVariant,
   );
 }
@@ -17,8 +17,10 @@ BottomNavigationBarThemeData _bottomNavigationTheme(ColorScheme colorScheme) {
 NavigationBarThemeData _navigationBarTheme(ColorScheme colorScheme) {
   return NavigationBarThemeData(
     elevation: 6,
-    backgroundColor: colorScheme.surface,
-    indicatorColor: colorScheme.surfaceContainerLowest,
+    backgroundColor: colorScheme.surfaceContainer,
+    indicatorColor: colorScheme.brightness.isLight
+        ? const Color(0xfff6f6f6)
+        : const Color(0xff272727),
     indicatorShape: RoundedRectangleBorder(
       side: BorderSide(
         color: colorScheme.outline,

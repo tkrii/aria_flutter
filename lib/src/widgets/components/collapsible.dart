@@ -13,11 +13,7 @@ ExpansionTileThemeData _expansionTileThemeData(
       collapsedShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
-      backgroundColor: Color.lerp(
-        colorScheme.surfaceContainer,
-        colorScheme.surfaceContainerHighest,
-        0.5,
-      ),
+      backgroundColor: colorScheme.surfaceContainerLowest,
       collapsedBackgroundColor: Colors.transparent,
       collapsedIconColor: colorScheme.onSurface,
       iconColor: colorScheme.secondary,

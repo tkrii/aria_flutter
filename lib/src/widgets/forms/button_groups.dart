@@ -5,7 +5,7 @@ SegmentedButtonThemeData _segmentedButtonThemeData(ColorScheme colorScheme) =>
       style: ButtonStyle(
         backgroundColor: WidgetStateColor.resolveWith(
           (state) => state.contains(WidgetState.disabled)
-              ? colorScheme.surfaceContainerLowest
+              ? colorScheme.disabled
               : state.contains(WidgetState.selected)
                   ? colorScheme.primaryContainer
                   : colorScheme.surfaceContainerLowest,
@@ -23,7 +23,7 @@ SegmentedButtonThemeData _segmentedButtonThemeData(ColorScheme colorScheme) =>
 
 ToggleButtonsThemeData _toggleButtonsThemeData(ColorScheme colorScheme) =>
     ToggleButtonsThemeData(
-      color: colorScheme.onSurface,
+      color: colorScheme.surfaceContainerLowest,
       selectedColor: colorScheme.onPrimaryContainer,
       disabledColor: colorScheme.disabled,
       fillColor: colorScheme.primaryContainer,

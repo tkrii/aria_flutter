@@ -21,7 +21,7 @@ OutlinedButtonThemeData _outlinedButtonThemeData(ColorScheme colorScheme) =>
               );
             }
             return BorderSide(
-              color: colorScheme.primary.outerColor,
+              color: colorScheme.primary,
             );
           },
         ),
@@ -44,7 +44,7 @@ ElevatedButtonThemeData _elevatedButtonThemeData(ColorScheme colorScheme) =>
               );
             }
             return BorderSide(
-              color: colorScheme.outline,
+              color: colorScheme.surfaceContainerLow,
             );
           },
         ),
@@ -79,11 +79,7 @@ FloatingActionButtonThemeData _floatingActionButtonThemeData(
       disabledElevation: 0,
       backgroundColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.disabled)
-            ? Color.lerp(
-                colorScheme.secondaryContainer,
-                colorScheme.disabled,
-                0.5,
-              )!
+            ? colorScheme.secondaryContainer.scale(alpha: -0.5)
             : colorScheme.secondaryContainer,
       ),
       foregroundColor: WidgetStateColor.resolveWith(

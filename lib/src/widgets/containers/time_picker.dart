@@ -7,7 +7,7 @@ TimePickerThemeData _timePickerThemeData(ColorScheme colorScheme) =>
       inputDecorationTheme: _inputDecorationTheme(colorScheme).copyWith(
         contentPadding: const EdgeInsets.all(2),
       ),
-      backgroundColor: colorScheme.surfaceContainer,
+      backgroundColor: colorScheme.surfaceContainerHigh,
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
@@ -15,10 +15,10 @@ TimePickerThemeData _timePickerThemeData(ColorScheme colorScheme) =>
           color: colorScheme.outline,
         ),
       ),
-      dialBackgroundColor: colorScheme.surfaceContainerLow,
+      dialBackgroundColor: colorScheme.surfaceContainerHighest,
       hourMinuteColor: WidgetStateColor.resolveWith(
         (state) => !state.contains(WidgetState.selected)
-            ? colorScheme.surfaceContainerHigh
+            ? colorScheme.surfaceContainerLowest
             : colorScheme.primaryContainer,
       ),
       hourMinuteTextColor: WidgetStateColor.resolveWith(
@@ -28,7 +28,7 @@ TimePickerThemeData _timePickerThemeData(ColorScheme colorScheme) =>
       ),
       dayPeriodColor: WidgetStateColor.resolveWith(
         (state) => !state.contains(WidgetState.selected)
-            ? colorScheme.surfaceContainerHigh
+            ? colorScheme.surfaceContainerLowest
             : colorScheme.tertiary,
       ),
       dayPeriodTextColor: WidgetStateColor.resolveWith(
@@ -39,13 +39,13 @@ TimePickerThemeData _timePickerThemeData(ColorScheme colorScheme) =>
       dayPeriodShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
         side: BorderSide(
-          color: colorScheme.outline,
+          color: colorScheme.outlineVariant,
         ),
       ),
       hourMinuteShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
         side: BorderSide(
-          color: colorScheme.outline,
+          color: colorScheme.outlineVariant,
         ),
       ),
     );

@@ -3,8 +3,10 @@ part of '../../theme/scheme_theme.dart';
 MenuStyle _menuStyle(ColorScheme colorScheme) => MenuStyle(
       backgroundColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.selected)
-            ? colorScheme.surfaceContainerHigh
-            : colorScheme.surfaceContainerHighest,
+            ? colorScheme.brightness.isLight
+                ? const Color(0xfff6f6f6)
+                : const Color(0xff272727)
+            : colorScheme.surfaceContainerHigh,
       ),
     );
 

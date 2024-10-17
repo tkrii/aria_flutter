@@ -3,7 +3,7 @@ part of '../../theme/scheme_theme.dart';
 DrawerThemeData _drawerTheme(ColorScheme colorScheme) {
   return DrawerThemeData(
     elevation: 8,
-    backgroundColor: colorScheme.surfaceContainerHighest,
+    backgroundColor: colorScheme.surfaceBright,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadiusDirectional.only(
         topEnd: Radius.circular(26),
@@ -22,8 +22,10 @@ DrawerThemeData _drawerTheme(ColorScheme colorScheme) {
 NavigationDrawerThemeData _navigationDrawerTheme(ColorScheme colorScheme) {
   return NavigationDrawerThemeData(
     elevation: 8,
-    backgroundColor: colorScheme.surfaceContainerHighest,
-    indicatorColor: colorScheme.surfaceContainer,
+    backgroundColor: colorScheme.surfaceBright,
+    indicatorColor: colorScheme.brightness.isLight
+        ? const Color(0xfff6f6f6)
+        : const Color(0xff272727),
     indicatorShape: RoundedRectangleBorder(
       side: BorderSide(
         color: colorScheme.outline,

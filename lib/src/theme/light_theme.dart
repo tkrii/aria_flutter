@@ -5,10 +5,10 @@ import 'package:material_color_utilities/dynamiccolor/dynamic_scheme.dart';
 ThemeData lightTheme({
   required DynamicScheme dynamicScheme,
 }) {
-  ColorScheme colorScheme = ColorScheme(
+  final colorScheme = ColorScheme(
     brightness: Brightness.light,
     primary: Color(
-      dynamicScheme.primaryPalette.get(40),
+      dynamicScheme.primaryPalette.get(42),
     ),
     inversePrimary: Color(
       dynamicScheme.primaryPalette.get(80),
@@ -23,7 +23,7 @@ ThemeData lightTheme({
       dynamicScheme.primaryPalette.get(10),
     ),
     secondary: Color(
-      dynamicScheme.secondaryPalette.get(40),
+      dynamicScheme.secondaryPalette.get(42),
     ),
     onSecondary: Color(
       dynamicScheme.secondaryPalette.get(100),
@@ -35,7 +35,7 @@ ThemeData lightTheme({
       dynamicScheme.secondaryPalette.get(10),
     ),
     tertiary: Color(
-      dynamicScheme.tertiaryPalette.get(40),
+      dynamicScheme.tertiaryPalette.get(42),
     ),
     onTertiary: Color(
       dynamicScheme.tertiaryPalette.get(100),
@@ -47,7 +47,7 @@ ThemeData lightTheme({
       dynamicScheme.tertiaryPalette.get(10),
     ),
     error: Color(
-      dynamicScheme.errorPalette.get(40),
+      dynamicScheme.errorPalette.get(42),
     ),
     onError: Color(
       dynamicScheme.errorPalette.get(100),
@@ -64,22 +64,24 @@ ThemeData lightTheme({
     shadow: Color(
       dynamicScheme.neutralPalette.get(0),
     ),
+    // Adwaita secondary sidebar
     surfaceDim: Color(
-      dynamicScheme.neutralPalette.get(87),
+      dynamicScheme.neutralPalette.get(96),
     ),
-    // Arna background color
+    // Adwaita background color
     surface: Color(
-      dynamicScheme.neutralPalette.get(95),
+      dynamicScheme.neutralPalette.get(98),
     ),
+    // Adwaita sidebar color
     surfaceBright: Color(
-      dynamicScheme.neutralPalette.get(100),
+      dynamicScheme.neutralPalette.get(93),
     ),
     surfaceTint: Color(
       dynamicScheme.neutralPalette.get(100),
     ),
     // Arna reverse background color
     inverseSurface: Color(
-      dynamicScheme.neutralPalette.get(12),
+      dynamicScheme.neutralVariantPalette.get(12),
     ),
     // Arna primary color
     onSurface: Color(
@@ -87,40 +89,44 @@ ThemeData lightTheme({
     ),
     // Arna reverse primary color
     onInverseSurface: Color(
-      dynamicScheme.neutralPalette.get(95),
+      dynamicScheme.neutralVariantPalette.get(95),
     ),
-    // Arna button/field color
+    // Adwaita view
     surfaceContainerLowest: Color(
       dynamicScheme.neutralPalette.get(100),
     ),
-    // Arna header color
+
+    // Material color role Card
+    // Adwaita card
     surfaceContainerLow: Color(
-      dynamicScheme.neutralPalette.get(97),
+      dynamicScheme.neutralPalette.get(100),
     ),
-    // Arna card color
+    // Material color role NavigationBar
+    // Adwaita header
     surfaceContainer: Color(
+      dynamicScheme.neutralPalette.get(100),
+    ),
+    // Material color role Dialog
+    // Adwaita dialog
+    surfaceContainerHigh: Color(
       dynamicScheme.neutralPalette.get(98),
     ),
-
-    surfaceContainerHigh: Color(
-      dynamicScheme.neutralPalette.get(96),
-    ),
-    // Arna sidebar color
+    // Material color role Input
+    // Adwaita secondary sidebar
     surfaceContainerHighest: Color(
-      dynamicScheme.neutralPalette.get(97),
+      dynamicScheme.neutralPalette.get(96),
     ),
     // Arna secondary color
     onSurfaceVariant: Color(
-      dynamicScheme.neutralPalette.get(43),
+      dynamicScheme.neutralVariantPalette.get(43),
     ),
     // Arna border color
     outline: Color(
-      dynamicScheme.neutralVariantPalette.get(82),
-    ),
-    // Arna disabled text color
+      dynamicScheme.neutralVariantPalette.get(12),
+    ).withOpacity(0.45),
     outlineVariant: Color(
-      dynamicScheme.neutralPalette.get(60),
-    ),
+      dynamicScheme.neutralPalette.get(12),
+    ).withOpacity(0.7),
   );
   return createAriaTheme(
     colorScheme,

@@ -4,22 +4,10 @@ SliderThemeData _sliderThemeData(
   ColorScheme colorScheme,
 ) {
   return SliderThemeData(
-    activeTrackColor: colorScheme.primary,
-    inactiveTrackColor: Color.lerp(
-      colorScheme.surfaceContainer,
-      colorScheme.secondary,
-      0.2,
-    ),
+    activeTrackColor: colorScheme.inverseSurface,
+    inactiveTrackColor: colorScheme.outline,
     trackHeight: 3,
-    thumbColor: Color.lerp(
-      Colors.white,
-      colorScheme.primary,
-      0.5,
-    ),
-    disabledThumbColor: Color.lerp(
-      colorScheme.inverseSurface,
-      colorScheme.surface,
-      0.7,
-    ),
+    thumbColor: colorScheme.inversePrimary,
+    disabledThumbColor: colorScheme.surfaceContainer,
   );
 }

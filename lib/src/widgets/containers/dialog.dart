@@ -1,7 +1,7 @@
 part of '../../theme/scheme_theme.dart';
 
 DialogTheme _dialogTheme(ColorScheme colorScheme) => DialogTheme(
-      backgroundColor: colorScheme.surfaceContainer,
+      backgroundColor: colorScheme.surfaceContainerHigh,
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(26),
