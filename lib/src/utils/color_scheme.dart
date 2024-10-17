@@ -10,19 +10,19 @@ extension AriaColorSchemeExtension on ColorScheme {
 
   /// AccentColor based on *Arna*
   ColorFamily get accent =>
-      ExtendedColor(value: const Color(0xFF0791E7)).from(brightness);
+      ExtendedColor(color: const Color(0xFF0791E7)).from(brightness);
 
   /// Destructive based on *Arna*
   ColorFamily get destructive =>
-      ExtendedColor(value: const Color(0xFFF7072F)).from(brightness);
+      ExtendedColor(color: const Color(0xFFF7072F)).from(brightness);
 
   /// Warning based on *Arna*
   ColorFamily get success =>
-      ExtendedColor(value: const Color(0xFF26A598)).from(brightness);
+      ExtendedColor(color: const Color(0xFF26A598)).from(brightness);
 
   /// Success based on *Arna*
   ColorFamily get warning =>
-      ExtendedColor(value: const Color(0xFFF9A72D)).from(brightness);
+      ExtendedColor(color: const Color(0xFFF9A72D)).from(brightness);
 
   Color get onSurfaceSecondary => onSurfaceVariant;
 

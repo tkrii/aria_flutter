@@ -11,13 +11,13 @@ extension AriaColorExtension on Color {
 
   /// [Brightness] of this [Color].
   Brightness get estimateBrightness =>
-      (_brightnessValue) >= (Colors.white._brightnessValue / 2)
+      _brightnessValue >= (Colors.white._brightnessValue / 2)
           ? Brightness.light
           : Brightness.dark;
 
   /// [Color] of text on this color.
   Color get foregroundColor {
-    TonalPalette tonal = TonalPalette.fromHct(
+    final tonal = TonalPalette.fromHct(
       Hct.fromInt(value),
     );
     return Color(
@@ -25,24 +25,24 @@ extension AriaColorExtension on Color {
     );
   }
 
-  /// Applies an overlay color to a [backgroundColor].
+  /// Applies an overlay color to a backgroundColor.
   Color get applyOverlay {
     return Color.alphaBlend(foregroundColor.withOpacity(0.1), this);
   }
 
-  /// The color to use when drawn outside of [color].
+  /// The color to use when drawn outside of color.
   Color get outerColor {
-    final double colorLuminance = computeLuminance();
-    final Color fgColor = colorLuminance < 0.2 || colorLuminance > 0.8
+    final colorLuminance = computeLuminance();
+    final fgColor = colorLuminance < 0.2 || colorLuminance > 0.8
         ? Color.alphaBlend(foregroundColor.withOpacity(0.49), this)
         : this;
     return Color.alphaBlend(fgColor, this);
   }
 
-  /// Computes the color that matches with [color] and [brightness].
+  /// Computes the color that matches with color and [brightness].
   Color matchingColor(final Brightness brightness) {
-    final double colorLuminance = computeLuminance();
-    final Color fgColor = colorLuminance < 0.2 && brightness == Brightness.dark
+    final colorLuminance = computeLuminance();
+    final fgColor = colorLuminance < 0.2 && brightness == Brightness.dark
         ? Color.alphaBlend(foregroundColor.withOpacity(0.49), this)
         : colorLuminance > 0.8 && brightness == Brightness.light
             ? Color.alphaBlend(
@@ -53,26 +53,9 @@ extension AriaColorExtension on Color {
     return Color.alphaBlend(fgColor, this);
   }
 
-  Color applyHighContrast(bool highContrast) => highContrast
+  Color applyHighContrast({bool highContrast = false}) => highContrast
       ? (estimateBrightness == Brightness.dark ? Colors.black : Colors.white)
       : this;
-
-  /// Combine this [Color] with received [Color]
-  Color mix(Color other, [int weight = 50]) {
-    assert(weight >= 0 && weight <= 100);
-    int weightDifference = 100 - weight;
-    int newRed =
-        ((red * weightDifference / 100) + (other.red * weight / 100)).round();
-    int newGreen =
-        ((green * weightDifference / 100) + (other.green * weight / 100))
-            .round();
-    int newBlue =
-        ((blue * weightDifference / 100) + (other.blue * weight / 100)).round();
-    int newAlpha =
-        ((alpha * weightDifference / 100) + (other.alpha * weight / 100))
-            .round();
-    return Color.fromARGB(newAlpha, newRed, newGreen, newBlue);
-  }
 
   /// Adjust color attributes by the given values.
   /// [alpha], [saturation] and [lightness] values must be clamped between -1.0 and 1.0

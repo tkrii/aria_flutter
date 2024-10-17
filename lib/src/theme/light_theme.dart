@@ -1,6 +1,6 @@
 import 'package:aria/aria.dart';
 import 'package:flutter/material.dart';
-import 'package:material_color_utilities/scheme/dynamic_scheme.dart';
+import 'package:material_color_utilities/dynamiccolor/dynamic_scheme.dart';
 
 ThemeData lightTheme({
   required DynamicScheme dynamicScheme,

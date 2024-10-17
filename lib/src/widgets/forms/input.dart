@@ -26,7 +26,11 @@ InputDecorationTheme _inputDecorationTheme(ColorScheme colorScheme) {
     ),
     disabledBorder: OutlineInputBorder(
       borderSide: BorderSide(
-        color: colorScheme.disabled.mix(colorScheme.surfaceContainerLowest),
+        color: Color.lerp(
+          colorScheme.disabled,
+          colorScheme.surfaceContainerLowest,
+          0.5,
+        )!,
       ),
       borderRadius: BorderRadius.circular(12),
     ),

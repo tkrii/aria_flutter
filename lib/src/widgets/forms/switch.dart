@@ -19,7 +19,11 @@ SwitchThemeData _switchThemeData(ColorScheme colorScheme) => SwitchThemeData(
             ? colorScheme.disabled
             : state.contains(WidgetState.selected)
                 ? Colors.transparent
-                : colorScheme.success.onColor.mix(colorScheme.success.color),
+                : Color.lerp(
+                    colorScheme.success.onColor,
+                    colorScheme.success.color,
+                    0.5,
+                  )!,
       ),
       trackColor: WidgetStateColor.resolveWith((state) =>
           state.contains(WidgetState.selected) &&

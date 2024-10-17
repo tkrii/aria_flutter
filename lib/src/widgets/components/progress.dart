@@ -1,11 +1,13 @@
 part of '../../theme/scheme_theme.dart';
 
 ProgressIndicatorThemeData _progressIndicatorThemeData(
-    ColorScheme colorScheme) {
-  Color background = colorScheme.surfaceContainer.mix(
+  ColorScheme colorScheme,
+) {
+  final background = Color.lerp(
+    colorScheme.surfaceContainer,
     colorScheme.secondary,
-    20,
-  );
+    0.2,
+  )!;
   return ProgressIndicatorThemeData(
     color: colorScheme.primary,
     linearTrackColor: background,
