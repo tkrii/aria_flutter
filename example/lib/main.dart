@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           theme: AriaTheme(
             primary: controller.color.value.color,
           ).light(),
-          darkTheme:AriaTheme(
+          darkTheme: AriaTheme(
             primary: controller.color.value.color,
           ).dark(),
         ),

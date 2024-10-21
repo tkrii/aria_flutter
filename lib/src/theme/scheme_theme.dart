@@ -43,7 +43,7 @@ ThemeData createAriaTheme(
       dialogBackgroundColor: colorScheme.surfaceContainerHigh,
       applyElevationOverlayColor: colorScheme.isDark,
       textTheme: textTheme,
-      canvasColor: colorScheme.surfaceBright,
+      canvasColor: colorScheme.surfaceContainer,
       disabledColor: colorScheme.disabled,
       cupertinoOverrideTheme: CupertinoThemeData(
         primaryColor: colorScheme.primary,
