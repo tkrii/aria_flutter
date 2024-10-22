@@ -54,7 +54,9 @@ ThemeData createAriaTheme(
       ),
       appBarTheme: _appBarTheme(colorScheme),
       bannerTheme: _materialBannerThemeData(colorScheme),
-      cardColor: colorScheme.surfaceContainerLow,
+      cardColor: colorScheme.isLight
+          ? colorScheme.surfaceContainerLow
+          : colorScheme.surfaceContainerHigh,
       cardTheme: _cardTheme(colorScheme),
       listTileTheme: _listTileThemeData(colorScheme),
       badgeTheme: _badgeTheme(colorScheme),
