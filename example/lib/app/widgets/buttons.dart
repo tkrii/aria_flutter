@@ -110,6 +110,15 @@ class Buttons extends StatelessWidget {
               icon: const PhosphorIcon(PhosphorIconsRegular.plus),
               onPressed: () {},
             ).paddingAll(8),
+            FilledButton.tonal(
+              child: Text(LocaleKeys.add.tr),
+              onPressed: () {},
+            ).paddingAll(8),
+            FilledButton.tonalIcon(
+              label: Text(LocaleKeys.add.tr),
+              icon: const PhosphorIcon(PhosphorIconsRegular.plus),
+              onPressed: () {},
+            ).paddingAll(8),
             FilledButton.icon(
               icon: const PhosphorIcon(PhosphorIconsRegular.plus),
               onPressed: null,
