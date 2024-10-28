@@ -1,6 +1,6 @@
 # example
 
-Example app for ArgoTheme
+A new Flutter project.
 
 ## Getting Started
 

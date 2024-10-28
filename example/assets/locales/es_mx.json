@@ -1,0 +1,52 @@
+{
+    "app": {
+        "navigation": {
+            "fonts": "Tipografía",
+            "controls": "Controles",
+            "text_field": "Campos de texto",
+            "palette": "Colores",
+            "containers": "Contenedores"
+        },
+        "controls": {
+            "buttons": {
+                "label": "Botones",
+                "text": "Botón de texto",
+                "outlined": "Botón con borde",
+                "filled": "Botón con relleno",
+                "elevated": "Botón elevado",
+                "icon": "Botón con icono",
+                "fab": "Botón flotante",
+                "toggle": "Botón de alternancia"
+            },
+            "on": "Encendido",
+            "off": "Apagado",
+            "chips": {
+                "singluar": "Etiqueta",
+                "plural": "Etiquetas",
+                "deletable": "Etiqueta des cartable",
+                "disabled": "Etiqueta des habilitada",
+                "selected": "Etiqueta seleccionada",
+                "selected_and_disabled": "Etiqueta des habilitada y seleccionada"
+            }
+        },
+        "text_fields": {
+            "username": "Nombre de usuario",
+            "password": "Contraseña",
+            "wrong": "Lo estas haciendo mal"
+        },
+        "palette": {
+            "accent": "Colores de tono del tema",
+            "base": "Colores base del tema",
+            "special": "Colores espaciales del tema",
+            "extensions": "Colores de extension del tema"
+        },
+        "containers": {
+            "show_in_dialog": "Mostrar en Dialogo",
+            "card": "Tarjeta",
+            "border": "Solo es un borde",
+            "list_lite_title": "Titulo ListTile %s",
+            "subtitle": "Subtitulo",
+            "trailing": "Final"
+        }
+    }
+}

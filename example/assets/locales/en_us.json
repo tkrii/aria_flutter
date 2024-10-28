@@ -1,0 +1,52 @@
+{
+    "app": {
+        "navigation": {
+            "fonts": "Fonts",
+            "controls": "Controls",
+            "text_field": "Text fields",
+            "palette": "Palette",
+            "containers": "Containers"
+        },
+        "controls": {
+            "buttons": {
+                "label": "Buttons",
+                "text": "Text",
+                "outlined": "Outlined",
+                "filled": "Filled",
+                "elevated": "Elevated",
+                "icon": "Icon",
+                "fab": "FAB",
+                "toggle": "Toggle"
+            },
+            "on": "On",
+            "off": "Off",
+            "chips": {
+                "singular": "Chip",
+                "plural": "Chips",
+                "deletable": "Deletable chip",
+                "disabled": "Disabled chip",
+                "selected": "Selected chip",
+                "selected_and_disabled": "Disabled, selected chip"
+            }
+        },
+        "text_fields": {
+            "username": "Username",
+            "password": "Password",
+            "wrong": "You're doing it wrong"
+        },
+        "palette": {
+            "accent": "Theme accent colors",
+            "base": "Theme base colors",
+            "special": "Theme special colors",
+            "extensions": "Theme extension colors"
+        },
+        "containers": {
+            "show_in_dialog": "Show in Dialog",
+            "card": "Card",
+            "border": "Just a border",
+            "list_lite_title": " ListTile title %s",
+            "subtitle": "Subtitle",
+            "trailing": "Trailing"
+        }
+    }
+}
