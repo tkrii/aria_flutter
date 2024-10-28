@@ -1,11 +1,11 @@
 import 'package:aria/src/extensions/extensions.dart';
+import 'package:aria/src/theme/src/text_theme.dart';
 import 'package:aria/src/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 ThemeData createAriaTheme(
   ColorScheme colorScheme,
-  TextTheme textTheme,
 ) =>
     ThemeData(
       package: 'aria',
@@ -17,7 +17,7 @@ ThemeData createAriaTheme(
       visualDensity: VisualDensity.adaptivePlatformDensity,
       dialogBackgroundColor: colorScheme.surfaceContainerHigh,
       applyElevationOverlayColor: colorScheme.isDark,
-      textTheme: textTheme,
+      textTheme: createTextTheme(colorScheme.onSurface),
       canvasColor: colorScheme.surfaceContainerLow,
       disabledColor: colorScheme.disabled,
       cupertinoOverrideTheme: CupertinoThemeData(

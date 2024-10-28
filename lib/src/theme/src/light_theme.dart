@@ -109,6 +109,5 @@ ThemeData lightTheme({
   );
   return createAriaTheme(
     colorScheme,
-    createTextTheme(colorScheme.onSurface),
   );
 }
