@@ -52,9 +52,12 @@ class AriaTheme {
       primaryPalette: fromColor(primary),
       secondaryPalette: secondary != null
           ? fromColor(secondary!)
-          : TonalPalette.of(
-              hueFromColor(primary),
-              16.0,
+          : TonalPalette.fromHct(
+              DislikeAnalyzer.fixIfDisliked(
+                TemperatureCache(
+                  Hct.fromInt(primary.value),
+                ).analogous()[3],
+              ),
             ),
       tertiaryPalette: tertiary != null
           ? fromColor(tertiary!)

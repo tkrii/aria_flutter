@@ -1,5 +1,7 @@
 {
     "app": {
+        "name": "Aria",
+        "description": "Basado en los roles de colores de MD3",
         "navigation": {
             "fonts": "Tipografía",
             "controls": "Controles",
@@ -7,9 +9,27 @@
             "palette": "Colores",
             "containers": "Contenedores"
         },
+        "colors": {
+            "blue": "Azul",
+            "teal": "Turquesa",
+            "green": "Verde",
+            "yellow": "Amarillo",
+            "orange": "Naranja",
+            "red": "Rojo",
+            "pink": "Rosa",
+            "purple": "Morado",
+            "slate": "Plata"
+        },
         "controls": {
+            "labels": {
+                "buttons": "Botones",
+                "fabs": "Botones flotantes",
+                "toggles": "Botones de alternancia",
+                "chip": "Etiqueta",
+                "chips": "Etiquetas",
+                "progress": "Progreso"
+            },
             "buttons": {
-                "label": "Botones",
                 "text": "Botón de texto",
                 "outlined": "Botón con borde",
                 "filled": "Botón con relleno",
@@ -21,8 +41,6 @@
             "on": "Encendido",
             "off": "Apagado",
             "chips": {
-                "singluar": "Etiqueta",
-                "plural": "Etiquetas",
                 "deletable": "Etiqueta des cartable",
                 "disabled": "Etiqueta des habilitada",
                 "selected": "Etiqueta seleccionada",
@@ -32,12 +50,13 @@
         "text_fields": {
             "username": "Nombre de usuario",
             "password": "Contraseña",
-            "wrong": "Lo estas haciendo mal"
+            "wrong": "Lo estas haciendo mal",
+            "disabled": "Des habilitado"
         },
         "palette": {
             "accent": "Colores de tono del tema",
             "base": "Colores base del tema",
-            "special": "Colores espaciales del tema",
+            "special": "Colores especiales del tema",
             "extensions": "Colores de extension del tema"
         },
         "containers": {

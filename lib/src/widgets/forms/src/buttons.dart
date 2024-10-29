@@ -27,7 +27,7 @@ OutlinedButtonThemeData outlinedButtonThemeData(ColorScheme colorScheme) =>
             );
           },
         ),
-      ),
+      ).merge(commonButton),
     );
 
 ElevatedButtonThemeData elevatedButtonThemeData(ColorScheme colorScheme) =>

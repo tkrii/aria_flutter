@@ -4,18 +4,35 @@
 // ignore: avoid_classes_with_only_static_members
 class AppTranslation {
   static Map<String, Map<String, String>> translations = {
-    'es_mx': Locales.es_mx,
     'en_us': Locales.en_us,
+    'es_mx': Locales.es_mx,
   };
 }
 
 class LocaleKeys {
   LocaleKeys._();
+  static const app_name = 'app_name';
+  static const app_description = 'app_description';
   static const app_navigation_fonts = 'app_navigation_fonts';
   static const app_navigation_controls = 'app_navigation_controls';
   static const app_navigation_text_field = 'app_navigation_text_field';
   static const app_navigation_palette = 'app_navigation_palette';
   static const app_navigation_containers = 'app_navigation_containers';
+  static const app_colors_blue = 'app_colors_blue';
+  static const app_colors_teal = 'app_colors_teal';
+  static const app_colors_green = 'app_colors_green';
+  static const app_colors_yellow = 'app_colors_yellow';
+  static const app_colors_orange = 'app_colors_orange';
+  static const app_colors_red = 'app_colors_red';
+  static const app_colors_pink = 'app_colors_pink';
+  static const app_colors_purple = 'app_colors_purple';
+  static const app_colors_slate = 'app_colors_slate';
+  static const app_controls_labels_buttons = 'app_controls_labels_buttons';
+  static const app_controls_labels_fabs = 'app_controls_labels_fabs';
+  static const app_controls_labels_toggles = 'app_controls_labels_toggles';
+  static const app_controls_labels_chip = 'app_controls_labels_chip';
+  static const app_controls_labels_chips = 'app_controls_labels_chips';
+  static const app_controls_labels_progress = 'app_controls_labels_progress';
   static const app_controls_buttons_label = 'app_controls_buttons_label';
   static const app_controls_buttons_text = 'app_controls_buttons_text';
   static const app_controls_buttons_outlined = 'app_controls_buttons_outlined';
@@ -26,8 +43,6 @@ class LocaleKeys {
   static const app_controls_buttons_toggle = 'app_controls_buttons_toggle';
   static const app_controls_on = 'app_controls_on';
   static const app_controls_off = 'app_controls_off';
-  static const app_controls_chips_singluar = 'app_controls_chips_singluar';
-  static const app_controls_chips_plural = 'app_controls_chips_plural';
   static const app_controls_chips_deletable = 'app_controls_chips_deletable';
   static const app_controls_chips_disabled = 'app_controls_chips_disabled';
   static const app_controls_chips_selected = 'app_controls_chips_selected';
@@ -36,6 +51,7 @@ class LocaleKeys {
   static const app_text_fields_username = 'app_text_fields_username';
   static const app_text_fields_password = 'app_text_fields_password';
   static const app_text_fields_wrong = 'app_text_fields_wrong';
+  static const app_text_fields_disabled = 'app_text_fields_disabled';
   static const app_palette_accent = 'app_palette_accent';
   static const app_palette_base = 'app_palette_base';
   static const app_palette_special = 'app_palette_special';
@@ -47,53 +63,32 @@ class LocaleKeys {
       'app_containers_list_lite_title';
   static const app_containers_subtitle = 'app_containers_subtitle';
   static const app_containers_trailing = 'app_containers_trailing';
-  static const app_controls_chips_singular = 'app_controls_chips_singular';
 }
 
 class Locales {
-  static const es_mx = {
-    'app_navigation_fonts': 'Tipografía',
-    'app_navigation_controls': 'Controles',
-    'app_navigation_text_field': 'Campos de texto',
-    'app_navigation_palette': 'Colores',
-    'app_navigation_containers': 'Contenedores',
-    'app_controls_buttons_label': 'Botones',
-    'app_controls_buttons_text': 'Botón de texto',
-    'app_controls_buttons_outlined': 'Botón con borde',
-    'app_controls_buttons_filled': 'Botón con relleno',
-    'app_controls_buttons_elevated': 'Botón elevado',
-    'app_controls_buttons_icon': 'Botón con icono',
-    'app_controls_buttons_fab': 'Botón flotante',
-    'app_controls_buttons_toggle': 'Botón de alternancia',
-    'app_controls_on': 'Encendido',
-    'app_controls_off': 'Apagado',
-    'app_controls_chips_singluar': 'Etiqueta',
-    'app_controls_chips_plural': 'Etiquetas',
-    'app_controls_chips_deletable': 'Etiqueta des cartable',
-    'app_controls_chips_disabled': 'Etiqueta des habilitada',
-    'app_controls_chips_selected': 'Etiqueta seleccionada',
-    'app_controls_chips_selected_and_disabled':
-        'Etiqueta des habilitada y seleccionada',
-    'app_text_fields_username': 'Nombre de usuario',
-    'app_text_fields_password': 'Contraseña',
-    'app_text_fields_wrong': 'Lo estas haciendo mal',
-    'app_palette_accent': 'Colores de tono del tema',
-    'app_palette_base': 'Colores base del tema',
-    'app_palette_special': 'Colores espaciales del tema',
-    'app_palette_extensions': 'Colores de extension del tema',
-    'app_containers_show_in_dialog': 'Mostrar en Dialogo',
-    'app_containers_card': 'Tarjeta',
-    'app_containers_border': 'Solo es un borde',
-    'app_containers_list_lite_title': 'Titulo ListTile %s',
-    'app_containers_subtitle': 'Subtitulo',
-    'app_containers_trailing': 'Final',
-  };
   static const en_us = {
+    'app_name': 'Aria',
+    'app_description': 'Based on color roles of MD3',
     'app_navigation_fonts': 'Fonts',
     'app_navigation_controls': 'Controls',
     'app_navigation_text_field': 'Text fields',
     'app_navigation_palette': 'Palette',
     'app_navigation_containers': 'Containers',
+    'app_colors_blue': 'Blue',
+    'app_colors_teal': 'Teal',
+    'app_colors_green': 'Green',
+    'app_colors_yellow': 'Yellow',
+    'app_colors_orange': 'Orange',
+    'app_colors_red': 'Red',
+    'app_colors_pink': 'Pink',
+    'app_colors_purple': 'Purple',
+    'app_colors_slate': 'Slate',
+    'app_controls_labels_buttons': 'Buttons',
+    'app_controls_labels_fabs': 'FABs',
+    'app_controls_labels_toggles': 'Toggleable buttons',
+    'app_controls_labels_chip': 'Chip',
+    'app_controls_labels_chips': 'Chips',
+    'app_controls_labels_progress': 'Progress',
     'app_controls_buttons_label': 'Buttons',
     'app_controls_buttons_text': 'Text',
     'app_controls_buttons_outlined': 'Outlined',
@@ -104,8 +99,6 @@ class Locales {
     'app_controls_buttons_toggle': 'Toggle',
     'app_controls_on': 'On',
     'app_controls_off': 'Off',
-    'app_controls_chips_singular': 'Chip',
-    'app_controls_chips_plural': 'Chips',
     'app_controls_chips_deletable': 'Deletable chip',
     'app_controls_chips_disabled': 'Disabled chip',
     'app_controls_chips_selected': 'Selected chip',
@@ -113,6 +106,7 @@ class Locales {
     'app_text_fields_username': 'Username',
     'app_text_fields_password': 'Password',
     'app_text_fields_wrong': 'You\'re doing it wrong',
+    'app_text_fields_disabled': 'Disabled',
     'app_palette_accent': 'Theme accent colors',
     'app_palette_base': 'Theme base colors',
     'app_palette_special': 'Theme special colors',
@@ -123,5 +117,57 @@ class Locales {
     'app_containers_list_lite_title': ' ListTile title %s',
     'app_containers_subtitle': 'Subtitle',
     'app_containers_trailing': 'Trailing',
+  };
+  static const es_mx = {
+    'app_name': 'Aria',
+    'app_description': 'Basado en los roles de colores de MD3',
+    'app_navigation_fonts': 'Tipografía',
+    'app_navigation_controls': 'Controles',
+    'app_navigation_text_field': 'Campos de texto',
+    'app_navigation_palette': 'Colores',
+    'app_navigation_containers': 'Contenedores',
+    'app_colors_blue': 'Azul',
+    'app_colors_teal': 'Turquesa',
+    'app_colors_green': 'Verde',
+    'app_colors_yellow': 'Amarillo',
+    'app_colors_orange': 'Naranja',
+    'app_colors_red': 'Rojo',
+    'app_colors_pink': 'Rosa',
+    'app_colors_purple': 'Morado',
+    'app_colors_slate': 'Plata',
+    'app_controls_labels_buttons': 'Botones',
+    'app_controls_labels_fabs': 'Botones flotantes',
+    'app_controls_labels_toggles': 'Botones de alternancia',
+    'app_controls_labels_chip': 'Etiqueta',
+    'app_controls_labels_chips': 'Etiquetas',
+    'app_controls_labels_progress': 'Progreso',
+    'app_controls_buttons_text': 'Botón de texto',
+    'app_controls_buttons_outlined': 'Botón con borde',
+    'app_controls_buttons_filled': 'Botón con relleno',
+    'app_controls_buttons_elevated': 'Botón elevado',
+    'app_controls_buttons_icon': 'Botón con icono',
+    'app_controls_buttons_fab': 'Botón flotante',
+    'app_controls_buttons_toggle': 'Botón de alternancia',
+    'app_controls_on': 'Encendido',
+    'app_controls_off': 'Apagado',
+    'app_controls_chips_deletable': 'Etiqueta des cartable',
+    'app_controls_chips_disabled': 'Etiqueta des habilitada',
+    'app_controls_chips_selected': 'Etiqueta seleccionada',
+    'app_controls_chips_selected_and_disabled':
+        'Etiqueta des habilitada y seleccionada',
+    'app_text_fields_username': 'Nombre de usuario',
+    'app_text_fields_password': 'Contraseña',
+    'app_text_fields_wrong': 'Lo estas haciendo mal',
+    'app_text_fields_disabled': 'Des habilitado',
+    'app_palette_accent': 'Colores de tono del tema',
+    'app_palette_base': 'Colores base del tema',
+    'app_palette_special': 'Colores especiales del tema',
+    'app_palette_extensions': 'Colores de extension del tema',
+    'app_containers_show_in_dialog': 'Mostrar en Dialogo',
+    'app_containers_card': 'Tarjeta',
+    'app_containers_border': 'Solo es un borde',
+    'app_containers_list_lite_title': 'Titulo ListTile %s',
+    'app_containers_subtitle': 'Subtitulo',
+    'app_containers_trailing': 'Final',
   };
 }

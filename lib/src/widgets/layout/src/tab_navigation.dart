@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 TabBarTheme tabBarTheme(ColorScheme colorScheme) {
   return TabBarTheme(
-    indicatorColor: colorScheme.secondaryContainer,
+    indicatorColor: colorScheme.secondary,
     dividerColor: colorScheme.outlineVariant,
     labelColor: colorScheme.primary,
     unselectedLabelColor: colorScheme.onSurfaceVariant,

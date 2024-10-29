@@ -1,5 +1,7 @@
 {
     "app": {
+        "name": "Aria",
+        "description": "Based on color roles of MD3",
         "navigation": {
             "fonts": "Fonts",
             "controls": "Controls",
@@ -7,7 +9,26 @@
             "palette": "Palette",
             "containers": "Containers"
         },
+        "colors": {
+            "blue": "Blue",
+            "teal": "Teal",
+            "green": "Green",
+            "yellow": "Yellow",
+            "orange": "Orange",
+            "red": "Red",
+            "pink": "Pink",
+            "purple": "Purple",
+            "slate": "Slate"
+        },
         "controls": {
+            "labels": {
+                "buttons": "Buttons",
+                "fabs": "FABs",
+                "toggles": "Toggleable buttons",
+                "chip": "Chip",
+                "chips": "Chips",
+                "progress": "Progress"
+            },
             "buttons": {
                 "label": "Buttons",
                 "text": "Text",
@@ -21,8 +42,6 @@
             "on": "On",
             "off": "Off",
             "chips": {
-                "singular": "Chip",
-                "plural": "Chips",
                 "deletable": "Deletable chip",
                 "disabled": "Disabled chip",
                 "selected": "Selected chip",
@@ -32,7 +51,8 @@
         "text_fields": {
             "username": "Username",
             "password": "Password",
-            "wrong": "You're doing it wrong"
+            "wrong": "You're doing it wrong",
+            "disabled": "Disabled"
         },
         "palette": {
             "accent": "Theme accent colors",

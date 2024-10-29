@@ -7,7 +7,7 @@ SegmentedButtonThemeData segmentedButtonThemeData(ColorScheme colorScheme) =>
       style: ButtonStyle(
         backgroundColor: WidgetStateColor.resolveWith(
           (state) => state.contains(WidgetState.disabled)
-              ? colorScheme.disabled
+              ? Colors.transparent
               : state.contains(WidgetState.selected)
                   ? colorScheme.primary
                   : colorScheme.surfaceContainerLowest,
@@ -25,10 +25,11 @@ SegmentedButtonThemeData segmentedButtonThemeData(ColorScheme colorScheme) =>
 
 ToggleButtonsThemeData toggleButtonsThemeData(ColorScheme colorScheme) =>
     ToggleButtonsThemeData(
-      color: colorScheme.surfaceContainerLowest,
+      color: colorScheme.onSurface,
       selectedColor: colorScheme.onPrimary,
       disabledColor: colorScheme.disabled,
       fillColor: colorScheme.primary,
       selectedBorderColor: colorScheme.primary.outerColor,
+      borderColor: colorScheme.outline,
       borderRadius: BorderRadius.circular(12),
     );

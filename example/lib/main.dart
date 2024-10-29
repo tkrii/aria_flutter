@@ -14,14 +14,17 @@ void main() async {
     GetMaterialController(),
   )
     ..darkTheme = theme.dark()
-    ..theme = theme.light();
+    ..theme = theme.light()
+    ..themeMode = ThemeMode.system;
 
   runApp(
     GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Example Aria App',
       initialRoute: AppPages.INITIAL,
+      locale: const Locale('es', 'MX'),
       supportedLocales: const [
-        Locale('es', 'US'),
+        Locale('en', 'US'),
         Locale('es', 'MX'),
       ],
       localizationsDelegates: const [
