@@ -1,12 +1,9 @@
 import 'package:aria/aria.dart';
-import 'package:flutter/material.dart' show Brightness, Color, Colors, HSLColor;
-import 'package:material_color_utilities/material_color_utilities.dart';
+import 'package:flutter/material.dart' show Brightness, Color, HSLColor;
+import 'package:material_color_utilities/hct/hct.dart';
+import 'package:material_color_utilities/palettes/tonal_palette.dart';
 
 extension AriaColorExtension on Color {
-  /// [Brightness] value using W3 contrast value
-  int get _brightnessValue =>
-      (((red * 299) + (green * 587) + (blue * 114)) / 1000).round();
-
   /// Convert [Color] to [AriaTheme]
   AriaTheme toAriaTheme({
     Color? secondary,
@@ -19,10 +16,10 @@ extension AriaColorExtension on Color {
       );
 
   /// [Brightness] of this [Color].
-  Brightness get estimateBrightness =>
-      _brightnessValue >= (Colors.white._brightnessValue / 2)
-          ? Brightness.light
-          : Brightness.dark;
+  Brightness get estimateBrightness => ((1.05) / (computeLuminance() + 0.05)) >
+          ((computeLuminance() + 0.05) / 0.05)
+      ? Brightness.light
+      : Brightness.dark;
 
   /// [Color] of text on this color.
   Color get foregroundColor {
@@ -30,7 +27,7 @@ extension AriaColorExtension on Color {
       Hct.fromInt(value),
     );
     return Color(
-      estimateBrightness == Brightness.light ? tonal.get(10) : tonal.get(90),
+      estimateBrightness.inverse.isLight ? tonal.get(10) : tonal.get(90),
     );
   }
 

@@ -14,7 +14,9 @@ extension AriaBrightnessExtension on Brightness {
 
 extension AriaBoolBrightnessExtension on bool {
   /// Convert bool value to [Brightness]
-  /// ```true = Brightness.light```
-  /// ```false = Brightness.dark```
+  /// ```dart
+  /// if(value == true) return Brightness.light;
+  /// else return Brightness.dark;
+  /// ```
   Brightness get toBrightness => this ? Brightness.light : Brightness.dark;
 }

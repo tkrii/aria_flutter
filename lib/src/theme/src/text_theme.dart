@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/// Text styles from [MD3](https://m3.material.io/styles/typography/type-scale-tokens) typography specifications
+///
+/// The fonts used in this theme are [Inter](https://fonts.google.com/specimen/Inter?query=inter) and [Fira Sans](https://fonts.google.com/specimen/Fira+Sans)
 TextTheme createTextTheme(Color textColor) {
   return TextTheme(
     displayLarge: _TextStyle(
@@ -98,10 +101,10 @@ TextTheme createTextTheme(Color textColor) {
 class _TextStyle extends TextStyle {
   final Color textColor;
   const _TextStyle({
+    required this.textColor,
     super.fontFamily,
     super.fontSize,
     super.fontWeight,
-    required this.textColor,
   }) : super(
           package: 'aria',
           color: textColor,

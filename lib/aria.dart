@@ -1,5 +1,5 @@
 library aria;
 
-export 'src/colors/colors.dart';
-export 'src/extensions/extensions.dart';
-export 'src/theme/theme.dart';
+export 'colors.dart';
+export 'src/extensions.dart';
+export 'src/theme.dart';

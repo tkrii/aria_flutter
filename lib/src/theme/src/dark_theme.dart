@@ -1,7 +1,8 @@
-import 'package:aria/src/theme/theme.dart';
+import 'package:aria/src/theme/src/scheme_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:material_color_utilities/dynamiccolor/dynamic_scheme.dart';
 
+/// Generate [ThemeData] from [dynamicScheme]
 ThemeData darkTheme({
   required DynamicScheme dynamicScheme,
 }) {

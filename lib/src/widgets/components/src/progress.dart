@@ -1,4 +1,4 @@
-import 'package:aria/src/extensions/extensions.dart';
+import 'package:aria/src/extensions/src/color.dart';
 import 'package:flutter/material.dart';
 
 ProgressIndicatorThemeData progressIndicatorThemeData(

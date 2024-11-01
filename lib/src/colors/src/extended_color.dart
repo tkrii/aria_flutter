@@ -1,4 +1,4 @@
-import 'package:aria/aria.dart';
+import 'package:aria/src/extensions/src/brightness.dart';
 import 'package:flutter/material.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
 
@@ -9,7 +9,7 @@ class ExtendedColor {
 
   TonalPalette get _palette => TonalPalette.of(_hct.hue, _hct.chroma);
 
-  ExtendedColor({required this.color});
+  const ExtendedColor({required this.color});
 
   ColorFamily light() => ColorFamily(
         color: Color(

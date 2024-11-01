@@ -1,5 +1,5 @@
-import 'package:aria/src/extensions/extensions.dart';
-import 'package:aria/src/theme/theme.dart';
+import 'package:aria/src/extensions/src/color_scheme.dart';
+import 'package:aria/src/theme.dart';
 import 'package:aria/src/widgets/utils.dart';
 import 'package:flutter/material.dart';
 
