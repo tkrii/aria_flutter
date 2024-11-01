@@ -1,3 +1,4 @@
+import 'package:example/app/modules/home/views/buttons_controls_view.dart';
 import 'package:example/generated/locales.g.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -106,21 +107,7 @@ class ControlsView extends StatelessWidget {
         tooltip: LocaleKeys.app_controls_buttons_icon.tr,
       ),
     ];
-    Widget buttons(List<Widget> children, [double extent = 56]) =>
-        CustomScrollView(
-          slivers: [
-            SliverGrid.builder(
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 220,
-                mainAxisExtent: extent,
-              ),
-              itemBuilder: (context, index) => Center(
-                child: children[index],
-              ),
-              itemCount: children.length,
-            ),
-          ],
-        );
+
     final fabs = [
       FloatingActionButton(
         onPressed: showSnackbar,
@@ -348,13 +335,13 @@ class ControlsView extends StatelessWidget {
           Expanded(
             child: TabBarView(
               children: [
-                buttons(buttonsChild),
-                buttons(
-                  fabs,
-                  80,
+                ButtonsControlsView(children: buttonsChild),
+                ButtonsControlsView(
+                  children: fabs,
+                  extent: 80,
                 ),
-                buttons(toggleButtons),
-                buttons(chips),
+                ButtonsControlsView(children: toggleButtons),
+                ButtonsControlsView(children: chips),
                 ObxValue(
                   (data) => ListView(
                     children: [
