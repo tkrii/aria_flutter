@@ -7,13 +7,13 @@ ProgressIndicatorThemeData progressIndicatorThemeData(
     color: colorScheme.primaryFixed,
     linearTrackColor: Color.lerp(
       colorScheme.primaryContainer,
-      colorScheme.surfaceContainer,
+      colorScheme.outlineVariant,
       0.5,
     )!
         .applyOverlay,
     circularTrackColor: Color.lerp(
       colorScheme.primaryContainer,
-      colorScheme.surfaceContainer,
+      colorScheme.outlineVariant,
       0.5,
     )!
         .applyOverlay,

@@ -2,8 +2,8 @@ part of '../../theme/scheme_theme.dart';
 
 ListTileThemeData listTileThemeData(ColorScheme colorScheme) {
   return ListTileThemeData(
-    selectedTileColor: colorScheme.surfaceDim,
-    selectedColor: colorScheme.onSurface,
+    selectedTileColor: colorScheme.secondaryContainer,
+    selectedColor: colorScheme.onSecondaryContainer,
     iconColor: colorScheme.onSurfaceSecondary,
     titleTextStyle: createTextTheme(colorScheme.onSurface).bodyLarge,
     subtitleTextStyle:

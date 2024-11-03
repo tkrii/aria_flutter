@@ -19,19 +19,19 @@ NavigationDrawerThemeData navigationDrawerTheme(ColorScheme colorScheme) {
   return NavigationDrawerThemeData(
     elevation: 8,
     backgroundColor: colorScheme.surfaceContainer,
-    indicatorColor: colorScheme.surfaceDim,
+    indicatorColor: colorScheme.primary,
     indicatorShape: RoundedRectangleBorder(
       borderRadius: Utils.borderRadius,
     ),
     iconTheme: WidgetStateProperty.resolveWith(
       (states) => states.contains(WidgetState.selected)
-          ? IconThemeData(color: colorScheme.onSurface)
-          : IconThemeData(color: colorScheme.onSurfaceSecondary),
+          ? IconThemeData(color: colorScheme.onPrimary)
+          : IconThemeData(color: colorScheme.onSurfaceVariant),
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
       (state) => state.contains(WidgetState.selected)
-          ? createTextTheme(colorScheme.onSurface).labelMedium!
-          : createTextTheme(colorScheme.onSurfaceSecondary).labelMedium!,
+          ? createTextTheme(colorScheme.onPrimary).labelMedium!
+          : createTextTheme(colorScheme.onSurfaceVariant).labelMedium!,
     ),
   );
 }

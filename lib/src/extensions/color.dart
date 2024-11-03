@@ -1,5 +1,6 @@
 import 'package:aria/aria.dart';
 import 'package:flutter/material.dart' show Brightness, Color, HSLColor;
+import 'package:material_color_utilities/blend/blend.dart';
 import 'package:material_color_utilities/hct/hct.dart';
 import 'package:material_color_utilities/palettes/tonal_palette.dart';
 
@@ -58,6 +59,19 @@ extension AriaColorExtension on Color {
             : this;
     return Color.alphaBlend(fgColor, this);
   }
+
+  /// Harmonize color with current [value]
+  Color harmonize(Color color) => Color(
+        Blend.harmonize(
+          color.value,
+          value,
+        ),
+      );
+
+  /// Create [ExtendedColor] using current colo
+  ExtendedColor get extended => ExtendedColor(
+        color: this,
+      );
 
   /// Adjust color attributes by the given values.
   /// [alpha], [saturation] and [lightness] values must be clamped between -1.0 and 1.0

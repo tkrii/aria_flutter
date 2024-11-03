@@ -58,7 +58,7 @@ ThemeData materialLightTheme({
       dynamicScheme.errorPalette.get(10),
     ),
     surfaceDim: Color(
-      dynamicScheme.neutralPalette.get(87),
+      dynamicScheme.neutralVariantPalette.get(87),
     ),
     surface: Color(
       dynamicScheme.neutralPalette.get(98),
@@ -124,55 +124,55 @@ ThemeData adwaitalLightTheme({
       dynamicScheme.primaryPalette.get(55),
     ),
     primary: Color(
-      dynamicScheme.primaryPalette.get(41),
+      dynamicScheme.primaryPalette.get(42),
     ),
     onPrimary: Color(
-      dynamicScheme.primaryPalette.get(97),
+      dynamicScheme.primaryPalette.get(100),
     ),
     secondary: Color(
-      dynamicScheme.secondaryPalette.get(41),
+      dynamicScheme.secondaryPalette.get(42),
     ),
     onSecondary: Color(
-      dynamicScheme.secondaryPalette.get(97),
+      dynamicScheme.secondaryPalette.get(100),
     ),
     tertiary: Color(
-      dynamicScheme.tertiaryPalette.get(41),
+      dynamicScheme.tertiaryPalette.get(42),
     ),
     onTertiary: Color(
-      dynamicScheme.tertiaryPalette.get(97),
+      dynamicScheme.tertiaryPalette.get(100),
     ),
     error: Color(
-      dynamicScheme.errorPalette.get(41),
+      dynamicScheme.errorPalette.get(42),
     ),
     onError: Color(
-      dynamicScheme.errorPalette.get(97),
+      dynamicScheme.errorPalette.get(100),
     ),
     primaryContainer: Color(
-      dynamicScheme.primaryPalette.get(85),
+      dynamicScheme.primaryPalette.get(92),
     ),
     onPrimaryContainer: Color(
       dynamicScheme.primaryPalette.get(14),
     ),
     secondaryContainer: Color(
-      dynamicScheme.secondaryPalette.get(85),
+      dynamicScheme.secondaryPalette.get(92),
     ),
     onSecondaryContainer: Color(
       dynamicScheme.secondaryPalette.get(14),
     ),
     tertiaryContainer: Color(
-      dynamicScheme.tertiaryPalette.get(85),
+      dynamicScheme.tertiaryPalette.get(92),
     ),
     onTertiaryContainer: Color(
       dynamicScheme.tertiaryPalette.get(14),
     ),
     errorContainer: Color(
-      dynamicScheme.errorPalette.get(85),
+      dynamicScheme.errorPalette.get(92),
     ),
     onErrorContainer: Color(
       dynamicScheme.errorPalette.get(14),
     ),
     surfaceDim: Color(
-      dynamicScheme.neutralPalette.get(94),
+      dynamicScheme.neutralVariantPalette.get(94),
     ),
     surface: Color(
       dynamicScheme.neutralPalette.get(99),
@@ -196,16 +196,16 @@ ThemeData adwaitalLightTheme({
       dynamicScheme.neutralVariantPalette.get(30),
     ),
     outline: Color(
-      dynamicScheme.neutralPalette.get(63),
+      dynamicScheme.neutralPalette.get(50),
     ),
     outlineVariant: Color(
-      dynamicScheme.neutralVariantPalette.get(83),
+      dynamicScheme.neutralVariantPalette.get(80),
     ),
     inverseSurface: Color(
       dynamicScheme.neutralVariantPalette.get(14),
     ),
     onInverseSurface: Color(
-      dynamicScheme.neutralVariantPalette.get(97),
+      dynamicScheme.neutralVariantPalette.get(100),
     ),
     inversePrimary: Color(
       dynamicScheme.primaryPalette.get(80),

@@ -18,19 +18,19 @@ NavigationBarThemeData navigationBarTheme(ColorScheme colorScheme) {
   return NavigationBarThemeData(
     elevation: 6,
     backgroundColor: colorScheme.surfaceContainer,
-    indicatorColor: colorScheme.surfaceDim,
+    indicatorColor: colorScheme.primary,
     indicatorShape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(12),
     ),
     iconTheme: WidgetStateProperty.resolveWith(
       (states) => states.contains(WidgetState.selected)
-          ? IconThemeData(color: colorScheme.onSurface)
-          : IconThemeData(color: colorScheme.onSurfaceSecondary),
+          ? IconThemeData(color: colorScheme.onPrimary)
+          : IconThemeData(color: colorScheme.onSurfaceVariant),
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
       (state) => state.contains(WidgetState.selected)
-          ? createTextTheme(colorScheme.onSurfaceVariant).labelMedium!
-          : createTextTheme(colorScheme.onSurfaceSecondary).labelSmall!,
+          ? createTextTheme(colorScheme.primary).labelMedium!
+          : createTextTheme(colorScheme.onSurfaceVariant).labelSmall!,
     ),
   );
 }

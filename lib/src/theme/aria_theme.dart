@@ -108,7 +108,6 @@ class AriaTheme {
     TonalPalette paletteFromColor(Color color) => TonalPalette.fromHct(
           Hct.fromInt(color.value),
         );
-
     return DynamicScheme(
       contrastLevel: contrastValue,
       isDark: isDark,
@@ -135,11 +134,11 @@ class AriaTheme {
             ),
       neutralPalette: TonalPalette.of(
         hueFromColor(primary),
-        material ? 3.5 : 0.0,
+        material ? 2.0 : 0.0,
       ),
       neutralVariantPalette: TonalPalette.of(
         hueFromColor(primary),
-        16.0,
+        16,
       ),
     );
   }

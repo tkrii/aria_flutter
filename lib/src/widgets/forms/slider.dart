@@ -5,8 +5,13 @@ SliderThemeData sliderThemeData(
 ) {
   return SliderThemeData(
     activeTrackColor: colorScheme.primaryFixed,
-    inactiveTrackColor: colorScheme.outline,
-    trackHeight: 3,
+    inactiveTrackColor: Color.lerp(
+      colorScheme.primaryContainer,
+      colorScheme.outlineVariant,
+      0.5,
+    )!
+        .applyOverlay,
+    trackHeight: 5,
     thumbColor: Colors.white,
   );
 }

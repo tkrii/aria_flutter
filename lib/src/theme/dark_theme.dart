@@ -58,7 +58,7 @@ ThemeData materialDarkTheme({
       dynamicScheme.errorPalette.get(90),
     ),
     surfaceDim: Color(
-      dynamicScheme.neutralPalette.get(6),
+      dynamicScheme.neutralVariantPalette.get(6),
     ),
     surface: Color(
       dynamicScheme.neutralPalette.get(6),
@@ -148,25 +148,25 @@ ThemeData adwaitaDarkTheme({
       dynamicScheme.errorPalette.get(12),
     ),
     primaryContainer: Color(
-      dynamicScheme.primaryPalette.get(23),
+      dynamicScheme.primaryPalette.get(30),
     ),
     onPrimaryContainer: Color(
       dynamicScheme.primaryPalette.get(95),
     ),
     secondaryContainer: Color(
-      dynamicScheme.secondaryPalette.get(23),
+      dynamicScheme.secondaryPalette.get(30),
     ),
     onSecondaryContainer: Color(
       dynamicScheme.secondaryPalette.get(95),
     ),
     tertiaryContainer: Color(
-      dynamicScheme.tertiaryPalette.get(23),
+      dynamicScheme.tertiaryPalette.get(30),
     ),
     onTertiaryContainer: Color(
       dynamicScheme.tertiaryPalette.get(95),
     ),
     errorContainer: Color(
-      dynamicScheme.errorPalette.get(23),
+      dynamicScheme.errorPalette.get(30),
     ),
     onErrorContainer: Color(
       dynamicScheme.errorPalette.get(95),
@@ -200,10 +200,10 @@ ThemeData adwaitaDarkTheme({
       dynamicScheme.neutralVariantPalette.get(90),
     ),
     outline: Color(
-      dynamicScheme.neutralPalette.get(58),
+      dynamicScheme.neutralPalette.get(60),
     ),
     outlineVariant: Color(
-      dynamicScheme.neutralPalette.get(25),
+      dynamicScheme.neutralVariantPalette.get(30),
     ),
     inverseSurface: Color(
       dynamicScheme.neutralVariantPalette.get(98),

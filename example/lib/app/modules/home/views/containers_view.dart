@@ -70,6 +70,8 @@ class ContainersView extends StatelessWidget {
               Icon(Icons.calendar_month_rounded),
             ];
             return ListTile(
+              enabled: index < (icons.length - 1),
+              selected: index == 0,
               leading: icons[index],
               title: Text(
                 LocaleKeys.app_containers_list_lite_title.trArgs(

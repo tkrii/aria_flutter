@@ -14,15 +14,14 @@ NavigationRailThemeData navigationRailThemeData(ColorScheme colorScheme) {
   return NavigationRailThemeData(
     elevation: 6,
     backgroundColor: colorScheme.surface,
-    indicatorColor: colorScheme.surfaceDim,
+    indicatorColor: colorScheme.primary,
     indicatorShape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(12),
     ),
-    selectedIconTheme: IconThemeData(color: colorScheme.onSurface),
-    unselectedIconTheme: IconThemeData(color: colorScheme.onSurfaceSecondary),
-    selectedLabelTextStyle:
-        createTextTheme(colorScheme.onSurfaceVariant).labelMedium,
+    selectedIconTheme: IconThemeData(color: colorScheme.onPrimary),
+    unselectedIconTheme: IconThemeData(color: colorScheme.onSurfaceVariant),
+    selectedLabelTextStyle: createTextTheme(colorScheme.primary).labelMedium,
     unselectedLabelTextStyle:
-        createTextTheme(colorScheme.onSurfaceSecondary).labelSmall,
+        createTextTheme(colorScheme.onSurfaceVariant).labelSmall,
   );
 }

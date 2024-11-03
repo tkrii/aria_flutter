@@ -1,4 +1,4 @@
-import 'package:example/app/data/enums/harmony_colors.dart';
+import 'package:example/app/data/enums/adwaita_colors.dart';
 import 'package:example/app/modules/home/controllers/home_controller.dart';
 import 'package:example/app/modules/home/views/containers_view.dart';
 import 'package:example/app/modules/home/views/controls_view.dart';
@@ -94,9 +94,9 @@ class HomeView extends GetView<HomeController> {
               );
             },
           ),
-          PopupMenuButton<HarmonyColors>(
-            itemBuilder: (context) => HarmonyColors.values
-                .map<PopupMenuEntry<HarmonyColors>>(
+          PopupMenuButton<AdwaitaColors>(
+            itemBuilder: (context) => AdwaitaColors.values
+                .map<PopupMenuEntry<AdwaitaColors>>(
                   (e) => PopupMenuItem(
                     value: e,
                     child: Row(
