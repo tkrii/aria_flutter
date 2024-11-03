@@ -1,7 +1,6 @@
 name: aria
-description: "A simple color theme"
+description: "A simple color theme to customize Material app"
 version: 0.0.6
-#homepage:
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
