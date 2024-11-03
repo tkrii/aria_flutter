@@ -10,9 +10,6 @@ class PaletteView extends StatelessWidget {
     final colorScheme = context.theme.colorScheme;
 
     Widget colorCard(String label, Color accent) {
-      final textStyle = context.textTheme.labelSmall?.copyWith(
-        color: accent.foregroundColor,
-      );
       return Card(
         color: accent,
         shape: RoundedRectangleBorder(
@@ -22,13 +19,13 @@ class PaletteView extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            SmallText(
               label,
-              style: textStyle,
+              color: accent.foregroundColor,
             ),
-            Text(
+            SmallText(
               '#${accent.value.toRadixString(16)}',
-              style: textStyle,
+              color: accent.foregroundColor,
             ),
           ],
         ),
@@ -53,7 +50,8 @@ class PaletteView extends StatelessWidget {
             const Divider().paddingOnly(top: 16),
             Text(
               label,
-              style: context.textTheme.headlineSmall,
+              style: createTextTheme(context.theme.colorScheme.onSurfaceVariant)
+                  .headlineSmall, //context.textTheme.headlineSmall,
             ),
           ],
         );
@@ -72,28 +70,12 @@ class PaletteView extends StatelessWidget {
               accent: colorScheme.onPrimary,
             ),
             (
-              label: 'primaryContainer',
-              accent: colorScheme.primaryContainer,
-            ),
-            (
-              label: 'onPrimaryContainer',
-              accent: colorScheme.onPrimaryContainer,
-            ),
-            (
               label: 'secondary',
               accent: colorScheme.secondary,
             ),
             (
               label: 'onSecondary',
               accent: colorScheme.onSecondary,
-            ),
-            (
-              label: 'secondaryContainer',
-              accent: colorScheme.secondaryContainer,
-            ),
-            (
-              label: 'onSecondaryContainer',
-              accent: colorScheme.onSecondaryContainer,
             ),
             (
               label: 'tertiary',
@@ -104,12 +86,32 @@ class PaletteView extends StatelessWidget {
               accent: colorScheme.onTertiary,
             ),
             (
+              label: 'primaryContainer',
+              accent: colorScheme.primaryContainer,
+            ),
+            (
+              label: 'onPrimaryContainer',
+              accent: colorScheme.onPrimaryContainer,
+            ),
+            (
+              label: 'secondaryContainer',
+              accent: colorScheme.secondaryContainer,
+            ),
+            (
+              label: 'onSecondaryContainer',
+              accent: colorScheme.onSecondaryContainer,
+            ),
+            (
               label: 'tertiaryContainer',
               accent: colorScheme.tertiaryContainer,
             ),
             (
               label: 'onTertiaryContainer',
               accent: colorScheme.onTertiaryContainer,
+            ),
+            (
+              label: 'primaryFixed',
+              accent: colorScheme.primaryFixed,
             ),
           ],
         ),
@@ -123,6 +125,10 @@ class PaletteView extends StatelessWidget {
             (
               label: 'onSurface',
               accent: colorScheme.onSurface,
+            ),
+            (
+              label: 'onSurfaceVariant',
+              accent: colorScheme.onSurfaceVariant,
             ),
             (
               label: 'surfaceContainerLowest',
@@ -192,6 +198,14 @@ class PaletteView extends StatelessWidget {
             (
               label: 'scrim',
               accent: colorScheme.scrim,
+            ),
+            (
+              label: 'outline',
+              accent: colorScheme.outline,
+            ),
+            (
+              label: 'outlineVariant',
+              accent: colorScheme.outlineVariant,
             ),
           ],
         ),
@@ -264,9 +278,30 @@ class PaletteView extends StatelessWidget {
               label: 'destructive.onColorContainer',
               accent: colorScheme.destructive.onColorContainer,
             ),
+            (
+              label: 'onSurfaceSecondary',
+              accent: colorScheme.onSurfaceSecondary,
+            ),
+            (
+              label: 'disabled',
+              accent: colorScheme.disabled,
+            ),
           ],
         ),
       ],
     ).paddingSymmetric(horizontal: 16);
   }
+}
+
+class SmallText extends Text {
+  final Color color;
+  SmallText(
+    super.data, {
+    required this.color,
+    super.key,
+  }) : super(
+          style: createTextTheme(color).bodySmall,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        );
 }

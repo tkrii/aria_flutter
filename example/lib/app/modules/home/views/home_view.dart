@@ -1,4 +1,4 @@
-import 'package:example/app/data/enums/adwaita_colors.dart';
+import 'package:example/app/data/enums/harmony_colors.dart';
 import 'package:example/app/modules/home/controllers/home_controller.dart';
 import 'package:example/app/modules/home/views/containers_view.dart';
 import 'package:example/app/modules/home/views/controls_view.dart';
@@ -57,6 +57,24 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: context.theme.colorScheme.surfaceContainer,
         title: Text(LocaleKeys.app_name.tr),
         actions: [
+          Obx(
+            () => Tooltip(
+              message: LocaleKeys.app_material_theme_switch.tr,
+              child: Switch(
+                onChanged: controller.materialTheme,
+                value: controller.materialTheme.value,
+                thumbIcon: WidgetStateProperty.resolveWith(
+                  (state) {
+                    if (state.contains(WidgetState.selected)) {
+                      return const Icon(Icons.android_rounded);
+                    } else {
+                      return const Icon(Icons.desktop_mac_rounded);
+                    }
+                  },
+                ),
+              ),
+            ),
+          ),
           IconButton(
             onPressed: () => controller.showBanner(context),
             icon: const Icon(Icons.info_outline_rounded),
@@ -76,9 +94,9 @@ class HomeView extends GetView<HomeController> {
               );
             },
           ),
-          PopupMenuButton<AdwaitaColors>(
-            itemBuilder: (context) => AdwaitaColors.values
-                .map<PopupMenuEntry<AdwaitaColors>>(
+          PopupMenuButton<HarmonyColors>(
+            itemBuilder: (context) => HarmonyColors.values
+                .map<PopupMenuEntry<HarmonyColors>>(
                   (e) => PopupMenuItem(
                     value: e,
                     child: Row(
@@ -101,7 +119,7 @@ class HomeView extends GetView<HomeController> {
               color: context.theme.colorScheme.primary,
             ),
             onSelected: (value) => controller.onColorChange(
-              value,
+              value.accent,
               context,
             ),
           ),

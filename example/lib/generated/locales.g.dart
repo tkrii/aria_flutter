@@ -13,6 +13,8 @@ class LocaleKeys {
   LocaleKeys._();
   static const app_name = 'app_name';
   static const app_description = 'app_description';
+  static const app_adwaita_description = 'app_adwaita_description';
+  static const app_material_theme_switch = 'app_material_theme_switch';
   static const app_navigation_fonts = 'app_navigation_fonts';
   static const app_navigation_controls = 'app_navigation_controls';
   static const app_navigation_text_field = 'app_navigation_text_field';
@@ -27,6 +29,10 @@ class LocaleKeys {
   static const app_colors_pink = 'app_colors_pink';
   static const app_colors_purple = 'app_colors_purple';
   static const app_colors_slate = 'app_colors_slate';
+  static const app_colors_cyan = 'app_colors_cyan';
+  static const app_colors_lime = 'app_colors_lime';
+  static const app_colors_pumpkin = 'app_colors_pumpkin';
+  static const app_colors_violet = 'app_colors_violet';
   static const app_controls_labels_buttons = 'app_controls_labels_buttons';
   static const app_controls_labels_fabs = 'app_controls_labels_fabs';
   static const app_controls_labels_toggles = 'app_controls_labels_toggles';
@@ -63,12 +69,15 @@ class LocaleKeys {
       'app_containers_list_lite_title';
   static const app_containers_subtitle = 'app_containers_subtitle';
   static const app_containers_trailing = 'app_containers_trailing';
+  static const app_lime = 'app_lime';
 }
 
 class Locales {
   static const en_us = {
     'app_name': 'Aria',
     'app_description': 'Based on color roles of MD3',
+    'app_adwaita_description': 'Based on color roles of Adwaita',
+    'app_material_theme_switch': 'Material theme',
     'app_navigation_fonts': 'Fonts',
     'app_navigation_controls': 'Controls',
     'app_navigation_text_field': 'Text fields',
@@ -83,6 +92,10 @@ class Locales {
     'app_colors_pink': 'Pink',
     'app_colors_purple': 'Purple',
     'app_colors_slate': 'Slate',
+    'app_colors_cyan': 'Cyan',
+    'app_colors_lime': 'Lime',
+    'app_colors_pumpkin': 'Pumpkin',
+    'app_colors_violet': 'Violet',
     'app_controls_labels_buttons': 'Buttons',
     'app_controls_labels_fabs': 'FABs',
     'app_controls_labels_toggles': 'Toggleable buttons',
@@ -121,6 +134,8 @@ class Locales {
   static const es_mx = {
     'app_name': 'Aria',
     'app_description': 'Basado en los roles de colores de MD3',
+    'app_adwaita_description': 'Basado en los roles de colores de Adwaita',
+    'app_material_theme_switch': 'Tema de Material Design',
     'app_navigation_fonts': 'Tipografía',
     'app_navigation_controls': 'Controles',
     'app_navigation_text_field': 'Campos de texto',
@@ -135,6 +150,11 @@ class Locales {
     'app_colors_pink': 'Rosa',
     'app_colors_purple': 'Morado',
     'app_colors_slate': 'Plata',
+    'app_colors_cyan': 'Azul claro',
+    'app_colors_lime': 'Limon',
+    'app_colors_pumpkin': 'Calabaza',
+    'app_colors_violet': 'Violeta',
+    'app_lime': 'Limon',
     'app_controls_labels_buttons': 'Botones',
     'app_controls_labels_fabs': 'Botones flotantes',
     'app_controls_labels_toggles': 'Botones de alternancia',

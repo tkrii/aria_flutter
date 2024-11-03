@@ -2,6 +2,8 @@
     "app": {
         "name": "Aria",
         "description": "Based on color roles of MD3",
+        "adwaita_description": "Based on color roles of Adwaita",
+        "material_theme_switch": "Material theme",
         "navigation": {
             "fonts": "Fonts",
             "controls": "Controls",
@@ -18,7 +20,11 @@
             "red": "Red",
             "pink": "Pink",
             "purple": "Purple",
-            "slate": "Slate"
+            "slate": "Slate",
+            "cyan": "Cyan",
+            "lime": "Lime",
+            "pumpkin": "Pumpkin",
+            "violet": "Violet"
         },
         "controls": {
             "labels": {

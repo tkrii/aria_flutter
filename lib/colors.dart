@@ -1,3 +1,3 @@
 library colors;
 
-export 'src/colors/src/extended_color.dart';
+export 'src/colors/extended_color.dart';

@@ -1,13 +1,27 @@
 import 'package:aria/aria.dart';
-import 'package:example/app/data/enums/adwaita_colors.dart';
 import 'package:example/generated/locales.g.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+  final material = Get.find<GetMaterialController>();
   final navigation = RxInt(0);
   final theme = Rx(ThemeMode.system);
-  final material = Get.find<GetMaterialController>();
+  final materialTheme = RxBool(true);
+
+  AriaTheme _ariaTheme = const AriaTheme();
+
+  @override
+  void onInit() {
+    ever(
+      materialTheme,
+      (_) => onColorChange(
+        null,
+        Get.context!,
+      ),
+    );
+    super.onInit();
+  }
 
   @override
   void onClose() {
@@ -28,20 +42,40 @@ class HomeController extends GetxController {
     material.setThemeMode(theme.value);
   }
 
-  void onColorChange(AdwaitaColors value, BuildContext context) {
-    material
-      ..setTheme(
-        value.accent.toAriaTheme().dark(),
-      )
-      ..setTheme(
-        value.accent.toAriaTheme().light(),
+  void onColorChange(Color? value, BuildContext context) {
+    if (value != null) {
+      _ariaTheme = AriaTheme(
+        primary: value,
       );
+    }
+
+    if (materialTheme.value) {
+      material
+        ..setTheme(
+          _ariaTheme.dark(),
+        )
+        ..setTheme(
+          _ariaTheme.light(),
+        );
+      return;
+    } else {
+      material
+        ..setTheme(
+          _ariaTheme.adwaitaDark(),
+        )
+        ..setTheme(
+          _ariaTheme.adwaitaLight(),
+        );
+      return;
+    }
   }
 
   void showBanner(BuildContext context) {
     ScaffoldMessenger.of(context).showMaterialBanner(
       MaterialBanner(
-        content: Text(LocaleKeys.app_description.tr),
+        content: materialTheme.value
+            ? Text(LocaleKeys.app_description.tr)
+            : Text(LocaleKeys.app_adwaita_description.tr),
         actions: [
           TextButton(
             onPressed: ScaffoldMessenger.of(context).clearMaterialBanners,

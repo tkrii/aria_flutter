@@ -34,6 +34,8 @@ void main() async {
       ],
       translationsKeys: AppTranslation.translations,
       getPages: AppPages.routes,
+      highContrastTheme: theme.light(1),
+      highContrastDarkTheme: theme.dark(1),
     ),
   );
 }

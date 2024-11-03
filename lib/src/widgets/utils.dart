@@ -1,5 +1,4 @@
-import 'package:aria/src/extensions/src/brightness.dart';
-import 'package:flutter/material.dart';
+part of '../theme/scheme_theme.dart';
 
 class Utils {
   static const padding = EdgeInsets.symmetric(

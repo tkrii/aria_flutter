@@ -2,6 +2,8 @@
     "app": {
         "name": "Aria",
         "description": "Basado en los roles de colores de MD3",
+        "adwaita_description": "Basado en los roles de colores de Adwaita",
+        "material_theme_switch": "Tema de Material Design",
         "navigation": {
             "fonts": "Tipografía",
             "controls": "Controles",
@@ -18,8 +20,13 @@
             "red": "Rojo",
             "pink": "Rosa",
             "purple": "Morado",
-            "slate": "Plata"
+            "slate": "Plata",
+            "cyan": "Azul claro",
+            "lime": "Limon",
+            "pumpkin": "Calabaza",
+            "violet": "Violeta"
         },
+        "lime": "Limon",
         "controls": {
             "labels": {
                 "buttons": "Botones",
