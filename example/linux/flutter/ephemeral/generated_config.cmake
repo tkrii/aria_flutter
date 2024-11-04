@@ -14,7 +14,7 @@ list(APPEND FLUTTER_TOOL_ENVIRONMENT
   "PROJECT_DIR=/home/nahum/Proyectos/aria_flutter/example"
   "DART_OBFUSCATION=false"
   "TRACK_WIDGET_CREATION=true"
-  "TREE_SHAKE_ICONS=true"
+  "TREE_SHAKE_ICONS=false"
   "PACKAGE_CONFIG=/home/nahum/Proyectos/aria_flutter/example/.dart_tool/package_config.json"
-  "FLUTTER_TARGET=lib/main.dart"
+  "FLUTTER_TARGET=/home/nahum/Proyectos/aria_flutter/example/lib/main.dart"
 )

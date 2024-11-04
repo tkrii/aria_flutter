@@ -20,11 +20,21 @@
             "red": "Rojo",
             "pink": "Rosa",
             "purple": "Morado",
-            "slate": "Plata",
+            "slate": "Pizarra",
             "cyan": "Azul claro",
             "lime": "Limon",
             "pumpkin": "Calabaza",
-            "violet": "Violeta"
+            "violet": "Violeta",
+            "strawberry": "Fresa",
+            "banana": "Plátano",
+            "mint": "Menta",
+            "blueberry": "Arandano",
+            "grape": "Uva",
+            "bubblegum": "Chicle",
+            "latte": "Latte",
+            "cocoa": "Cocoa",
+            "silver": "Plata",
+            "black": "Negro"
         },
         "lime": "Limon",
         "controls": {

@@ -33,6 +33,16 @@ class LocaleKeys {
   static const app_colors_lime = 'app_colors_lime';
   static const app_colors_pumpkin = 'app_colors_pumpkin';
   static const app_colors_violet = 'app_colors_violet';
+  static const app_colors_strawberry = 'app_colors_strawberry';
+  static const app_colors_banana = 'app_colors_banana';
+  static const app_colors_mint = 'app_colors_mint';
+  static const app_colors_blueberry = 'app_colors_blueberry';
+  static const app_colors_grape = 'app_colors_grape';
+  static const app_colors_bubblegum = 'app_colors_bubblegum';
+  static const app_colors_latte = 'app_colors_latte';
+  static const app_colors_cocoa = 'app_colors_cocoa';
+  static const app_colors_silver = 'app_colors_silver';
+  static const app_colors_black = 'app_colors_black';
   static const app_controls_labels_buttons = 'app_controls_labels_buttons';
   static const app_controls_labels_fabs = 'app_controls_labels_fabs';
   static const app_controls_labels_toggles = 'app_controls_labels_toggles';
@@ -96,6 +106,16 @@ class Locales {
     'app_colors_lime': 'Lime',
     'app_colors_pumpkin': 'Pumpkin',
     'app_colors_violet': 'Violet',
+    'app_colors_strawberry': 'Strawberry',
+    'app_colors_banana': 'Banana',
+    'app_colors_mint': 'Mint',
+    'app_colors_blueberry': 'Blueberry',
+    'app_colors_grape': 'Grape',
+    'app_colors_bubblegum': 'Bubblegum',
+    'app_colors_latte': 'Latte',
+    'app_colors_cocoa': 'Cocoa',
+    'app_colors_silver': 'Silver',
+    'app_colors_black': 'Black',
     'app_controls_labels_buttons': 'Buttons',
     'app_controls_labels_fabs': 'FABs',
     'app_controls_labels_toggles': 'Toggleable buttons',
@@ -149,11 +169,21 @@ class Locales {
     'app_colors_red': 'Rojo',
     'app_colors_pink': 'Rosa',
     'app_colors_purple': 'Morado',
-    'app_colors_slate': 'Plata',
+    'app_colors_slate': 'Pizarra',
     'app_colors_cyan': 'Azul claro',
     'app_colors_lime': 'Limon',
     'app_colors_pumpkin': 'Calabaza',
     'app_colors_violet': 'Violeta',
+    'app_colors_strawberry': 'Fresa',
+    'app_colors_banana': 'Plátano',
+    'app_colors_mint': 'Menta',
+    'app_colors_blueberry': 'Arandano',
+    'app_colors_grape': 'Uva',
+    'app_colors_bubblegum': 'Chicle',
+    'app_colors_latte': 'Latte',
+    'app_colors_cocoa': 'Cocoa',
+    'app_colors_silver': 'Plata',
+    'app_colors_black': 'Negro',
     'app_lime': 'Limon',
     'app_controls_labels_buttons': 'Botones',
     'app_controls_labels_fabs': 'Botones flotantes',

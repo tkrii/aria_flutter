@@ -24,7 +24,17 @@
             "cyan": "Cyan",
             "lime": "Lime",
             "pumpkin": "Pumpkin",
-            "violet": "Violet"
+            "violet": "Violet",
+            "strawberry": "Strawberry",
+            "banana": "Banana",
+            "mint": "Mint",
+            "blueberry": "Blueberry",
+            "grape": "Grape",
+            "bubblegum": "Bubblegum",
+            "latte": "Latte",
+            "cocoa": "Cocoa",
+            "silver": "Silver",
+            "black": "Black"
         },
         "controls": {
             "labels": {

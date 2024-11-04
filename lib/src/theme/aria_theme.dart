@@ -25,7 +25,7 @@ class AriaTheme {
 
   /// Custom theme using [primary] color base
   const AriaTheme({
-    this.primary = const Color(0xff808080),
+    this.primary = const Color(0xff3689e6),
     this.secondary,
     this.tertiary,
   });
