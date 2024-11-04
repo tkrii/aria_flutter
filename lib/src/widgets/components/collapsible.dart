@@ -13,11 +13,11 @@ ExpansionTileThemeData expansionTileThemeData(
       backgroundColor: Color.lerp(
         colorScheme.surfaceContainerHigh,
         colorScheme.secondaryContainer,
-        0.75,
+        0.15,
       ),
       collapsedBackgroundColor: Colors.transparent,
-      collapsedIconColor: colorScheme.onSurface,
-      iconColor: colorScheme.onSecondary,
+      collapsedIconColor: colorScheme.onSurfaceSecondary,
+      iconColor: colorScheme.secondary,
       collapsedTextColor: colorScheme.onSurface,
-      textColor: colorScheme.onSecondary,
+      textColor: colorScheme.secondary,
     );
