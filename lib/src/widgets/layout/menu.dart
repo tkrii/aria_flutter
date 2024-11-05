@@ -6,9 +6,6 @@ MenuStyle menuStyle(ColorScheme colorScheme) => MenuStyle(
             ? colorScheme.surfaceDim
             : colorScheme.surfaceContainerHigh,
       ),
-      side: WidgetStatePropertyAll(
-        Utils.borderSide(colorScheme.outlineVariant),
-      ),
     );
 
 MenuThemeData menuThemeData(ColorScheme colorScheme) => MenuThemeData(
