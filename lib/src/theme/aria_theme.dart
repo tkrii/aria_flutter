@@ -1,6 +1,7 @@
 import 'package:aria/src/extensions/brightness.dart';
 import 'package:aria/src/theme/dark_theme.dart';
 import 'package:aria/src/theme/light_theme.dart';
+import 'package:aria/src/theme/material_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:material_color_utilities/dislike/dislike_analyzer.dart';
 import 'package:material_color_utilities/dynamiccolor/dynamic_scheme.dart';
@@ -33,7 +34,7 @@ class AriaTheme {
   /// Generate `custom MD3 theme` for light brightness
   /// [contrastValue] from -1 to 1. -1 represents minimum contrast, 0 represents
   /// standard (i.e. the design as spec'd), and 1 represents maximum contrast.
-  ThemeData light([double contrastValue = 0.0]) => materialLightTheme(
+  ThemeData light([double contrastValue = 0.0]) => materialTheme(
         dynamicScheme: _dynamicScheme(
           false,
           contrastValue,
@@ -44,9 +45,9 @@ class AriaTheme {
   /// Generate `custom MD3 theme` for dark brightness
   /// [contrastValue] from -1 to 1. -1 represents minimum contrast, 0 represents
   /// standard (i.e. the design as spec'd), and 1 represents maximum contrast.
-  ThemeData dark([double contrastValue = 0.0]) => materialDarkTheme(
+  ThemeData dark([double contrastValue = 0.0]) => materialTheme(
         dynamicScheme: _dynamicScheme(
-          false,
+          true,
           contrastValue,
           true,
         ),
