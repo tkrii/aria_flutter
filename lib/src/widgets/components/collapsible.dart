@@ -1,4 +1,4 @@
-part of '../../theme/scheme_theme.dart';
+part of '../../theme/create_theme.dart';
 
 ExpansionTileThemeData expansionTileThemeData(
   ColorScheme colorScheme,
@@ -11,9 +11,9 @@ ExpansionTileThemeData expansionTileThemeData(
         borderRadius: Utils.mediumBorderRadius,
       ),
       backgroundColor: Color.lerp(
-        colorScheme.surfaceContainerHigh,
+        colorScheme.surfaceContainerLow,
         colorScheme.secondaryContainer,
-        0.15,
+        0.5,
       ),
       collapsedBackgroundColor: Colors.transparent,
       collapsedIconColor: colorScheme.onSurfaceSecondary,

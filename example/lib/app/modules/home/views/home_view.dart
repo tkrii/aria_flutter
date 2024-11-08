@@ -54,7 +54,6 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: context.theme.colorScheme.surfaceContainer,
         title: Text(LocaleKeys.app_name.tr),
         actions: [
           Obx(

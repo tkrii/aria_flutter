@@ -1,8 +1,8 @@
+import 'dart:math' as math;
+
 import 'package:aria/aria.dart';
 import 'package:flutter/material.dart' show Brightness, Color, HSLColor;
 import 'package:material_color_utilities/blend/blend.dart';
-import 'package:material_color_utilities/hct/hct.dart';
-import 'package:material_color_utilities/palettes/tonal_palette.dart';
 
 extension AriaColorExtension on Color {
   /// Convert [Color] to [AriaTheme]
@@ -17,20 +17,22 @@ extension AriaColorExtension on Color {
       );
 
   /// [Brightness] of this [Color].
-  Brightness get estimateBrightness => ((1.05) / (computeLuminance() + 0.05)) >
-          ((computeLuminance() + 0.05) / 0.05)
-      ? Brightness.light
-      : Brightness.dark;
+  Brightness get estimateBrightness => (computeLuminance() >= 0.5).toBrightness;
+
+  double contrastRatio(Color contrast) {
+    final lum1 = computeLuminance();
+    final lum2 = contrast.computeLuminance();
+
+    final l1 = math.max(lum1, lum2);
+    final l2 = math.min(lum1, lum2);
+
+    return (l1 + 0.05) / (l2 + 0.05);
+  }
 
   /// [Color] of text on this color.
-  Color get foregroundColor {
-    final tonal = TonalPalette.fromHct(
-      Hct.fromInt(value),
-    );
-    return Color(
-      estimateBrightness.inverse.isLight ? tonal.get(16) : tonal.get(97),
-    );
-  }
+  Color get foregroundColor => estimateBrightness.isDark
+      ? copyWith(lightness: 0.9)
+      : copyWith(lightness: 0.1);
 
   /// Applies an overlay color to a backgroundColor.
   Color get applyOverlay {
@@ -61,7 +63,7 @@ extension AriaColorExtension on Color {
   }
 
   /// Harmonize color with current [value]
-  Color harmonize(Color color) => Color(
+  Color harmonizeWith(Color color) => Color(
         Blend.harmonize(
           color.value,
           value,

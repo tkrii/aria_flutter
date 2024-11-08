@@ -1,7 +1,7 @@
 import 'package:aria/src/extensions/brightness.dart';
 import 'package:aria/src/extensions/color.dart';
 import 'package:aria/src/extensions/color_scheme.dart';
-import 'package:aria/src/theme/text_theme.dart';
+import 'package:aria/src/theme/create_text_theme.dart';
 import 'package:flutter/cupertino.dart' show CupertinoThemeData;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemUiOverlayStyle;
@@ -9,6 +9,7 @@ import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 part '../widgets/components/app_bar.dart';
 part '../widgets/components/banner.dart';
 part '../widgets/components/collapsible.dart';
+part '../widgets/components/divider_theme.dart';
 part '../widgets/components/list_tile.dart';
 part '../widgets/components/progress.dart';
 part '../widgets/components/scroll_bar.dart';
@@ -44,7 +45,7 @@ ThemeData createAriaTheme(
       useMaterial3: true,
       brightness: colorScheme.brightness,
       scaffoldBackgroundColor: colorScheme.surface,
-      dividerColor: colorScheme.outlineVariant,
+      dividerColor: colorScheme.outline,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       dialogBackgroundColor: colorScheme.surfaceContainerHigh,
       applyElevationOverlayColor: colorScheme.isDark,
@@ -60,6 +61,7 @@ ThemeData createAriaTheme(
       ),
       appBarTheme: appBarTheme(colorScheme),
       bannerTheme: materialBannerThemeData(colorScheme),
+      dividerTheme: dividerTheme(colorScheme),
       cardColor: colorScheme.surfaceContainerLow,
       cardTheme: cardTheme(colorScheme),
       listTileTheme: listTileThemeData(colorScheme),

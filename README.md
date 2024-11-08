@@ -52,17 +52,15 @@ Theme(
 **AriaTheme** is simple to use, only need a primary, if you need other values for secondary and tertiary color, you can put then.
 ```dart
 AriaTheme aria = AriaTheme(
-  primary: Color(0xff28bca3), // default Color(0xff3689e6)
+  primary: Color(0xff28bca3), // default Color(0xff6200ee) "Deep Purple 500"
   // secondary: analogous of primary from default
   // tertiary: contrasting of primary from default
 );
 
 MaterialApp(
   ...
-  theme: aria.light(),
-  darkTheme: aria.dark(),
-  highContrastTheme: aria.light(1),
-  highContrastDarkTheme: aria.dark(1),
+  theme: aria.light(), //aria.adwaitaLight() for "libadwaita" style theme
+  darkTheme: aria.dark(), //aria.adwaitaDark() for "libadwaita" style theme
   ...
 );
 ```

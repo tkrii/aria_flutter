@@ -1,4 +1,4 @@
-part of '../../theme/scheme_theme.dart';
+part of '../../theme/create_theme.dart';
 
 BadgeThemeData badgeTheme(ColorScheme colorScheme) => BadgeThemeData(
       backgroundColor: colorScheme.tertiary,

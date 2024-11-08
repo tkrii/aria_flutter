@@ -1,7 +1,6 @@
 import 'package:aria/src/extensions/brightness.dart';
-import 'package:aria/src/theme/dark_theme.dart';
-import 'package:aria/src/theme/light_theme.dart';
-import 'package:aria/src/theme/material_theme.dart';
+import 'package:aria/src/theme/material_scheme.dart';
+import 'package:aria/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:material_color_utilities/dislike/dislike_analyzer.dart';
 import 'package:material_color_utilities/dynamiccolor/dynamic_scheme.dart';
@@ -26,7 +25,7 @@ class AriaTheme {
 
   /// Custom theme using [primary] color base
   const AriaTheme({
-    this.primary = const Color(0xff3689e6),
+    this.primary = const Color(0xff6200ee),
     this.secondary,
     this.tertiary,
   });
@@ -34,22 +33,26 @@ class AriaTheme {
   /// Generate `custom MD3 theme` for light brightness
   /// [contrastValue] from -1 to 1. -1 represents minimum contrast, 0 represents
   /// standard (i.e. the design as spec'd), and 1 represents maximum contrast.
-  ThemeData light([double contrastValue = 0.0]) => materialTheme(
-        dynamicScheme: _dynamicScheme(
-          false,
-          contrastValue,
-          true,
+  ThemeData light([double contrastValue = 0.0]) => createAriaTheme(
+        materialScheme(
+          dynamicScheme: _dynamicScheme(
+            false,
+            contrastValue,
+            true,
+          ),
         ),
       );
 
   /// Generate `custom MD3 theme` for dark brightness
   /// [contrastValue] from -1 to 1. -1 represents minimum contrast, 0 represents
   /// standard (i.e. the design as spec'd), and 1 represents maximum contrast.
-  ThemeData dark([double contrastValue = 0.0]) => materialTheme(
-        dynamicScheme: _dynamicScheme(
-          true,
-          contrastValue,
-          true,
+  ThemeData dark([double contrastValue = 0.0]) => createAriaTheme(
+        materialScheme(
+          dynamicScheme: _dynamicScheme(
+            true,
+            contrastValue,
+            true,
+          ),
         ),
       );
 
@@ -68,22 +71,26 @@ class AriaTheme {
   /// Generate `custom Adwaita theme` for light brightness
   /// [contrastValue] from -1 to 1. -1 represents minimum contrast, 0 represents
   /// standard (i.e. the design as spec'd), and 1 represents maximum contrast.
-  ThemeData adwaitaLight([double contrastValue = 0.0]) => adwaitalLightTheme(
-        dynamicScheme: _dynamicScheme(
-          false,
-          contrastValue,
-          false,
+  ThemeData adwaitaLight([double contrastValue = 0.0]) => createAriaTheme(
+        adwaitaLightScheme(
+          dynamicScheme: _dynamicScheme(
+            false,
+            contrastValue,
+            false,
+          ),
         ),
       );
 
   /// Generate `custom Adwaita theme` for dark brightness
   /// [contrastValue] from -1 to 1. -1 represents minimum contrast, 0 represents
   /// standard (i.e. the design as spec'd), and 1 represents maximum contrast.
-  ThemeData adwaitaDark([double contrastValue = 0.0]) => adwaitaDarkTheme(
-        dynamicScheme: _dynamicScheme(
-          false,
-          contrastValue,
-          false,
+  ThemeData adwaitaDark([double contrastValue = 0.0]) => createAriaTheme(
+        adwaitaDarkScheme(
+          dynamicScheme: _dynamicScheme(
+            true,
+            contrastValue,
+            false,
+          ),
         ),
       );
 
@@ -113,7 +120,7 @@ class AriaTheme {
       contrastLevel: contrastValue,
       isDark: isDark,
       sourceColorArgb: primary.value,
-      variant: Variant.expressive,
+      variant: material ? Variant.expressive : Variant.neutral,
       primaryPalette: paletteFromColor(primary),
       secondaryPalette: secondary != null
           ? paletteFromColor(secondary!)

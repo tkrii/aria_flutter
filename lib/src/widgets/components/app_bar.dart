@@ -1,8 +1,14 @@
-part of '../../theme/scheme_theme.dart';
+part of '../../theme/create_theme.dart';
 
 AppBarTheme appBarTheme(ColorScheme colorScheme) => AppBarTheme(
       foregroundColor: colorScheme.onSurface,
-      color: colorScheme.surface,
+      color: colorScheme.surfaceContainer,
+      shape: ContinuousRectangleBorder(
+        side: Utils.borderSide(
+          colorScheme.disabled,
+          0.2,
+        ),
+      ),
       elevation: 0,
       scrolledUnderElevation: 0,
       systemOverlayStyle: (colorScheme.isLight

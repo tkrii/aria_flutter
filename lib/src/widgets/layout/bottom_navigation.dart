@@ -1,4 +1,4 @@
-part of '../../theme/scheme_theme.dart';
+part of '../../theme/create_theme.dart';
 
 BottomAppBarTheme bottomAppBarTheme(ColorScheme colorScheme) =>
     BottomAppBarTheme(
@@ -18,21 +18,20 @@ NavigationBarThemeData navigationBarTheme(ColorScheme colorScheme) {
   return NavigationBarThemeData(
     elevation: 6,
     backgroundColor: colorScheme.surfaceContainer,
-    indicatorColor: colorScheme.primaryContainer,
+    indicatorColor: colorScheme.surfaceDim,
     indicatorShape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(12),
     ),
     iconTheme: WidgetStateProperty.resolveWith(
       (states) => states.contains(WidgetState.selected)
-          ? IconThemeData(color: colorScheme.onPrimaryContainer)
-          : IconThemeData(color: colorScheme.onSurfaceVariant),
+          ? IconThemeData(color: colorScheme.onSurface)
+          : IconThemeData(color: colorScheme.onSurfaceSecondary),
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
-      (state) => state.contains(WidgetState.selected)
-          ? createTextTheme(colorScheme.onPrimaryContainer)
-              .labelSmall!
-              .copyWith(fontFamily: 'Inter', fontWeight: FontWeight.w700)
-          : createTextTheme(colorScheme.onSurfaceVariant).labelSmall!,
+      (state) => createTextTheme(state.contains(WidgetState.selected)
+              ? colorScheme.onSurface
+              : colorScheme.onSurfaceSecondary)
+          .labelSmall!,
     ),
   );
 }

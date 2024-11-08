@@ -1,4 +1,4 @@
-part of '../../theme/scheme_theme.dart';
+part of '../../theme/create_theme.dart';
 
 DrawerThemeData drawerTheme(ColorScheme colorScheme) {
   return DrawerThemeData(
@@ -19,19 +19,19 @@ NavigationDrawerThemeData navigationDrawerTheme(ColorScheme colorScheme) {
   return NavigationDrawerThemeData(
     elevation: 8,
     backgroundColor: colorScheme.surfaceContainer,
-    indicatorColor: colorScheme.primary,
+    indicatorColor: colorScheme.surfaceDim,
     indicatorShape: RoundedRectangleBorder(
       borderRadius: Utils.borderRadius,
     ),
     iconTheme: WidgetStateProperty.resolveWith(
       (states) => states.contains(WidgetState.selected)
-          ? IconThemeData(color: colorScheme.onPrimary)
-          : IconThemeData(color: colorScheme.onSurfaceVariant),
+          ? IconThemeData(color: colorScheme.onSurface)
+          : IconThemeData(color: colorScheme.onSurfaceSecondary),
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
       (state) => state.contains(WidgetState.selected)
-          ? createTextTheme(colorScheme.onPrimary).labelMedium!
-          : createTextTheme(colorScheme.onSurfaceVariant).labelMedium!,
+          ? createTextTheme(colorScheme.onSurface).labelMedium!
+          : createTextTheme(colorScheme.onSurfaceSecondary).labelMedium!,
     ),
   );
 }

@@ -1,4 +1,4 @@
-part of '../../theme/scheme_theme.dart';
+part of '../../theme/create_theme.dart';
 
 DialogTheme dialogTheme(ColorScheme colorScheme) => DialogTheme(
       backgroundColor: colorScheme.surfaceContainerHigh,

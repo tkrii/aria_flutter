@@ -1,16 +1,11 @@
-part of '../../theme/scheme_theme.dart';
+part of '../../theme/create_theme.dart';
 
 SliderThemeData sliderThemeData(
   ColorScheme colorScheme,
 ) {
   return SliderThemeData(
-    activeTrackColor: colorScheme.primaryFixed,
-    inactiveTrackColor: Color.lerp(
-      colorScheme.primaryContainer,
-      colorScheme.outlineVariant,
-      0.5,
-    )!
-        .applyOverlay,
+    activeTrackColor: colorScheme.primary,
+    inactiveTrackColor: colorScheme.outlineVariant,
     trackHeight: 5,
     thumbColor: Colors.white,
   );

@@ -1,4 +1,5 @@
 import 'package:aria/aria.dart';
+import 'package:example/app/data/enums/elementary_colors.dart';
 import 'package:example/app/routes/app_pages.dart';
 import 'package:example/generated/locales.g.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,9 @@ import 'package:get/get.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  const theme = AriaTheme();
+  final theme = AriaTheme(
+    primary: ElementaryColors.slate.accent,
+  );
 
   Get.put(
     GetMaterialController(),

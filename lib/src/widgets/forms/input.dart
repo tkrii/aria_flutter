@@ -1,10 +1,16 @@
-part of '../../theme/scheme_theme.dart';
+part of '../../theme/create_theme.dart';
 
 InputDecorationTheme inputDecorationTheme(ColorScheme colorScheme) {
   return InputDecorationTheme(
     filled: true,
     fillColor: colorScheme.surfaceContainerHighest,
     iconColor: colorScheme.onSurfaceSecondary,
+    prefixIconColor: colorScheme.onSurfaceSecondary,
+    suffixIconColor: colorScheme.onSurfaceSecondary,
+    border: OutlineInputBorder(
+      borderSide: Utils.borderSide(colorScheme.outline),
+      borderRadius: Utils.borderRadius,
+    ),
     enabledBorder: OutlineInputBorder(
       borderSide: Utils.borderSide(colorScheme.outline),
       borderRadius: Utils.borderRadius,
