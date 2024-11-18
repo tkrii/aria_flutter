@@ -3,7 +3,9 @@ part of '../../theme/create_theme.dart';
 ButtonStyle commonButton = ButtonStyle(
   shape: WidgetStatePropertyAll(
     RoundedRectangleBorder(
-      borderRadius: Utils.borderRadius,
+      borderRadius: BorderRadius.circular(
+        Utils.thumbnailSmallBorder,
+      ),
     ),
   ),
 );
@@ -35,7 +37,7 @@ ElevatedButtonThemeData elevatedButtonThemeData(ColorScheme colorScheme) =>
         foregroundColor: WidgetStateProperty.resolveWith(
           (state) => state.contains(WidgetState.disabled)
               ? null
-              : colorScheme.onSurface,
+              : colorScheme.onSurfaceVariant,
         ),
       ).merge(commonButton),
     );
@@ -63,16 +65,18 @@ FloatingActionButtonThemeData floatingActionButtonThemeData(
       disabledElevation: 0,
       backgroundColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.disabled)
-            ? colorScheme.secondary.withOpacity(0.5)
-            : colorScheme.secondary,
+            ? colorScheme.outlineVariant
+            : colorScheme.secondaryContainer,
       ),
       foregroundColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.disabled)
-            ? colorScheme.onSecondary.withOpacity(0.5)
-            : colorScheme.onSecondary,
+            ? colorScheme.onSurfaceVariant
+            : colorScheme.onSecondaryContainer,
       ),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(26),
+        borderRadius: BorderRadius.circular(
+          Utils.thumbnailLargeBorder,
+        ),
       ),
     );
 

@@ -12,7 +12,7 @@ SegmentedButtonThemeData segmentedButtonThemeData(ColorScheme colorScheme) =>
         ),
         foregroundColor: WidgetStateColor.resolveWith(
           (state) => state.contains(WidgetState.disabled)
-              ? colorScheme.disabled
+              ? colorScheme.outlineVariant
               : state.contains(WidgetState.selected)
                   ? colorScheme.onPrimary
                   : colorScheme.onSurface,
@@ -25,9 +25,11 @@ ToggleButtonsThemeData toggleButtonsThemeData(ColorScheme colorScheme) =>
     ToggleButtonsThemeData(
       color: colorScheme.onSurface,
       selectedColor: colorScheme.onPrimary,
-      disabledColor: colorScheme.disabled,
+      disabledColor: colorScheme.outlineVariant,
       fillColor: colorScheme.primary,
       selectedBorderColor: colorScheme.primary.outerColor,
       borderColor: colorScheme.outline,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(
+        Utils.thumbnailSmallBorder,
+      ),
     );

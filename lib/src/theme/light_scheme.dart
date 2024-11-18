@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart' show ColorScheme, Brightness, Color;
 import 'package:material_color_utilities/dynamiccolor/dynamic_scheme.dart';
 
-/// Generate [ColorScheme] from [dynamicScheme] using libadwaita guideline
+/// Generate [ColorScheme] from [dynamicScheme] using adwaita guideline
 ColorScheme adwaitaLightScheme({
   required DynamicScheme dynamicScheme,
 }) =>
     ColorScheme(
       brightness: Brightness.light,
-      primaryFixed: Color(
-        dynamicScheme.primaryPaletteKeyColor,
-      ),
+      primaryFixed: Color(dynamicScheme.primaryPaletteKeyColor),
       primary: Color(dynamicScheme.primary),
       onPrimary: Color(dynamicScheme.onPrimary),
       secondary: Color(dynamicScheme.secondary),
@@ -20,36 +18,50 @@ ColorScheme adwaitaLightScheme({
       onError: Color(dynamicScheme.onError),
       primaryContainer: Color(dynamicScheme.primaryContainer),
       onPrimaryContainer: Color(dynamicScheme.onPrimaryContainer),
-      secondaryContainer: Color(dynamicScheme.secondaryContainer),
-      onSecondaryContainer: Color(dynamicScheme.onSecondaryContainer),
+      secondaryContainer: Color(
+        dynamicScheme.neutralVariantPalette.get(92),
+      ),
+      onSecondaryContainer: Color(
+        dynamicScheme.neutralVariantPalette.get(14),
+      ),
       tertiaryContainer: Color(dynamicScheme.tertiaryContainer),
       onTertiaryContainer: Color(dynamicScheme.onTertiaryContainer),
       errorContainer: Color(dynamicScheme.errorContainer),
       onErrorContainer: Color(dynamicScheme.onErrorContainer),
       surfaceDim: Color(dynamicScheme.surfaceDim),
-      surface: const Color(0xfffafafa),
+      surface: Color(
+        dynamicScheme.neutralPalette.get(98),
+      ),
       surfaceBright: Color(
         dynamicScheme.neutralVariantPalette.get(94),
       ),
-      surfaceContainerLowest: const Color(0xffebebeb),
-      surfaceContainerLow: const Color(0xffffffff),
-      surfaceContainer: const Color(0xffffffff),
-      surfaceContainerHigh: const Color(0xfffdfdfd),
-      surfaceContainerHighest: const Color(0xffebebeb),
+      surfaceContainerLowest: Color(
+        dynamicScheme.neutralVariantPalette.get(93),
+      ),
+      surfaceContainerLow: Color(
+        dynamicScheme.neutralVariantPalette.get(100),
+      ),
+      surfaceContainer: Color(
+        dynamicScheme.neutralVariantPalette.get(100),
+      ),
+      surfaceContainerHigh: Color(
+        dynamicScheme.neutralVariantPalette.get(100),
+      ),
+      surfaceContainerHighest: Color(
+        dynamicScheme.neutralVariantPalette.get(93),
+      ),
       onSurface: Color(
-        dynamicScheme.neutralPalette.get(20),
+        dynamicScheme.neutralPalette.get(14),
       ),
-      onSurfaceVariant: Color(
-        dynamicScheme.neutralVariantPalette.get(20),
+      onSurfaceVariant: Color(dynamicScheme.onSurfaceVariant),
+      outline: Color(dynamicScheme.outline),
+      outlineVariant: Color(dynamicScheme.outlineVariant),
+      inverseSurface: Color(
+        dynamicScheme.neutralVariantPalette.get(33),
       ),
-      outline: Color(
-        dynamicScheme.neutralPalette.get(69),
+      onInverseSurface: Color(
+        dynamicScheme.neutralVariantPalette.get(94),
       ),
-      outlineVariant: Color(
-        dynamicScheme.neutralVariantPalette.get(84),
-      ),
-      inverseSurface: const Color(0xff4d4d4d),
-      onInverseSurface: const Color(0xffededed),
       inversePrimary: Color(dynamicScheme.inversePrimary),
       scrim: Color(dynamicScheme.scrim),
       shadow: Color(dynamicScheme.shadow),

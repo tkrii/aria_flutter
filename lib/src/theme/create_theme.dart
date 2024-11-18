@@ -51,7 +51,7 @@ ThemeData createAriaTheme(
       applyElevationOverlayColor: colorScheme.isDark,
       textTheme: createTextTheme(colorScheme.onSurface),
       canvasColor: colorScheme.surfaceContainerLow,
-      disabledColor: colorScheme.disabled,
+      // disabledColor: colorScheme.disabled,
       cupertinoOverrideTheme: CupertinoThemeData(
         primaryColor: colorScheme.primary,
         primaryContrastingColor: colorScheme.tertiary,
@@ -97,7 +97,8 @@ ThemeData createAriaTheme(
             const Icon(Icons.arrow_back_ios_new_rounded),
         closeButtonIconBuilder: (context) => const Icon(Icons.close_rounded),
         drawerButtonIconBuilder: (context) => const Icon(Icons.menu_rounded),
-        endDrawerButtonIconBuilder: (context) => const Icon(Icons.menu_rounded),
+        endDrawerButtonIconBuilder: (context) =>
+            const Icon(Icons.more_horiz_rounded),
       ),
       scrollbarTheme: scrollbarThemeData(colorScheme),
       searchBarTheme: searchBarThemeData(colorScheme),

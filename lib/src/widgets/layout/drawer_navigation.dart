@@ -3,14 +3,16 @@ part of '../../theme/create_theme.dart';
 DrawerThemeData drawerTheme(ColorScheme colorScheme) {
   return DrawerThemeData(
     elevation: 8,
-    backgroundColor: colorScheme.surfaceContainer,
+    backgroundColor: colorScheme.surface,
     shape: RoundedRectangleBorder(
       borderRadius: Utils.endBorderRadius(
-        26,
+        Utils.thumbnailLargeBorder,
       ),
     ),
     endShape: RoundedRectangleBorder(
-      borderRadius: Utils.startBorderRadius(26),
+      borderRadius: Utils.startBorderRadius(
+        Utils.thumbnailLargeBorder,
+      ),
     ),
   );
 }
@@ -18,20 +20,22 @@ DrawerThemeData drawerTheme(ColorScheme colorScheme) {
 NavigationDrawerThemeData navigationDrawerTheme(ColorScheme colorScheme) {
   return NavigationDrawerThemeData(
     elevation: 8,
-    backgroundColor: colorScheme.surfaceContainer,
-    indicatorColor: colorScheme.surfaceDim,
+    backgroundColor: colorScheme.surface,
+    indicatorColor: colorScheme.secondaryContainer,
     indicatorShape: RoundedRectangleBorder(
-      borderRadius: Utils.borderRadius,
+      borderRadius: BorderRadius.circular(
+        Utils.thumbnailLargeBorder,
+      ),
     ),
     iconTheme: WidgetStateProperty.resolveWith(
       (states) => states.contains(WidgetState.selected)
-          ? IconThemeData(color: colorScheme.onSurface)
-          : IconThemeData(color: colorScheme.onSurfaceSecondary),
+          ? IconThemeData(color: colorScheme.onSecondaryContainer)
+          : IconThemeData(color: colorScheme.onSurfaceVariant),
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
       (state) => state.contains(WidgetState.selected)
-          ? createTextTheme(colorScheme.onSurface).labelMedium!
-          : createTextTheme(colorScheme.onSurfaceSecondary).labelMedium!,
+          ? createTextTheme(colorScheme.onSecondaryContainer).labelMedium!
+          : createTextTheme(colorScheme.onSurfaceVariant).labelMedium!,
     ),
   );
 }

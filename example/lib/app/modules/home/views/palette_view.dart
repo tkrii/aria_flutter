@@ -30,7 +30,8 @@ class PaletteView extends StatelessWidget {
     }
 
     SliverGrid gridView(
-            List<({String label, Color accent, Color? onAccent})> data) =>
+      List<({String label, Color accent, Color? onAccent})> data,
+    ) =>
         SliverGrid.builder(
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 190,
@@ -326,16 +327,6 @@ class PaletteView extends StatelessWidget {
               label: 'destructive.onColorContainer',
               accent: colorScheme.destructive.onColorContainer,
               onAccent: colorScheme.destructive.colorContainer,
-            ),
-            (
-              label: 'onSurfaceSecondary',
-              accent: colorScheme.onSurfaceSecondary,
-              onAccent: null,
-            ),
-            (
-              label: 'disabled',
-              accent: colorScheme.disabled,
-              onAccent: null,
             ),
           ],
         ),

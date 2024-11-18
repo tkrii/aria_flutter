@@ -3,19 +3,14 @@ part of '../../theme/create_theme.dart';
 MenuStyle menuStyle(ColorScheme colorScheme) => MenuStyle(
       backgroundColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.selected)
-            ? colorScheme.surfaceDim
+            ? colorScheme.secondaryContainer
             : colorScheme.surfaceContainerHigh,
       ),
     );
 
 MenuThemeData menuThemeData(ColorScheme colorScheme) => MenuThemeData(
-      style: MenuStyle(
-        elevation: const WidgetStatePropertyAll(4),
-        shape: WidgetStatePropertyAll(
-          RoundedRectangleBorder(
-            borderRadius: Utils.borderRadius,
-          ),
-        ),
+      style: const MenuStyle(
+        elevation: WidgetStatePropertyAll(4),
       ).merge(
         menuStyle(
           colorScheme,

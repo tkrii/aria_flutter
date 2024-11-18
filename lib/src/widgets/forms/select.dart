@@ -4,7 +4,9 @@ PopupMenuThemeData popupMenuThemeData(ColorScheme colorScheme) =>
     PopupMenuThemeData(
       color: colorScheme.surfaceContainerHigh,
       shape: RoundedRectangleBorder(
-        borderRadius: Utils.borderRadius,
+        borderRadius: BorderRadius.circular(
+          Utils.thumbnailMediumBorder,
+        ),
         side: Utils.borderSide(colorScheme.outlineVariant),
       ),
     );

@@ -4,9 +4,11 @@ DialogTheme dialogTheme(ColorScheme colorScheme) => DialogTheme(
       backgroundColor: colorScheme.surfaceContainerHigh,
       elevation: 8,
       shape: RoundedRectangleBorder(
-        borderRadius: Utils.largeBorderRadius,
+        borderRadius: BorderRadius.circular(
+          Utils.thumbnailLargeBorder,
+        ),
         side: Utils.borderSideOnlyDark(
-          colorScheme.disabled,
+          colorScheme.outlineVariant,
           colorScheme.brightness,
         ),
       ),

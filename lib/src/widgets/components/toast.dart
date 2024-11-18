@@ -8,7 +8,9 @@ SnackBarThemeData snackBarThemeData(ColorScheme colorScheme) {
     behavior: SnackBarBehavior.floating,
     dismissDirection: DismissDirection.down,
     shape: RoundedRectangleBorder(
-      borderRadius: Utils.borderRadius,
+      borderRadius: BorderRadius.circular(
+        Utils.thumbnailLargeBorder,
+      ),
     ),
   );
 }

@@ -5,9 +5,11 @@ TimePickerThemeData timePickerThemeData(ColorScheme colorScheme) =>
       backgroundColor: colorScheme.surfaceContainerHigh,
       elevation: 8,
       shape: RoundedRectangleBorder(
-        borderRadius: Utils.largeBorderRadius,
+        borderRadius: BorderRadius.circular(
+          Utils.thumbnailLargeBorder,
+        ),
         side: Utils.borderSideOnlyDark(
-          colorScheme.disabled,
+          colorScheme.outlineVariant,
           colorScheme.brightness,
         ),
       ),
@@ -38,11 +40,15 @@ TimePickerThemeData timePickerThemeData(ColorScheme colorScheme) =>
             : colorScheme.onTertiaryContainer,
       ),
       dayPeriodShape: RoundedRectangleBorder(
-        borderRadius: Utils.largeBorderRadius,
+        borderRadius: BorderRadius.circular(
+          Utils.thumbnailMediumBorder,
+        ),
         side: Utils.borderSide(colorScheme.outline),
       ),
       hourMinuteShape: RoundedRectangleBorder(
-        borderRadius: Utils.largeBorderRadius,
+        borderRadius: BorderRadius.circular(
+          Utils.thumbnailMediumBorder,
+        ),
         side: Utils.borderSide(colorScheme.outline),
       ),
     );

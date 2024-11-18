@@ -2,14 +2,15 @@ part of '../../theme/create_theme.dart';
 
 ListTileThemeData listTileThemeData(ColorScheme colorScheme) {
   return ListTileThemeData(
-    selectedTileColor: colorScheme.secondary,
-    selectedColor: colorScheme.onSecondary,
-    iconColor: colorScheme.onSurfaceSecondary,
+    selectedTileColor: colorScheme.primaryContainer,
+    selectedColor: colorScheme.primary,
+    iconColor: colorScheme.onSurfaceVariant,
     titleTextStyle: createTextTheme(colorScheme.onSurface).bodyLarge,
-    subtitleTextStyle:
-        createTextTheme(colorScheme.onSurfaceSecondary).bodyMedium,
+    subtitleTextStyle: createTextTheme(colorScheme.onSurfaceVariant).bodyMedium,
     shape: RoundedRectangleBorder(
-      borderRadius: Utils.mediumBorderRadius,
+      borderRadius: BorderRadius.circular(
+        Utils.thumbnailMediumBorder,
+      ),
     ),
   );
 }

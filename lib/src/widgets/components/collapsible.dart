@@ -5,10 +5,14 @@ ExpansionTileThemeData expansionTileThemeData(
 ) =>
     ExpansionTileThemeData(
       shape: RoundedRectangleBorder(
-        borderRadius: Utils.mediumBorderRadius,
+        borderRadius: BorderRadius.circular(
+          Utils.thumbnailMediumBorder,
+        ),
       ),
       collapsedShape: RoundedRectangleBorder(
-        borderRadius: Utils.mediumBorderRadius,
+        borderRadius: BorderRadius.circular(
+          Utils.thumbnailMediumBorder,
+        ),
       ),
       backgroundColor: Color.lerp(
         colorScheme.surfaceContainerLow,
@@ -16,7 +20,7 @@ ExpansionTileThemeData expansionTileThemeData(
         0.5,
       ),
       collapsedBackgroundColor: Colors.transparent,
-      collapsedIconColor: colorScheme.onSurfaceSecondary,
+      collapsedIconColor: colorScheme.onSurfaceVariant,
       iconColor: colorScheme.secondary,
       collapsedTextColor: colorScheme.onSurface,
       textColor: colorScheme.secondary,

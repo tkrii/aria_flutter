@@ -18,19 +18,21 @@ NavigationBarThemeData navigationBarTheme(ColorScheme colorScheme) {
   return NavigationBarThemeData(
     elevation: 6,
     backgroundColor: colorScheme.surfaceContainer,
-    indicatorColor: colorScheme.surfaceDim,
+    indicatorColor: colorScheme.secondaryContainer,
     indicatorShape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(
+        Utils.thumbnailSmallBorder,
+      ),
     ),
     iconTheme: WidgetStateProperty.resolveWith(
       (states) => states.contains(WidgetState.selected)
-          ? IconThemeData(color: colorScheme.onSurface)
-          : IconThemeData(color: colorScheme.onSurfaceSecondary),
+          ? IconThemeData(color: colorScheme.onSecondaryContainer)
+          : IconThemeData(color: colorScheme.onSurfaceVariant),
     ),
     labelTextStyle: WidgetStateTextStyle.resolveWith(
       (state) => createTextTheme(state.contains(WidgetState.selected)
               ? colorScheme.onSurface
-              : colorScheme.onSurfaceSecondary)
+              : colorScheme.onSurfaceVariant)
           .labelSmall!,
     ),
   );
@@ -39,7 +41,7 @@ NavigationBarThemeData navigationBarTheme(ColorScheme colorScheme) {
 BottomSheetThemeData bottomSheetThemeData(ColorScheme colorScheme) =>
     BottomSheetThemeData(
       showDragHandle: true,
-      dragHandleColor: colorScheme.onSurfaceSecondary,
+      dragHandleColor: colorScheme.onSurfaceVariant,
       backgroundColor: colorScheme.surfaceContainer,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadiusDirectional.only(

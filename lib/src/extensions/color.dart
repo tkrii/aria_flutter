@@ -17,7 +17,8 @@ extension AriaColorExtension on Color {
       );
 
   /// [Brightness] of this [Color].
-  Brightness get estimateBrightness => (computeLuminance() >= 0.5).toBrightness;
+  Brightness get estimateBrightness =>
+      (computeLuminance() < 0.5).isDarkToBrightness;
 
   double contrastRatio(Color contrast) {
     final lum1 = computeLuminance();
@@ -30,13 +31,16 @@ extension AriaColorExtension on Color {
   }
 
   /// [Color] of text on this color.
-  Color get foregroundColor => estimateBrightness.isDark
-      ? copyWith(lightness: 0.9)
-      : copyWith(lightness: 0.1);
+  Color get foregroundColor => scale(
+        lightness: estimateBrightness.isDark ? 0.90 : -0.90,
+      );
 
   /// Applies an overlay color to a backgroundColor.
   Color get applyOverlay {
-    return Color.alphaBlend(foregroundColor.withOpacity(0.1), this);
+    return Color.alphaBlend(
+      foregroundColor.withOpacity(0.1),
+      this,
+    );
   }
 
   /// The color to use when drawn outside of color.
@@ -51,7 +55,7 @@ extension AriaColorExtension on Color {
   /// Computes the color that matches with color and [brightness].
   Color matchingColor(final Brightness brightness) {
     final colorLuminance = computeLuminance();
-    final fgColor = colorLuminance < 0.2 && brightness == Brightness.dark
+    final fgColor = colorLuminance < 0.2 && brightness.isDark
         ? Color.alphaBlend(foregroundColor.withOpacity(0.49), this)
         : colorLuminance > 0.8 && brightness == Brightness.light
             ? Color.alphaBlend(

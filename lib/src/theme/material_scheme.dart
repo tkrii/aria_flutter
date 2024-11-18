@@ -8,7 +8,7 @@ ColorScheme materialScheme({
   required DynamicScheme dynamicScheme,
 }) =>
     ColorScheme(
-      brightness: (!dynamicScheme.isDark).toBrightness,
+      brightness: dynamicScheme.isDark.isDarkToBrightness,
       primaryFixed: Color(dynamicScheme.primaryFixed),
       primary: Color(dynamicScheme.primary),
       onPrimary: Color(dynamicScheme.onPrimary),

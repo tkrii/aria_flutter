@@ -7,12 +7,7 @@ ColorScheme adwaitaDarkScheme({
 }) =>
     ColorScheme(
       brightness: Brightness.dark,
-      primaryFixed: Color(
-        dynamicScheme.primaryPaletteKeyColor,
-      ),
-      onPrimaryFixed: Color(
-        dynamicScheme.onSurface,
-      ),
+      primaryFixed: Color(dynamicScheme.primaryPaletteKeyColor),
       primary: Color(dynamicScheme.primary),
       onPrimary: Color(dynamicScheme.onPrimary),
       secondary: Color(dynamicScheme.secondary),
@@ -23,39 +18,53 @@ ColorScheme adwaitaDarkScheme({
       onError: Color(dynamicScheme.onError),
       primaryContainer: Color(dynamicScheme.primaryContainer),
       onPrimaryContainer: Color(dynamicScheme.onPrimaryContainer),
-      secondaryContainer: Color(dynamicScheme.secondaryContainer),
-      onSecondaryContainer: Color(dynamicScheme.onSecondaryContainer),
+      secondaryContainer: Color(
+        dynamicScheme.neutralVariantPalette.get(29),
+      ),
+      onSecondaryContainer: Color(
+        dynamicScheme.neutralVariantPalette.get(98),
+      ),
       tertiaryContainer: Color(dynamicScheme.tertiaryContainer),
       onTertiaryContainer: Color(dynamicScheme.onTertiaryContainer),
       errorContainer: Color(dynamicScheme.errorContainer),
       onErrorContainer: Color(dynamicScheme.onErrorContainer),
-      surfaceDim: const Color(0xff454545),
-      surface: const Color(0xff242424), //0xff131416),
+      surfaceDim: Color(dynamicScheme.surfaceDim),
+      surface: Color(
+        dynamicScheme.neutralPalette.get(14),
+      ),
       surfaceBright: Color(
-        dynamicScheme.neutralVariantPalette.get(14),
+        dynamicScheme.neutralVariantPalette.get(16),
       ),
-      surfaceContainerLowest: const Color(0xff484848),
-      surfaceContainerLow: const Color(0xff363636),
-      surfaceContainer: const Color(0xff303030),
-      surfaceContainerHigh: const Color(0xff383838),
-      surfaceContainerHighest: const Color(0xff484848),
-      onSurface: const Color(0xffffffff),
-      onSurfaceVariant: Color(
-        dynamicScheme.neutralVariantPalette.get(90),
+      surfaceContainerLowest: Color(
+        dynamicScheme.neutralPalette.get(30),
       ),
-      outline: Color(
-        dynamicScheme.neutralPalette.get(55),
+      surfaceContainerLow: Color(
+        dynamicScheme.neutralPalette.get(26),
       ),
-      outlineVariant: Color(
-        dynamicScheme.neutralVariantPalette.get(36),
+      surfaceContainer: Color(
+        dynamicScheme.neutralPalette.get(20),
       ),
-      inverseSurface: const Color(0xff060607),
-      onInverseSurface: const Color(0xffffffff),
-      inversePrimary: const Color(0xff454545),
-      scrim: Color(
-        dynamicScheme.neutralPalette.get(0),
+      surfaceContainerHigh: Color(
+        dynamicScheme.neutralPalette.get(24),
       ),
-      shadow: Color(
-        dynamicScheme.neutralPalette.get(0),
+      surfaceContainerHighest: Color(
+        dynamicScheme.neutralPalette.get(30),
       ),
+      onSurface: Color(
+        dynamicScheme.neutralPalette.get(100),
+      ),
+      onSurfaceVariant: Color(dynamicScheme.onSurfaceVariant),
+      outline: Color(dynamicScheme.outline),
+      outlineVariant: Color(dynamicScheme.outlineVariant),
+      inverseSurface: Color(
+        dynamicScheme.neutralVariantPalette.get(2),
+      ),
+      onInverseSurface: Color(
+        dynamicScheme.neutralVariantPalette.get(100),
+      ),
+      inversePrimary: Color(
+        dynamicScheme.neutralVariantPalette.get(29),
+      ),
+      scrim: Color(dynamicScheme.scrim),
+      shadow: Color(dynamicScheme.shadow),
     );

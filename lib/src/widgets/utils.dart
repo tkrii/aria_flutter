@@ -2,25 +2,17 @@ part of '../theme/create_theme.dart';
 
 class Utils {
   static const padding = EdgeInsets.symmetric(
-    horizontal: 16.0,
-    vertical: 8.0,
+    horizontal: 24.0,
+    vertical: 12.0,
   );
   static const halfHorizontalPadding = EdgeInsets.symmetric(
-    horizontal: 8.0,
-    vertical: 8.0,
+    horizontal: 12.0,
+    vertical: 12.0,
   );
 
-  /// Circular corner 8
-  static final smallBorderRadius = BorderRadius.circular(8);
-
-  /// Circular corner 12
-  static final borderRadius = BorderRadius.circular(12);
-
-  /// Circular corner 16
-  static final mediumBorderRadius = BorderRadius.circular(16);
-
-  /// Circular corner 26
-  static final largeBorderRadius = BorderRadius.circular(26);
+  static double thumbnailSmallBorder = 12;
+  static double thumbnailMediumBorder = 16;
+  static double thumbnailLargeBorder = 26;
 
   Utils._();
 

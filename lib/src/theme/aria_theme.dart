@@ -25,7 +25,7 @@ class AriaTheme {
 
   /// Custom theme using [primary] color base
   const AriaTheme({
-    this.primary = const Color(0xff6200ee),
+    this.primary = const Color(0xff3689e6),
     this.secondary,
     this.tertiary,
   });
@@ -116,11 +116,12 @@ class AriaTheme {
     TonalPalette paletteFromColor(Color color) => TonalPalette.fromHct(
           Hct.fromInt(color.value),
         );
+
     return DynamicScheme(
       contrastLevel: contrastValue,
       isDark: isDark,
       sourceColorArgb: primary.value,
-      variant: material ? Variant.expressive : Variant.neutral,
+      variant: Variant.vibrant,
       primaryPalette: paletteFromColor(primary),
       secondaryPalette: secondary != null
           ? paletteFromColor(secondary!)
@@ -142,11 +143,11 @@ class AriaTheme {
             ),
       neutralPalette: TonalPalette.of(
         hueFromColor(primary),
-        material ? 2.0 : 0.0,
+        0.0,
       ),
       neutralVariantPalette: TonalPalette.of(
         hueFromColor(primary),
-        16,
+        8,
       ),
     );
   }

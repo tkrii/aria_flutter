@@ -1,4 +1,5 @@
 import 'package:aria/src/extensions/brightness.dart';
+import 'package:aria/src/extensions/color.dart';
 import 'package:flutter/material.dart'
     show Brightness, BuildContext, Color, ColorScheme, Theme;
 import 'package:material_color_utilities/hct/hct.dart';
@@ -19,14 +20,14 @@ class ExtendedColor {
           _palette.get(40),
         ),
         onColor: Color(
-          _palette.get(100),
-        ),
+          _palette.get(40),
+        ).foregroundColor,
         colorContainer: Color(
           _palette.get(90),
         ),
         onColorContainer: Color(
-          _palette.get(10),
-        ),
+          _palette.get(90),
+        ).foregroundColor,
       );
 
   ColorFamily dark() => ColorFamily(
@@ -34,14 +35,14 @@ class ExtendedColor {
           _palette.get(80),
         ),
         onColor: Color(
-          _palette.get(20),
-        ),
+          _palette.get(80),
+        ).foregroundColor,
         colorContainer: Color(
           _palette.get(30),
         ),
         onColorContainer: Color(
-          _palette.get(90),
-        ),
+          _palette.get(30),
+        ).foregroundColor,
       );
 
   /// Get [light] or [dark] from [brightness] value

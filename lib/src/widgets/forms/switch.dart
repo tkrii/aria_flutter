@@ -3,7 +3,7 @@ part of '../../theme/create_theme.dart';
 SwitchThemeData switchThemeData(ColorScheme colorScheme) => SwitchThemeData(
       thumbColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.disabled)
-            ? colorScheme.disabled
+            ? colorScheme.outlineVariant
             : state.contains(WidgetState.selected)
                 ? colorScheme.success.onColor
                 : colorScheme.success.color,
@@ -16,7 +16,7 @@ SwitchThemeData switchThemeData(ColorScheme colorScheme) => SwitchThemeData(
       ),
       trackOutlineColor: WidgetStateColor.resolveWith(
         (state) => state.contains(WidgetState.disabled)
-            ? colorScheme.disabled
+            ? colorScheme.outlineVariant
             : state.contains(WidgetState.selected)
                 ? Colors.transparent
                 : colorScheme.outline,
@@ -25,6 +25,6 @@ SwitchThemeData switchThemeData(ColorScheme colorScheme) => SwitchThemeData(
         (state) => state.contains(WidgetState.selected) &&
                 !state.contains(WidgetState.disabled)
             ? colorScheme.success.color
-            : Colors.transparent,
+            : colorScheme.surfaceContainerHighest,
       ),
     );

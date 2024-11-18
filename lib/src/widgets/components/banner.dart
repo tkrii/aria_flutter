@@ -4,5 +4,5 @@ MaterialBannerThemeData materialBannerThemeData(ColorScheme colorScheme) =>
     MaterialBannerThemeData(
       elevation: 0,
       backgroundColor: colorScheme.surfaceContainer,
-      dividerColor: colorScheme.outlineVariant,
+      dividerColor: colorScheme.outline,
     );
